@@ -58,5 +58,10 @@
             <generatedKey column="id" sqlStatement="DB2" identity="true" />
         </table>
 
+        <table schema="office management" tableName="company" domainObjectName="Company">
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="id" sqlStatement="DB2" identity="true" />
+        </table>
+
     </context>
 </generatorConfiguration>

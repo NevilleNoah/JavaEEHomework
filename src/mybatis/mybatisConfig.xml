@@ -19,7 +19,12 @@
     </environments>
 
     <mappers>
-        <mapper resource="com/mybatis/xml/MessageMapper.xml"/>
+        <mapper resource="com/mybatis/CompanyMapper.xml"/>
+        <mapper resource="com/mybatis/DamageMapper.xml"/>
+        <mapper resource="com/mybatis/DemandMapper.xml"/>
+        <mapper resource="com/mybatis/GainMapper.xml"/>
+        <mapper resource="com/mybatis/GoodsMapper.xml"/>
+        <mapper resource="com/mybatis/UserMapper.xml"/>
     </mappers>
 
 </configuration>

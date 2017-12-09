@@ -22,6 +22,8 @@
 </head>
 <body>
 
+<div id="navbar "
+
 <div class="panel-group" id="accordion" style="" role="tablist" aria-multiselectable="true">
 
     <div class="panel panel-warning">
