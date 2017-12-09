@@ -14,7 +14,7 @@
   </head>
   <body>
     <%
-      List<Goods> goodsList = selectAllGoods(124124);
+      List<Goods> goodsList = selectAllGoods(214214);
       for (int i = 0; i < goodsList.size(); i++) {
     %>
       <%=goodsList.get(i).getGname()%>

@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
-    <properties resource="com/mybatis/mybatisConfig.properties"/>
+    <properties resource="mybatis/mybatisConfig.properties"/>
 
     <environments default="development">
         <environment id="development">
@@ -19,12 +19,12 @@
     </environments>
 
     <mappers>
-        <mapper resource="com/mybatis/CompanyMapper.xml"/>
-        <mapper resource="com/mybatis/DamageMapper.xml"/>
-        <mapper resource="com/mybatis/DemandMapper.xml"/>
-        <mapper resource="com/mybatis/GainMapper.xml"/>
-        <mapper resource="com/mybatis/GoodsMapper.xml"/>
-        <mapper resource="com/mybatis/UserMapper.xml"/>
+        <mapper resource="com/mapper/CompanyMapper.xml"/>
+        <mapper resource="com/mapper/DamageMapper.xml"/>
+        <mapper resource="com/mapper/DemandMapper.xml"/>
+        <mapper resource="com/mapper/GainMapper.xml"/>
+        <mapper resource="com/mapper/GoodsMapper.xml"/>
+        <mapper resource="com/mapper/UserMapper.xml"/>
     </mappers>
 
 </configuration>
