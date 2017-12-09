@@ -1,0 +1,35 @@
+a:hover {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:link {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}
+#accordion {
+    margin-left: 40px
+}
+.list_choose {
+    width: 150px;
+    height: 40px;
+    background-color: #FFEC8B;
+    color: #EE7600;
+    line-height: 40px;
+    margin-bottom: 1px;
+}
+.list_choose:hover {
+    background-color: #FFFACD;
+    cursor:pointer;
+}
+.panel {
+    width: 150px;
+    padding: 0px;
+    text-align: center;
+}
+.panel-body{
+    padding: 0px;
+}
