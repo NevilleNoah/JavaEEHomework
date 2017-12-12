@@ -1,21 +1,20 @@
 package com.service;
 
 import com.dbtools.GetSqlSession;
-import com.entity.Goods;
-import com.entity.GoodsExample;
+import com.entity.Gain;
+import com.entity.GainExample;
 import org.apache.ibatis.session.SqlSession;
 
 import java.io.IOException;
 import java.util.List;
 
 /**
- * Created by asus on 2017/12/9/009.
+ * Created by asus on 2017/12/12/012.
  */
-public class GoodsManager {
-
+public class GainManager {
 
     /**
-     * 搜索库存物品
+     * 搜索领取归还的记录
      * @param companyId 公司ID
      * @param key 关键词
      * @param order 排序依据
@@ -23,40 +22,34 @@ public class GoodsManager {
      * @return
      * @throws IOException
      */
-    public static List<Goods> selectGoods(Integer companyId, String key, String order, Integer up) throws IOException {
+    public static List<Gain> selectGain(Integer companyId, String key, String order, Integer up) throws IOException {
         SqlSession sqlSession = GetSqlSession.getSqlSession();
-        GoodsExample goodsExample = new GoodsExample();
+        GainExample gainExample = new GainExample();
 
         //关键字为空则搜索全部，否则根据关键字搜索
         if(key == null || key.length()!=0) {
-            goodsExample.or().andCidEqualTo(companyId);
+            gainExample.or().andCidEqualTo(companyId);
         } else {
-            goodsExample.or().andCidEqualTo(companyId).andGnameLike("%"+key+"%");
-            goodsExample.or().andCidEqualTo(companyId).andClassifyLike("%"+key+"%");
+            gainExample.or().andCidEqualTo(companyId).andGnameLike("%"+key+"%");
         }
         //设置升序降序或默认排序
         String sortWay;
         if(up == 0) {
             sortWay = " ASC";
-            goodsExample.setOrderByClause(order+sortWay);
+            gainExample.setOrderByClause(order+sortWay);
 
         } else if(up == 1) {
             sortWay = " DESC";
-            goodsExample.setOrderByClause(order+sortWay);
+            gainExample.setOrderByClause(order+sortWay);
 
         } else {
 
         }
 
-        List<Goods> goodsList = sqlSession.selectList("com.dao.GoodsMapper.selectByExample", goodsExample);
+        List<Gain> gainList = sqlSession.selectList("com.dao.GainMapper.selectByExample", gainExample);
 
         sqlSession.commit();
         sqlSession.close();
-        return goodsList;
+        return gainList;
     }
-
-
-
-
-
 }

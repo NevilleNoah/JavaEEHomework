@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	/*-----------------------------------/
-	/*	TOP NAVIGATION AND LAYOUT
+	/*	顶部按钮的相关方法
 	/*----------------------------------*/
 
 	$('.btn-toggle-fullwidth').on('click', function() {
@@ -47,7 +47,7 @@ $(document).ready(function() {
 
 
 	/*-----------------------------------/
-	/*	SIDEBAR NAVIGATION
+	/*	侧边导航列表
 	/*----------------------------------*/
 
 	$('.sidebar a[data-toggle="collapse"]').on('click', function() {
@@ -67,7 +67,7 @@ $(document).ready(function() {
 
 
 	/*-----------------------------------/
-	/*	PANEL FUNCTIONS
+	/*	面板的相关方法
 	/*----------------------------------*/
 
 	// panel remove
@@ -109,7 +109,7 @@ $(document).ready(function() {
 
 
 	/*-----------------------------------/
-	/*	PANEL SCROLLING
+	/*	面板滚动
 	/*----------------------------------*/
 
 	if( $('.panel-scrolling').length > 0) {

@@ -1755,7 +1755,19 @@ ul.activity-timeline > li {
     width: 22px;
     border: 1px solid #CCC; }
 .sidebar {
+
   background-color: #2B333E;
-  width: 275px;
+  font-size: 13px;
 }
-/*# sourceMappingURL=main.css.map */
+
+.navbar-myset {
+  background-color: #080808;
+}
+#main-body {
+  height: auto;
+  max-height: 86%;
+  width: 84%;
+  margin-top: 60px;
+  margin-left: 15%;
+  float: left;
+}

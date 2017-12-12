@@ -864,7 +864,7 @@ public class UserExample {
             return (Criteria) this;
         }
 
-        public Criteria andCidEqualTo(String value) {
+        public Criteria andCidEqualTo(Integer value) {
             addCriterion("cid =", value, "cid");
             return (Criteria) this;
         }
