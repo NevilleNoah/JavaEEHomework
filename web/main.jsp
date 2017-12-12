@@ -20,6 +20,7 @@
     <script src="js/klorofil-common.js"></script>
 
 
+
     <!-- CSS -->
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
@@ -30,11 +31,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700">
 
     <script>
-        function getAllGoods(cid) {
+
+        function getGoods(cid, str, order, up) {
             $.ajax({
                 type: "POST",
-                url: "goods/getGoodsByCompanyId.form",
-                data: {cid:cid},
+                url: "goods/sortGoods.form",
+                data: {cid:cid, str:str, order:order, up:up},
                 dataType: "json",
                 success: function (goodsList) {
                     var html = "<table class='table table-striped' id='mainTable'> <tr> <th>商品名称</th> <th>商品类别</th> <th>价格</th> <th>库存</th> <th>总量</th> </tr>";
@@ -51,28 +53,7 @@
             });
         }
 
-        function sortGoodsCostBy(cid,up,str) {
-            $.ajax({
-                type: "POST",
-                url: "goods/sortGoodsByCost.form",
-                data: {cid:cid,up:up,str:str},
-                dataType: "json",
-                success: function (goodsList) {
-                    var html = "<table class='table table-striped' id='mainTable'> <tr> <th>商品名称</th> <th>商品类别</th> <th>价格</th> <th>库存</th> <th>总量</th> </tr>";
 
-                    for(var i=0;i<goodsList.length;i++){
-                        html=html+"<tr><td>"+goodsList[i].gname+"</td><td>"+goodsList[i].classify+"</td><td>"+goodsList[i].cost+"</td><td>"+goodsList[i].store+"</td><td>"+goodsList[i].total+"</td></tr>";
-                    }
-
-
-                    html= html+"</table>";
-                    $("#tableDiv").html(html);
-                },
-                error:function () {
-                    alert("error");
-                }
-            });
-        }
 
 
         $(document).ready(function () {
@@ -109,119 +90,7 @@
 <body>
 
 
-<%--<div id="mainDiv" >
-<div class="panel-group" id="accordion" style="" role="tablist" aria-multiselectable="true">
 
-    <div class="panel panel-default">
-        <div class="panel-heading" role="tab" id="headingOne">
-            <h4 class="panel-title">
-                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
-                   aria-expanded="false" aria-controls="collapseThree">
-                    库存管理
-                </a>
-            </h4>
-        </div>
-        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-            <div class="panel-body">
-                <div id="store_info" class="">
-                    库存信息
-                </div>
-                <div id="add_store" class="">
-                    添加总量
-                </div>
-                <div id="sub_store" class="">
-                    减少总量
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading" role="tab" id="headingTwo">
-            <h4 class="panel-title">
-                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
-                   aria-expanded="false" aria-controls="collapseTwo">
-                    需求管理
-                </a>
-            </h4>
-        </div>
-        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-            <div class="panel-body">
-                <div id="demand_info" class="">
-                    需求信息
-                </div>
-                <div id="demand_add" class="">
-                    添加需求
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading" role="tab" id="headingThree">
-            <h4 class="panel-title">
-                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
-                   aria-expanded="false" aria-controls="collapseThree">
-                    员工管理
-                </a>
-            </h4>
-        </div>
-        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-            <div class="panel-body">
-                <div id="employee_info" class="">
-                    员工信息
-                </div>
-                <div id="employee_add" class="">
-                    添加员工
-                </div>
-                <div id="employee_fire" class="">
-                    员工离职
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading" role="tab" id="headingFour">
-            <h4 class="panel-title">
-                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour"
-                   aria-expanded="false" aria-controls="collapseTwo">
-                    领取/归还
-                </a>
-            </h4>
-        </div>
-        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-            <div class="panel-body">
-                <div id="goods_take" class="">
-                    领取
-                </div>
-                <div id="goods_return" class="">
-                    归还
-                </div>
-                <div id="goods_record" class="">
-                    记录
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading" role="tab" id="headingFive">
-            <h4 class="panel-title">
-                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive"
-                   aria-expanded="false" aria-controls="collapseThree">
-                    损坏管理
-                </a>
-            </h4>
-        </div>
-        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
-            <div class="panel-body">
-                <div id="demage_add" class="">
-                    添加记录
-                </div>
-                <div id="demage_record" class="">
-                    损坏记录
-                </div>
-            </div>
-        </div>
-    </div>
-</div>--%>
 <div id="sidebar-nav" class="sidebar">
     <div class="sidebar-scroll">
         <nav>
@@ -280,10 +149,11 @@
 </div>
 <div id="tableDiv">
     <script>
-        sortGoodsCostBy(214214, false, "纸");
+        /*sortGoods(214214, true, "", "classify");*/
+        getGoods(214214, "", "", 2);
     </script>
 </div>
-<%--<input id="all" type="button" value="点击" onclick="getAllGoods()"/>--%>
+
 
 </div>
 </body>

@@ -17,9 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.service.GoodsManager.selectGoodsByCompanyId;
-import static com.service.GoodsManager.sortGoodsByCostDown;
-import static com.service.GoodsManager.sortGoodsByCostUp;
+import static com.service.GoodsManager.*;
 
 /**
  * Created by asus on 2017/12/10/010.
@@ -31,34 +29,32 @@ public class GoodsController {
     @RequestMapping("/getGoodsByCompanyId")
     @ResponseBody
     public List<Goods> getGoodsByCompanyId(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
         Integer cid = Integer.valueOf(request.getParameter("cid"));
         List<Goods> goodsList = selectGoodsByCompanyId(cid);
         return goodsList;
 
     }
 
-    @RequestMapping("/sortGoodsByCost")
+    @RequestMapping("/sortGoods")
     @ResponseBody
-    public List<Goods> sortGoodsByCost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        System.out.println("action");
+    public List<Goods> getGoods(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
         Integer cid = Integer.valueOf(request.getParameter("cid"));
         String str = request.getParameter("str");
-        Boolean up = Boolean.valueOf(request.getParameter("up"));
+        String order = request.getParameter("order");
+        Integer up = Integer.valueOf(request.getParameter("up"));
 
         List<Goods> goodsList;
+        goodsList = selectGoods(cid, str, order, up);
 
-        if(up) {
-            System.out.println("true");
-            goodsList = sortGoodsByCostUp(cid, str);
-        } else {
-            System.out.println("false");
-            goodsList = sortGoodsByCostDown(cid, str);
-        }
-        if(goodsList == null) {
-            System.out.println(goodsList.toString());
-        }
+
         return goodsList;
     }
+
+
+
+
 
 
 

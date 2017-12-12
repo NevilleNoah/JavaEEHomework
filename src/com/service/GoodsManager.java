@@ -40,16 +40,31 @@ public class GoodsManager {
      * @return 物品列表
      * @throws IOException
      */
-    public static List<Goods> sortGoodsByCostUp(Integer companyId, String gname) throws IOException {
-        System.out.println("begin sort");
+    public static List<Goods> selectGoods(Integer companyId, String gname, String order, Integer up) throws IOException {
         SqlSession sqlSession = GetSqlSession.getSqlSession();
-
         GoodsExample goodsExample = new GoodsExample();
         GoodsExample.Criteria criteria = goodsExample.createCriteria();
         criteria.andCidEqualTo(companyId);
-        criteria.andGnameLike("%"+gname+"%");
-        goodsExample.setOrderByClause("cost ASC");
-        System.out.println("set");
+
+        //关键字为空则搜索全部，否则根据关键字搜索
+        if(gname == null || gname.length()!=0) {
+
+        } else {
+            criteria.andGnameLike("%"+gname+"%");
+        }
+        //设置升序降序或默认排序
+        String sortWay;
+        if(up == 0) {
+            sortWay = " ASC";
+            goodsExample.setOrderByClause(order+sortWay);
+
+        } else if(up == 1) {
+            sortWay = " DESC";
+            goodsExample.setOrderByClause(order+sortWay);
+
+        } else {
+
+        }
 
         List<Goods> goodsList = sqlSession.selectList("com.dao.GoodsMapper.selectByExample", goodsExample);
 
@@ -58,75 +73,8 @@ public class GoodsManager {
         return goodsList;
     }
 
-    /**
-     * 按价格降序
-     * @param companyId 公司ID
-     * @return 物品列表
-     * @throws IOException
-     */
-    public static List<Goods> sortGoodsByCostDown(Integer companyId, String gname) throws IOException {
-        System.out.println("begin sort");
-        SqlSession sqlSession = GetSqlSession.getSqlSession();
 
-        GoodsExample goodsExample = new GoodsExample();
-        GoodsExample.Criteria criteria = goodsExample.createCriteria();
-        criteria.andCidEqualTo(companyId);
-        criteria.andGnameLike("%"+gname+"%");
-        goodsExample.setOrderByClause("cost DESC");
-        System.out.println("set");
 
-        List<Goods> goodsList = sqlSession.selectList("com.dao.GoodsMapper.selectByExample", goodsExample);
-
-        sqlSession.commit();
-        sqlSession.close();
-        return goodsList;
-    }
-
-    /**
-     * 按类别升序
-     * @param companyId
-     * @param gname
-     * @return
-     * @throws IOException
-     */
-    public static List<Goods> sortGoodsByClassifyUp(Integer companyId, String gname) throws IOException {
-        SqlSession sqlSession = GetSqlSession.getSqlSession();
-
-        GoodsExample goodsExample = new GoodsExample();
-        GoodsExample.Criteria criteria = goodsExample.createCriteria();
-        criteria.andCidEqualTo(companyId);
-        criteria.andGnameLike(gname);
-        goodsExample.setOrderByClause("classify ASC");
-
-        List<Goods> goodsList = sqlSession.selectList("com.dao.GoodsMapper.selectByExample", goodsExample);
-
-        sqlSession.commit();
-        sqlSession.close();
-        return goodsList;
-    }
-
-    /**
-     * 按类别降序
-     * @param companyId
-     * @param gname
-     * @return
-     * @throws IOException
-     */
-    public static List<Goods> sortClassifyByDown(Integer companyId, String gname) throws IOException {
-        SqlSession sqlSession = GetSqlSession.getSqlSession();
-
-        GoodsExample goodsExample = new GoodsExample();
-        GoodsExample.Criteria criteria = goodsExample.createCriteria();
-        criteria.andCidEqualTo(companyId);
-        criteria.andGnameLike(gname);
-        goodsExample.setOrderByClause("classify DESC");
-
-        List<Goods> goodsList = sqlSession.selectList("com.dao.GoodsMapper.selectByExample", goodsExample);
-
-        sqlSession.commit();
-        sqlSession.close();
-        return goodsList;
-    }
 
 
 }
