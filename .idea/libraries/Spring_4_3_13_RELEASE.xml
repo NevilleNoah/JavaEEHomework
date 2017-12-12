@@ -20,6 +20,9 @@
       <root url="jar://$PROJECT_DIR$/lib/spring-beans-4.3.13.RELEASE.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/spring-oxm-4.3.13.RELEASE.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/spring-context-4.3.13.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-annotations-2.9.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-core-2.9.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-databind-2.9.3.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

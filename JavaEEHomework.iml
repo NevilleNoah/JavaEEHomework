@@ -26,6 +26,5 @@
     <orderEntry type="library" exported="" name="Spring MVC-4.3.13.RELEASE" level="project" />
     <orderEntry type="library" exported="" name="mybatis" level="project" />
     <orderEntry type="library" exported="" name="Tomcat" level="project" />
-    <orderEntry type="library" name="all" level="project" />
   </component>
 </module>
