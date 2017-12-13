@@ -106,9 +106,9 @@ public class SelectController {
         List<User> userList;
         userList = selectUser(cid, str, order, up);
 
-
         return userList;
     }
+
 
 
 

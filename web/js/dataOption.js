@@ -2,10 +2,11 @@
  * Created by asus on 2017/12/12/012.
  */
 
+
 function getGoods(cid, key, order, up) {
     $.ajax({
         type: "POST",
-        url: "select/getGoods.form",
+        url: "../select/getGoods.form",
         data: {cid: cid, key: key, order: order, up: up},
         dataType: "json",
         success: function (data) {
