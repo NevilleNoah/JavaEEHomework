@@ -23,11 +23,11 @@ function getGoods(cid, key, order, up) {
     });
 }
 
-function getGain(cid, key, order, up) {
+function getGain(cid, part, key, order, up) {
     $.ajax({
         type: "POST",
         url: "select/getGain.form",
-        data: {cid: cid, key: key, order: order, up: up},
+        data: {cid: cid, part: part, key: key, order: order, up: up},
         dataType: "json",
         success: function (data) {
             var html = "<table class='table table-striped' id='mainTable'> <tr> <th>商品名称</th> <th>商品类别</th> <th>价格</th> <th>库存</th> <th>总量</th> </tr>";
@@ -43,11 +43,11 @@ function getGain(cid, key, order, up) {
     });
 }
 
-function getDemand(cid, key, order, up) {
+function getDemand(cid, part, key, order, up) {
     $.ajax({
         type: "POST",
         url: "select/getDemand.form",
-        data: {cid: cid, key: key, order: order, up: up},
+        data: {cid: cid, part: part, key: key, order: order, up: up},
         dataType: "json",
         success: function (goodsList) {
             var html = "<table class='table table-striped' id='mainTable'> <tr> <th>商品名称</th> <th>商品类别</th> <th>价格</th> <th>库存</th> <th>总量</th> </tr>";
@@ -64,11 +64,11 @@ function getDemand(cid, key, order, up) {
 }
 
 
-function getDamage(cid, key, order, up) {
+function getDamage(cid, part, key, order, up) {
     $.ajax({
         type: "POST",
         url: "select/getDamage.form",
-        data: {cid: cid, key: key, order: order, up: up},
+        data: {cid: cid, part: part, key: key, order: order, up: up},
         dataType: "json",
         success: function (goodsList) {
             var html = "<table class='table table-striped' id='mainTable'> <tr> <th>商品名称</th> <th>商品类别</th> <th>价格</th> <th>库存</th> <th>总量</th> </tr>";
@@ -84,11 +84,11 @@ function getDamage(cid, key, order, up) {
     });
 }
 
-function getUser(cid, key, order, up) {
+function getUser(cid, part, key, order, up) {
     $.ajax({
         type: "POST",
         url: "select/getUser.form",
-        data: {cid: cid, key: key, order: order, up: up},
+        data: {cid: cid, part: part, key: key, order: order, up: up},
         dataType: "json",
         success: function (goodsList) {
             var html = "<table class='table table-striped' id='mainTable'> <tr> <th>商品名称</th> <th>商品类别</th> <th>价格</th> <th>库存</th> <th>总量</th> </tr>";

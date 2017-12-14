@@ -2,38 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5edad083-3930-4073-a4cb-94122a823370" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/CompanyMapper.xml" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/CompanyMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/DamageMapper.xml" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/DamageMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/DemandMapper.xml" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/DemandMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/GainMapper.xml" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/GainMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/GoodsMapper.xml" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/GoodsMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/UserMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dao/CompanyMapper.java" afterPath="$PROJECT_DIR$/src/com/dao/CompanyMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dao/DamageMapper.java" afterPath="$PROJECT_DIR$/src/com/dao/DamageMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dao/DemandMapper.java" afterPath="$PROJECT_DIR$/src/com/dao/DemandMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dao/GainMapper.java" afterPath="$PROJECT_DIR$/src/com/dao/GainMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dao/GoodsMapper.java" afterPath="$PROJECT_DIR$/src/com/dao/GoodsMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dao/UserMapper.java" afterPath="$PROJECT_DIR$/src/com/dao/UserMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/entity/Company.java" afterPath="$PROJECT_DIR$/src/com/entity/Company.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/entity/CompanyExample.java" afterPath="$PROJECT_DIR$/src/com/entity/CompanyExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/entity/Damage.java" afterPath="$PROJECT_DIR$/src/com/entity/Damage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/entity/DamageExample.java" afterPath="$PROJECT_DIR$/src/com/entity/DamageExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/entity/Demand.java" afterPath="$PROJECT_DIR$/src/com/entity/Demand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/entity/DemandExample.java" afterPath="$PROJECT_DIR$/src/com/entity/DemandExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/entity/Gain.java" afterPath="$PROJECT_DIR$/src/com/entity/Gain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/entity/GainExample.java" afterPath="$PROJECT_DIR$/src/com/entity/GainExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/entity/Goods.java" afterPath="$PROJECT_DIR$/src/com/entity/Goods.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/entity/GoodsExample.java" afterPath="$PROJECT_DIR$/src/com/entity/GoodsExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/entity/User.java" afterPath="$PROJECT_DIR$/src/com/entity/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/entity/UserExample.java" afterPath="$PROJECT_DIR$/src/com/entity/UserExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mapper/CompanyMapper.xml" afterPath="$PROJECT_DIR$/src/com/mapper/CompanyMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mapper/DamageMapper.xml" afterPath="$PROJECT_DIR$/src/com/mapper/DamageMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mapper/DemandMapper.xml" afterPath="$PROJECT_DIR$/src/com/mapper/DemandMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mapper/GainMapper.xml" afterPath="$PROJECT_DIR$/src/com/mapper/GainMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mapper/GoodsMapper.xml" afterPath="$PROJECT_DIR$/src/com/mapper/GoodsMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/src/com/mapper/UserMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/service/GoodsManager.java" afterPath="$PROJECT_DIR$/src/com/service/GoodsManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/dataOption.js" afterPath="$PROJECT_DIR$/web/js/dataOption.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,8 +24,8 @@
       <file leaf-file-name="dataOption.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/js/dataOption.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="87" column="12" lean-forward="true" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="12" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc;n#getGoods#0" expanded="false" />
               </folding>
@@ -263,9 +232,9 @@
         <option value="$PROJECT_DIR$/src/com/controller/SelectController.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml" />
         <option value="$PROJECT_DIR$/src/com/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/web/js/dataOption.js" />
         <option value="$PROJECT_DIR$/src/mybatis/mybatisGeneratorRun.java" />
         <option value="$PROJECT_DIR$/src/com/service/GoodsManager.java" />
+        <option value="$PROJECT_DIR$/web/js/dataOption.js" />
       </list>
     </option>
   </component>
@@ -1271,12 +1240,12 @@
       <workItem from="1513049177032" duration="18497000" />
       <workItem from="1513080974449" duration="6965000" />
       <workItem from="1513131491877" duration="15481000" />
-      <workItem from="1513215971166" duration="142000" />
+      <workItem from="1513215971166" duration="454000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104509000" />
+    <option name="totallyTimeSpent" value="104821000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1704,8 +1673,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/dataOption.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="87" column="12" lean-forward="true" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="12" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc;n#getGoods#0" expanded="false" />
           </folding>
