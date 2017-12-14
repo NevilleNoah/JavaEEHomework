@@ -10,12 +10,64 @@ function getGoods(cid, key, order, up) {
         data: {cid: cid, key: key, order: order, up: up},
         dataType: "json",
         success: function (data) {
-            var html = "<table class='table table-striped' id='mainTable'> <tr> <th>商品名称</th> <th>商品类别</th> <th>价格</th> <th>库存</th> <th>总量</th> </tr>";
+            var html = '<div class="panel panel-primary">'
+                +'<div class="navbar navbar-inverse">'
+                +'<div class="container-fluid">'
+                +'<div id="header" class="navbar-header">'
+
+                +'<a id="title" class="navbar-brand">库存信息</a>'
+
+                +'</div>'
+                +'<div id="action-nav" class="collapse navbar-collapse">'
+                +'<form id="search" class="navbar-form navbar-right">'
+                +'<div class="form-group">'
+                +'<input type="text" class="form-control" placeholder="请输入您要搜索的内容">'
+                +'</div>'
+                +'<button type="submit" class="btn btn-default">搜索</button>'
+                +'</form>'
+                +'<ul id="part-choose" class="nav navbar-nav">'
+                +'<li class="dropdown">'
+                +'<a id="part-name" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"'
+                +'aria-haspopup="true" aria-expanded="false">选择部门<span class="caret"></span></a>'
+                +'<ul class="dropdown-menu">'
+                +'<li><a href="#">业务部</a></li>'
+                +'<li><a href="#">人事部</a></li>'
+                +'<li><a href="#">财政部</a></li>'
+                +'<li><a href="#">管理部</a></li>'
+                +'</ul>'
+                +'</li>'
+                +'</ul>'
+                +'<ul id="sort-choose" class="nav navbar-nav">'
+                +'<li class="dropdown">'
+                +'<a id="sort-name" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"'
+                +'aria-haspopup="true" aria-expanded="false">排序方式<span class="caret"></span></a>'
+                +'<ul class="dropdown-menu">'
+                +'<li><a href="#">按排序</a></li>'
+                +'<li><a href="#">按排序</a></li>'
+                +'<li><a href="#">按排序</a></li>'
+                +'<li><a href="#">按排序</a></li>'
+                +'</ul>'
+                +'</li>'
+                +'</ul>'
+                +'<ul id="up-choose" class="nav navbar-nav">'
+                +'<li class="dropdown">'
+                +'<a id="up-name" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"'
+                +'aria-haspopup="true" aria-expanded="false">升序/降序<span class="caret"></span></a>'
+                +'<ul class="dropdown-menu">'
+                +'<li><a href="#">升序</a></li>'
+                +'<li><a href="#">降序</a></li>'
+                +'</ul>'
+                +'</li>'
+                +'</ul>'
+                +'</div>'
+                +'</div>'
+                +'</div>'
+            html = html+ '<div id="table-div" class="panel-body"><table class="table table-striped" id="mainTable"> <tr> <th>商品名称</th> <th>商品类别</th> <th>价格</th> <th>库存</th> <th>总量</th> </tr>';
             for (var i = 0; i < data.length; i++) {
                 html = html + "<tr><td>" + data[i].gname + "</td><td>" + data[i].classify + "</td><td>" + data[i].cost + "</td><td>" + data[i].store + "</td><td>" + data[i].total + "</td></tr>";
             }
-            html = html + "</table>";
-            $("#table-div").html(html);
+            html = html + "</table></div>";
+            $("#main-body").html(html);
         },
         error: function () {
             alert("error");

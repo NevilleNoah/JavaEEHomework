@@ -2,41 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5edad083-3930-4073-a4cb-94122a823370" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/main.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/main.jsp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/User.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/UserExample$Criteria.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/UserExample$Criteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/UserExample$Criterion.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/UserExample$Criterion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/UserExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/UserExample$GeneratedCriteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/service/GoodsManager.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/service/GoodsManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/User.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/UserExample$Criteria.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/UserExample$Criteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/UserExample$Criterion.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/UserExample$Criterion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/UserExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/UserExample$GeneratedCriteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/service/GoodsManager.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/service/GoodsManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/CompanyMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/CompanyMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/DamageMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/DamageMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/DemandMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/DemandMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/GainMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/GainMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/GoodsMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/GoodsMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/UserMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/jsp/main.jsp" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/jsp/main.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/js/dataOption.js" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/js/dataOption.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/CompanyMapper.xml" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/CompanyMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/DamageMapper.xml" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/DamageMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/DemandMapper.xml" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/DemandMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/GainMapper.xml" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/GainMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/GoodsMapper.xml" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/GoodsMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/UserMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mapper/CompanyMapper.xml" afterPath="$PROJECT_DIR$/src/com/mapper/CompanyMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mapper/DamageMapper.xml" afterPath="$PROJECT_DIR$/src/com/mapper/DamageMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mapper/DemandMapper.xml" afterPath="$PROJECT_DIR$/src/com/mapper/DemandMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mapper/GainMapper.xml" afterPath="$PROJECT_DIR$/src/com/mapper/GainMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mapper/GoodsMapper.xml" afterPath="$PROJECT_DIR$/src/com/mapper/GoodsMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/src/com/mapper/UserMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/main.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/main.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/main.css" afterPath="$PROJECT_DIR$/web/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/dataOption.js" afterPath="$PROJECT_DIR$/web/js/dataOption.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,11 +23,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="dataOption.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dataOption.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/js/dataOption.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="103" column="7" lean-forward="true" selection-start-line="103" selection-start-column="7" selection-end-line="103" selection-end-column="7" />
+            <state relative-caret-position="247">
+              <caret line="90" column="10" lean-forward="true" selection-start-line="90" selection-start-column="10" selection-end-line="90" selection-end-column="10" />
               <folding>
                 <element signature="n#!!doc;n#getGoods#0" expanded="false" />
               </folding>
@@ -71,17 +39,17 @@
         <entry file="file://$PROJECT_DIR$/web/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="426">
-              <caret line="1783" column="19" lean-forward="false" selection-start-line="1783" selection-start-column="19" selection-end-line="1783" selection-end-column="19" />
+              <caret line="1783" column="16" lean-forward="false" selection-start-line="1783" selection-start-column="16" selection-end-line="1783" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/main.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-33">
-              <caret line="136" column="36" lean-forward="false" selection-start-line="136" selection-start-column="36" selection-end-line="136" selection-end-column="36" />
+            <state relative-caret-position="327">
+              <caret line="193" column="21" lean-forward="false" selection-start-line="193" selection-start-column="21" selection-end-line="193" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -128,6 +96,7 @@
       <find>&quot;gain&quot;</find>
       <find>&quot;goods&quot;</find>
       <find>&quot;user&quot;</find>
+      <find>submit</find>
     </findStrings>
     <replaceStrings>
       <replace>company</replace>
@@ -194,9 +163,9 @@
         <option value="$PROJECT_DIR$/src/com/mapper/GoodsMapper.xml" />
         <option value="$PROJECT_DIR$/src/com/mapper/UserMapper.xml" />
         <option value="$PROJECT_DIR$/web/main.jsp" />
-        <option value="$PROJECT_DIR$/web/js/dataOption.js" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/main.jsp" />
         <option value="$PROJECT_DIR$/web/css/main.css" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/main.jsp" />
+        <option value="$PROJECT_DIR$/web/js/dataOption.js" />
       </list>
     </option>
   </component>
@@ -1248,12 +1217,12 @@
       <workItem from="1513049177032" duration="18497000" />
       <workItem from="1513080974449" duration="6965000" />
       <workItem from="1513131491877" duration="15481000" />
-      <workItem from="1513215971166" duration="4502000" />
+      <workItem from="1513215971166" duration="5967000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108869000" />
+    <option name="totallyTimeSpent" value="110334000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1734,29 +1703,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/dataOption.js">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/main.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="103" column="7" lean-forward="true" selection-start-line="103" selection-start-column="7" selection-end-line="103" selection-end-column="7" />
-          <folding>
-            <element signature="n#!!doc;n#getGoods#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="327">
+          <caret line="193" column="21" lean-forward="false" selection-start-line="193" selection-start-column="21" selection-end-line="193" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="426">
-          <caret line="1783" column="19" lean-forward="false" selection-start-line="1783" selection-start-column="19" selection-end-line="1783" selection-end-column="19" />
+          <caret line="1783" column="16" lean-forward="false" selection-start-line="1783" selection-start-column="16" selection-end-line="1783" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/main.jsp">
+    <entry file="file://$PROJECT_DIR$/web/js/dataOption.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-33">
-          <caret line="136" column="36" lean-forward="false" selection-start-line="136" selection-start-column="36" selection-end-line="136" selection-end-column="36" />
-          <folding />
+        <state relative-caret-position="247">
+          <caret line="90" column="10" lean-forward="true" selection-start-line="90" selection-start-column="10" selection-end-line="90" selection-end-column="10" />
+          <folding>
+            <element signature="n#!!doc;n#getGoods#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
