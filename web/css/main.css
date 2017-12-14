@@ -1771,3 +1771,15 @@ ul.activity-timeline > li {
   margin-left: 15%;
   float: left;
 }
+#search {
+  float: right;
+}
+#part-choose {
+  float: right;
+}
+#header {
+  height: 80px;
+}
+#title {
+  margin-top: 15px;
+}

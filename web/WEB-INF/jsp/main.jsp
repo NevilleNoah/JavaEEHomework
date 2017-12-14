@@ -130,9 +130,37 @@
     </div>
     <div id="main-body">
         <div class="panel panel-primary">
-            <div class="panel-heading">
-                <h3 class="panel-title">库存信息</h3>
+            <div class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div id="header" class="navbar-header">
+
+                        <a id="title" class="navbar-brand">库存信息</a>
+
+                    </div>
+
+                    <div id="action-nav" class="collapse navbar-collapse">
+                        <form id="search" class="navbar-form navbar-right">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                        <ul id="part-choose" class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a id="part-name" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                   aria-haspopup="true" aria-expanded="false">选择部门<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">业务部</a></li>
+                                    <li><a href="#">人事部</a></li>
+                                    <li><a href="#">财政部</a></li>
+                                    <li><a href="#">管理部</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+
             <div id="table-div" class="panel-body">
                 <script>
                     getGoods(214214, "", "", 2);
