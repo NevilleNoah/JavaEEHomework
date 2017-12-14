@@ -32,7 +32,6 @@ public class GoodsManager {
             goodsExample.or().andCidEqualTo(companyId);
         } else {
             goodsExample.or().andCidEqualTo(companyId).andGnameLike("%"+key+"%");
-            goodsExample.or().andCidEqualTo(companyId).andClassifyLike("%"+key+"%");
         }
         //设置升序降序或默认排序
         String sortWay;
