@@ -1783,3 +1783,6 @@ ul.activity-timeline > li {
 #title {
   margin-top: 13px;
 }
+.choose:hover{
+  cursor: pointer;
+}

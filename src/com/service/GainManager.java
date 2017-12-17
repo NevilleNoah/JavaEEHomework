@@ -3,6 +3,7 @@ package com.service;
 import com.dbtools.GetSqlSession;
 import com.entity.Gain;
 import com.entity.GainExample;
+import com.entity.Goods;
 import org.apache.ibatis.session.SqlSession;
 
 import java.io.IOException;
@@ -22,28 +23,28 @@ public class GainManager {
      * @return
      * @throws IOException
      */
-    public static List<Gain> selectGain(Integer companyId, String key, String order, Integer up) throws IOException {
+    public static List<Gain> selectGain(Integer companyId, String part, String key, String order, String up) throws IOException {
         SqlSession sqlSession = GetSqlSession.getSqlSession();
         GainExample gainExample = new GainExample();
 
         //关键字为空则搜索全部，否则根据关键字搜索
-        if(key == null || key.length()!=0) {
+        if(key == null || key.length() == 0) {
             gainExample.or().andCidEqualTo(companyId);
         } else {
             gainExample.or().andCidEqualTo(companyId).andGnameLike("%"+key+"%");
         }
         //设置升序降序或默认排序
-        String sortWay;
-        if(up == 0) {
-            sortWay = " ASC";
-            gainExample.setOrderByClause(order+sortWay);
+        if(!order.equals("default")) {
+            String sortWay;
+            if (up.equals("升序")) {
+                sortWay = " ASC";
+                gainExample.setOrderByClause(order + sortWay);
+            } else if (up.equals("降序")) {
+                sortWay = " DESC";
+                gainExample.setOrderByClause(order + sortWay);
+            } else {
 
-        } else if(up == 1) {
-            sortWay = " DESC";
-            gainExample.setOrderByClause(order+sortWay);
-
-        } else {
-
+            }
         }
 
         List<Gain> gainList = sqlSession.selectList("com.dao.GainMapper.selectByExample", gainExample);

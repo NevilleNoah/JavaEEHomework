@@ -23,28 +23,25 @@ public class GoodsManager {
      * @return
      * @throws IOException
      */
-    public static List<Goods> selectGoods(Integer companyId, String key, String order, Integer up) throws IOException {
+    public static List<Goods> selectGoods(Integer companyId, String key, String order, String up) throws IOException {
         SqlSession sqlSession = GetSqlSession.getSqlSession();
         GoodsExample goodsExample = new GoodsExample();
-
         //关键字为空则搜索全部，否则根据关键字搜索
-        if(key == null || key.length()!=0) {
+        if(key == null || key.length() == 0) {
             goodsExample.or().andCidEqualTo(companyId);
         } else {
             goodsExample.or().andCidEqualTo(companyId).andGnameLike("%"+key+"%");
         }
         //设置升序降序或默认排序
-        String sortWay;
-        if(up == 0) {
-            sortWay = " ASC";
-            goodsExample.setOrderByClause(order+sortWay);
-
-        } else if(up == 1) {
-            sortWay = " DESC";
-            goodsExample.setOrderByClause(order+sortWay);
-
-        } else {
-
+        if(!order.equals("default")) {
+            String sortWay;
+            if (up.equals("升序")) {
+                sortWay = " ASC";
+                goodsExample.setOrderByClause(order + sortWay);
+            } else if (up.equals("降序")) {
+                sortWay = " DESC";
+                goodsExample.setOrderByClause(order + sortWay);
+            }
         }
 
         List<Goods> goodsList = sqlSession.selectList("com.dao.GoodsMapper.selectByExample", goodsExample);

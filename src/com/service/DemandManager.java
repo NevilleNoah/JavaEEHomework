@@ -22,28 +22,36 @@ public class DemandManager {
      * @return
      * @throws IOException
      */
-    public static List<Demand> selectDemand(Integer companyId, String key, String order, Integer up) throws IOException {
+    public static List<Demand> selectDemand(Integer companyId, String part, String key, String order, String up) throws IOException {
         SqlSession sqlSession = GetSqlSession.getSqlSession();
         DemandExample demandExample = new DemandExample();
 
         //关键字为空则搜索全部，否则根据关键字搜索
-        if (key == null || key.length() != 0) {
-            demandExample.or().andCidEqualTo(companyId);
+        if (key == null || key.length() == 0) {
+            if(part.equals("所有部门")) {
+                demandExample.or().andCidEqualTo(companyId);
+            } else {
+                demandExample.or().andCidEqualTo(companyId).andPartEqualTo(part);
+            }
         } else {
-            demandExample.or().andCidEqualTo(companyId).andGnameLike("%" + key + "%");
+            if(part.equals("所有部门")) {
+                demandExample.or().andCidEqualTo(companyId).andGnameLike("%" + key + "%");
+            } else {
+                demandExample.or().andCidEqualTo(companyId).andPartEqualTo(part).andGnameLike("%" + key + "%");
+            }
         }
         //设置升序降序或默认排序
-        String sortWay;
-        if (up == 0) {
-            sortWay = " ASC";
-            demandExample.setOrderByClause(order + sortWay);
+        if(!order.equals("default")) {
+            String sortWay;
+            if (up.equals("升序")) {
+                sortWay = " ASC";
+                demandExample.setOrderByClause(order + sortWay);
+            } else if (up.equals("降序")) {
+                sortWay = " DESC";
+                demandExample.setOrderByClause(order + sortWay);
+            } else {
 
-        } else if (up == 1) {
-            sortWay = " DESC";
-            demandExample.setOrderByClause(order + sortWay);
-
-        } else {
-
+            }
         }
 
         List<Demand> demandList = sqlSession.selectList("com.dao.DemandMapper.selectByExample", demandExample);

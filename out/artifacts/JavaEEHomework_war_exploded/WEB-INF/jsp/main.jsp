@@ -76,9 +76,9 @@
                             <span>库存管理</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
                         <div id="subPages1" class="collapse ">
                             <ul class="nav">
-                                <li><a class="">库存信息</a></li>
-                                <li><a class="">添加总量</a></li>
-                                <li><a class="">减少总量</a></li>
+                                <li><a class="choose" onclick="getGoods(214214, '', '', '默认排序')">库存信息</a></li>
+                                <li><a class="choose">添加总量</a></li>
+                                <li><a class="choose">减少总量</a></li>
                             </ul>
                         </div>
                     </li>
@@ -87,8 +87,8 @@
                             <span>需求管理</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
                         <div id="subPages2" class="collapse">
                             <ul class="nav">
-                                <li><a class="">需求信息</a></li>
-                                <li><a class="">添加需求</a></li>
+                                <li><a class="choose" onclick="getDemand(214214, '所有部门', '', '', '默认排序')">需求信息</a></li>
+                                <li><a class="choose">添加需求</a></li>
                             </ul>
                         </div>
                     </li>
@@ -97,9 +97,9 @@
                             <span>员工管理</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
                         <div id="subPages3" class="collapse">
                             <ul class="nav">
-                                <li><a class="">员工信息</a></li>
-                                <li><a class="">添加员工</a></li>
-                                <li><a class="">离职员工</a></li>
+                                <li><a class="choose" onclick="getUser(214214, '所有部门', '', '', '默认排序')">员工信息</a></li>
+                                <li><a class="choose">添加员工</a></li>
+                                <li><a class="choose">离职员工</a></li>
                             </ul>
                         </div>
                     </li>
@@ -108,9 +108,9 @@
                             <span>领取/归还</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
                         <div id="subPages4" class="collapse ">
                             <ul class="nav">
-                                <li><a class="">信息记录</a></li>
-                                <li><a class="">领取物品</a></li>
-                                <li><a class="">归还物品</a></li>
+                                <li><a class="choose" onclick="getGain(214214, '所有部门', '', '', '默认排序')">信息记录</a></li>
+                                <li><a class="choose">领取物品</a></li>
+                                <li><a class="choose">归还物品</a></li>
                             </ul>
                         </div>
                     </li>
@@ -119,8 +119,8 @@
                             <span>损坏管理</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
                         <div id="subPages5" class="collapse ">
                             <ul class="nav">
-                                <li><a class="">损坏记录</a></li>
-                                <li><a class="">添加记录</a></li>
+                                <li><a class="choose" onclick="getDamage(214214, '所有部门', '', '', '默认排序')">损坏记录</a></li>
+                                <li><a class="choose">添加记录</a></li>
                             </ul>
                         </div>
                     </li>
@@ -129,69 +129,6 @@
         </div>
     </div>
     <div id="main-body">
-        <%--<div class="panel panel-primary">
-            <div class="navbar navbar-inverse">
-                <div class="container-fluid">
-                    <div id="header" class="navbar-header">
-
-                        <a id="title" class="navbar-brand">库存信息</a>
-
-                    </div>
-                    <div id="action-nav" class="collapse navbar-collapse">
-                        <form id="search" class="navbar-form navbar-right">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="请输入您要搜索的内容">
-                            </div>
-                            <button type="submit" class="btn btn-default">搜索</button>
-                        </form>
-                        <ul id="part-choose" class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a id="part-name" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                   aria-haspopup="true" aria-expanded="false">选择部门<span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">业务部</a></li>
-                                    <li><a href="#">人事部</a></li>
-                                    <li><a href="#">财政部</a></li>
-                                    <li><a href="#">管理部</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <ul id="sort-choose" class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a id="sort-name" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                   aria-haspopup="true" aria-expanded="false">排序方式<span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">按排序</a></li>
-                                    <li><a href="#">按排序</a></li>
-                                    <li><a href="#">按排序</a></li>
-                                    <li><a href="#">按排序</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <ul id="up-choose" class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a id="up-name" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                   aria-haspopup="true" aria-expanded="false">升序/降序<span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">升序</a></li>
-                                    <li><a href="#">降序</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div id="table-div" class="panel-body">
-                <script>
-                    getGoods(214214, "", "", 2);
-                </script>
-            </div>
-        </div>
-    </div>--%>
-            <script>
-                getGoods(214214, "", "", 2);
-            </script>
 </div>
 
 

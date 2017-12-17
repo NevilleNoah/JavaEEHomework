@@ -21,28 +21,36 @@ public class UserManager {
      * @return
      * @throws IOException
      */
-    public static List<User> selectUser(Integer companyId, String key, String order, Integer up) throws IOException {
+    public static List<User> selectUser(Integer companyId, String part, String key, String order, String up) throws IOException {
         SqlSession sqlSession = GetSqlSession.getSqlSession();
         UserExample userExample = new UserExample();
 
         //关键字为空则搜索全部，否则根据关键字搜索
-        if(key == null || key.length()!=0) {
-            userExample.or().andCidEqualTo(companyId);
+        if(key == null || key.length() == 0) {
+            if(part.equals("所有部门")) {
+                userExample.or().andCidEqualTo(companyId);
+            } else {
+                userExample.or().andCidEqualTo(companyId).andPartEqualTo(part);
+            }
         } else {
-            userExample.or().andCidEqualTo(companyId).andNameLike("%"+key+"%");
+            if(part.equals("所有部门")) {
+                userExample.or().andCidEqualTo(companyId).andNameLike("%"+key+"%");
+            } else {
+                userExample.or().andCidEqualTo(companyId).andPartEqualTo(part).andNameLike("%"+key+"%");
+            }
         }
         //设置升序降序或默认排序
-        String sortWay;
-        if(up == 0) {
-            sortWay = " ASC";
-            userExample.setOrderByClause(order+sortWay);
+        if(!order.equals("default")) {
+            String sortWay;
+            if (up.equals("升序")) {
+                sortWay = " ASC";
+                userExample.setOrderByClause(order + sortWay);
+            } else if (up.equals("降序")) {
+                sortWay = " DESC";
+                userExample.setOrderByClause(order + sortWay);
+            } else {
 
-        } else if(up == 1) {
-            sortWay = " DESC";
-            userExample.setOrderByClause(order+sortWay);
-
-        } else {
-
+            }
         }
 
         List<User> userList = sqlSession.selectList("com.dao.UserMapper.selectByExample", userExample);

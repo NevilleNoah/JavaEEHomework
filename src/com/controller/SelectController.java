@@ -35,13 +35,12 @@ public class SelectController {
     public List<Goods> getGoods(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         Integer cid = Integer.valueOf(request.getParameter("cid"));
-        String str = request.getParameter("str");
+        String key = request.getParameter("key");
         String order = request.getParameter("order");
-        Integer up = Integer.valueOf(request.getParameter("up"));
+        String up = request.getParameter("up");
 
         List<Goods> goodsList;
-        goodsList = selectGoods(cid, str, order, up);
-
+        goodsList = selectGoods(cid, key, order, up);
 
         return goodsList;
     }
@@ -51,13 +50,13 @@ public class SelectController {
     public List<Gain> getGain(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         Integer cid = Integer.valueOf(request.getParameter("cid"));
+        String part = request.getParameter("part");
         String str = request.getParameter("str");
         String order = request.getParameter("order");
-        Integer up = Integer.valueOf(request.getParameter("up"));
+        String up = request.getParameter("up");
 
         List<Gain> gainList;
-        gainList = selectGain(cid, str, order, up);
-
+        gainList = selectGain(cid, part, str, order, up);
 
         return gainList;
     }
@@ -67,12 +66,13 @@ public class SelectController {
     public List<Damage> getDamage(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         Integer cid = Integer.valueOf(request.getParameter("cid"));
+        String part = request.getParameter("part");
         String str = request.getParameter("str");
         String order = request.getParameter("order");
-        Integer up = Integer.valueOf(request.getParameter("up"));
+        String up = request.getParameter("up");
 
         List<Damage> damageList;
-        damageList = selectDamage(cid, str, order, up);
+        damageList = selectDamage(cid, part, str, order, up);
 
 
         return damageList;
@@ -83,12 +83,13 @@ public class SelectController {
     public List<Demand> getDemand(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         Integer cid = Integer.valueOf(request.getParameter("cid"));
+        String part = request.getParameter("part");
         String str = request.getParameter("str");
         String order = request.getParameter("order");
-        Integer up = Integer.valueOf(request.getParameter("up"));
+        String up = request.getParameter("up");
 
         List<Demand> demandList;
-        demandList = selectDemand(cid, str, order, up);
+        demandList = selectDemand(cid, part, str, order, up);
 
 
         return demandList;
@@ -99,12 +100,13 @@ public class SelectController {
     public List<User> getUser(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         Integer cid = Integer.valueOf(request.getParameter("cid"));
+        String part = request.getParameter("part");
         String str = request.getParameter("str");
         String order = request.getParameter("order");
-        Integer up = Integer.valueOf(request.getParameter("up"));
+        String up = request.getParameter("up");
 
         List<User> userList;
-        userList = selectUser(cid, str, order, up);
+        userList = selectUser(cid, part, str, order, up);
 
         return userList;
     }
