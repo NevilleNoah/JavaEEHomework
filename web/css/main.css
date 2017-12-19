@@ -1786,3 +1786,45 @@ ul.activity-timeline > li {
 .choose:hover{
   cursor: pointer;
 }
+#take-goods {
+  margin-left: 20px;
+  width: 400px;
+  height: 470px;
+  overflow-y: scroll;
+  float: left;
+}
+#take-add-goods {
+  margin-left: 20px;
+  width: 826px;
+  height: 470px;
+  overflow-y: scroll;
+  float: left;
+}
+#take-title1 {
+  margin-left: 20px;
+  width: 400px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 20px;
+  float: left;
+}
+#take-title2 {
+  margin-left: 20px;
+  width: 830px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 20px;
+  float: left;
+}
+#take-button {
+  float: right;
+  margin-right: 10px;
+}
+.td-center{
+  text-align: center;
+}
+#take-board {
+  height: 540px;
+}

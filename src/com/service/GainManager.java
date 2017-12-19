@@ -1,13 +1,16 @@
 package com.service;
 
+import com.dao.GainGoodsMapper;
 import com.dbtools.GetSqlSession;
-import com.entity.Gain;
-import com.entity.GainExample;
-import com.entity.Goods;
+import com.entity.*;
 import org.apache.ibatis.session.SqlSession;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by asus on 2017/12/12/012.
@@ -53,4 +56,99 @@ public class GainManager {
         sqlSession.close();
         return gainList;
     }
+
+    public static List<GainGoods> selectGainGoods(Integer cid) throws IOException {
+        SqlSession sqlSession = GetSqlSession.getSqlSession();
+        GainGoodsExample gainGoodsExample = new GainGoodsExample();
+        gainGoodsExample.or().andCidEqualTo(cid);
+
+        List<GainGoods> gainGoodsList = sqlSession.selectList("com.dao.GainGoodsMapper.selectByExample",gainGoodsExample);
+
+        sqlSession.commit();
+        sqlSession.close();
+        return gainGoodsList;
+    }
+
+    public static void clearGainGoods(Integer cid) throws IOException {
+
+        SqlSession sqlSession = GetSqlSession.getSqlSession();
+
+        GainGoodsExample gainGoodsExample = new GainGoodsExample();
+        gainGoodsExample.or().andCidEqualTo(cid);
+
+        sqlSession.delete("com.dao.GainGoodsMapper.deleteByExample", gainGoodsExample);
+
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
+
+    public static boolean gainGoodsCheckRepeat(Integer cid, String gname) throws IOException {
+        SqlSession sqlSession = GetSqlSession.getSqlSession();
+
+        GainGoodsExample example = new GainGoodsExample();
+        example.or().andCidEqualTo(cid).andGnameLike(gname);
+
+        List<GainGoods> gainGoods = sqlSession.selectList("com.dao.GainGoodsMapper.selectByExample", example);
+
+        sqlSession.commit();
+        sqlSession.close();
+
+        return gainGoods != null;
+    }
+
+    public static void addGainGoods(Integer cid, String gname, Integer number) throws IOException {
+
+        SqlSession sqlSession = GetSqlSession.getSqlSession();
+
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("com/beans.xml");
+        GainGoods gainGoods = (GainGoods) applicationContext.getBean("gainGoods");
+
+        gainGoods.setCid(cid);
+        gainGoods.setGname(gname);
+        gainGoods.setNumber(number);
+
+        GainGoodsMapper gainGoodsMapper = sqlSession.getMapper(GainGoodsMapper.class);
+        gainGoodsMapper.insert(gainGoods);
+
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
+    public static void deleteGainGoods(Integer cid, String gname) throws IOException {
+
+        SqlSession sqlSession = GetSqlSession.getSqlSession();
+
+        GainGoodsMapper gainGoodsMapper = sqlSession.getMapper(GainGoodsMapper.class);
+
+        GainGoodsExample example = new GainGoodsExample();
+        example.or().andCidEqualTo(cid).andGnameEqualTo(gname);
+
+        gainGoodsMapper.deleteByExample(example);
+
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
+    public static void updateGainGoods(Integer cid, String gname, Integer number) throws IOException {
+
+        SqlSession sqlSession = GetSqlSession.getSqlSession();
+
+        GainGoodsExample example = new GainGoodsExample();
+        example.or().andCidEqualTo(cid).andGnameEqualTo(gname);
+
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("com/beans.xml");
+        GainGoods gainGoods = (GainGoods) applicationContext.getBean("gainGoods");
+
+        gainGoods.setCid(cid);
+        gainGoods.setGname(gname);
+        gainGoods.setNumber(number);
+
+        GainGoodsMapper gainGoodsMapper = sqlSession.getMapper(GainGoodsMapper.class);
+        gainGoodsMapper.updateByExample(gainGoods, example);
+
+        sqlSession.commit();
+        sqlSession.close();
+    }
 }
+

@@ -2,58 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5edad083-3930-4073-a4cb-94122a823370" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/beans.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/controller/AddController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/controller/DeleteController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/controller/TableController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/controller/LoginController.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/controller/LoginController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/controller/SelectController.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/controller/SelectController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/Company.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/Company.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/CompanyExample$Criteria.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/CompanyExample$Criteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/CompanyExample$Criterion.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/CompanyExample$Criterion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/CompanyExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/CompanyExample$GeneratedCriteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/Damage.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/Damage.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/DamageExample$Criteria.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/DamageExample$Criteria.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/DamageExample$Criterion.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/DamageExample$Criterion.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/DamageExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/DamageExample$GeneratedCriteria.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/DamageExample.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/DamageExample.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/Demand.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/Demand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/DemandExample$Criteria.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/DemandExample$Criteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/DemandExample$Criterion.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/DemandExample$Criterion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/DemandExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/DemandExample$GeneratedCriteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/Gain.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/Gain.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/GainExample$Criteria.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/GainExample$Criteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/GainExample$Criterion.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/GainExample$Criterion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/GainExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/GainExample$GeneratedCriteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/User.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/UserExample$Criteria.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/UserExample$Criteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/UserExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/UserExample$GeneratedCriteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/service/DamageManager.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/service/DamageManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/service/DemandManager.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/service/DemandManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/service/GainManager.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/service/GainManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/service/GoodsManager.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/service/GoodsManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/service/UserManager.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/service/UserManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/controller/LoginController.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/controller/LoginController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/controller/SelectController.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/controller/SelectController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/Company.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/Company.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/CompanyExample$Criteria.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/CompanyExample$Criteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/CompanyExample$Criterion.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/CompanyExample$Criterion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/CompanyExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/CompanyExample$GeneratedCriteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/Damage.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/Damage.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/DamageExample$Criteria.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/DamageExample$Criteria.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/DamageExample$Criterion.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/DamageExample$Criterion.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/DamageExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/DamageExample$GeneratedCriteria.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/DamageExample.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/DamageExample.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/Demand.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/Demand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/DemandExample$Criteria.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/DemandExample$Criteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/DemandExample$Criterion.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/DemandExample$Criterion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/DemandExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/DemandExample$GeneratedCriteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/Gain.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/Gain.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/GainExample$Criteria.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/GainExample$Criteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/GainExample$Criterion.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/GainExample$Criterion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/GainExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/GainExample$GeneratedCriteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/User.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/UserExample$Criteria.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/UserExample$Criteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/UserExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/UserExample$GeneratedCriteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/service/DamageManager.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/service/DamageManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/service/DemandManager.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/service/DemandManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/service/GainManager.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/service/GainManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/service/GoodsManager.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/service/GoodsManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/service/UserManager.class" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/service/UserManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/CompanyMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/CompanyMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/DamageMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/DamageMapper.xml" />
@@ -61,6 +27,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/GainMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/GainMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/GoodsMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/GoodsMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/UserMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/mybatis/mybatisConfig.xml" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/mybatis/mybatisConfig.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/mybatis/mybatisGeneratorConfig.xml" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/mybatis/mybatisGeneratorConfig.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/jsp/main.jsp" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/jsp/main.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/css/main.css" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/js/dataOption.js" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/js/dataOption.js" />
@@ -70,6 +38,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/GainMapper.xml" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/GainMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/GoodsMapper.xml" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/GoodsMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/UserMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/mybatis/mybatisConfig.xml" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/mybatis/mybatisConfig.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/mybatis/mybatisGeneratorConfig.xml" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/mybatis/mybatisGeneratorConfig.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/com/controller/LoginController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/controller/SelectController.java" afterPath="$PROJECT_DIR$/src/com/controller/SelectController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dao/CompanyMapper.java" afterPath="$PROJECT_DIR$/src/com/dao/CompanyMapper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dao/DamageMapper.java" afterPath="$PROJECT_DIR$/src/com/dao/DamageMapper.java" />
@@ -95,11 +66,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mapper/GainMapper.xml" afterPath="$PROJECT_DIR$/src/com/mapper/GainMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mapper/GoodsMapper.xml" afterPath="$PROJECT_DIR$/src/com/mapper/GoodsMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/src/com/mapper/UserMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/service/DamageManager.java" afterPath="$PROJECT_DIR$/src/com/service/DamageManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/service/DemandManager.java" afterPath="$PROJECT_DIR$/src/com/service/DemandManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/service/GainManager.java" afterPath="$PROJECT_DIR$/src/com/service/GainManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/service/GoodsManager.java" afterPath="$PROJECT_DIR$/src/com/service/GoodsManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/service/UserManager.java" afterPath="$PROJECT_DIR$/src/com/service/UserManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mybatis/mybatisConfig.xml" afterPath="$PROJECT_DIR$/src/mybatis/mybatisConfig.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mybatis/mybatisGeneratorConfig.xml" afterPath="$PROJECT_DIR$/src/mybatis/mybatisGeneratorConfig.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/main.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/main.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/main.css" afterPath="$PROJECT_DIR$/web/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/dataOption.js" afterPath="$PROJECT_DIR$/web/js/dataOption.js" />
@@ -121,52 +90,47 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="main.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/main.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2147">
-              <caret line="113" column="33" lean-forward="false" selection-start-line="113" selection-start-column="33" selection-end-line="113" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DemandManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/service/DemandManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="43" column="33" lean-forward="false" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GainManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/service/GainManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="36" column="33" lean-forward="false" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-              <folding />
+            <state relative-caret-position="-179">
+              <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GoodsManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/service/GoodsManager.java">
+      <file leaf-file-name="GainGoodsMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mapper/GainGoodsMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-50">
-              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="-408">
+              <caret line="211" column="29" lean-forward="false" selection-start-line="211" selection-start-column="14" selection-end-line="211" selection-end-column="29" />
+              <folding>
+                <marker date="1513658262627" expanded="true" signature="4506:4613" ph="select from gaingoods" />
+                <marker date="1513658262627" expanded="true" signature="4896:4957" ph="delete from " />
+                <marker date="1513658262627" expanded="true" signature="5247:5268" ph="delete from " />
+                <marker date="1513658262627" expanded="true" signature="5634:5768" ph="insert into gaingoods... " />
+                <marker date="1513658262627" expanded="true" signature="6936:6966" ph="select count... gaingoods" />
+                <marker date="1513658262627" expanded="true" signature="8038:8197" ph="update gaing... " />
+                <marker date="1513658262627" expanded="true" signature="8594:8848" ph="update gaing... " />
+                <marker date="1513658262627" expanded="true" signature="9134:9275" ph="update gaing... " />
+                <marker date="1513658262627" expanded="true" signature="9150:9275" ph="update &quot;gain... " />
+                <marker date="1513658262627" expanded="true" signature="9273:9275" ph="update gaing... " />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SelectController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/controller/SelectController.java">
+      <file leaf-file-name="TableController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/controller/TableController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="467">
+              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -174,30 +138,18 @@
       <file leaf-file-name="dataOption.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/js/dataOption.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1878">
-              <caret line="199" column="84" lean-forward="false" selection-start-line="199" selection-start-column="73" selection-end-line="199" selection-end-column="84" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/service/UserManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="42" column="33" lean-forward="false" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+            <state relative-caret-position="-1">
+              <caret line="726" column="217" lean-forward="false" selection-start-line="726" selection-start-column="217" selection-end-line="726" selection-end-column="217" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DamageManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/service/DamageManager.java">
+      <file leaf-file-name="main.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/main.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6">
-              <caret line="43" column="33" lean-forward="false" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+            <state relative-caret-position="332">
+              <caret line="171" column="128" lean-forward="false" selection-start-line="171" selection-start-column="128" selection-end-line="171" selection-end-column="128" />
               <folding />
             </state>
           </provider>
@@ -208,36 +160,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="spring-beans.schema" />
         <option value="Jsp File" />
         <option value="JavaScript File" />
-        <option value="Class" />
         <option value="CSS File" />
+        <option value="spring-beans.schema" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mainDIV</find>
-      <find>assets/</find>
-      <find>_parent</find>
-      <find>like</find>
-      <find>selectBy</find>
-      <find>selectByExam</find>
-      <find>Goods</find>
-      <find>gname</find>
-      <find>goodsList</find>
-      <find>tableDiv</find>
-      <find>damage</find>
       <find>id=&quot;basic-addon1&quot;</find>
       <find>lnr</find>
-      <find>select</find>
-      <find>&quot;demand&quot;</find>
-      <find>&quot;gain&quot;</find>
-      <find>&quot;goods&quot;</find>
-      <find>&quot;company&quot;</find>
-      <find>&quot;damage&quot;</find>
-      <find>&quot;user&quot;</find>
       <find>排序方式</find>
       <find>选择部门</find>
       <find>damageList</find>
@@ -248,6 +182,24 @@
       <find>submit</find>
       <find>demand</find>
       <find>goods</find>
+      <find>&quot;goods&quot;</find>
+      <find>&quot;user&quot;</find>
+      <find>&quot;gain&quot;</find>
+      <find>&quot;demand&quot;</find>
+      <find>&quot;damage&quot;</find>
+      <find>&quot;company&quot;</find>
+      <find>delete</find>
+      <find>&quot;gaingoods&quot;</find>
+      <find>214214</find>
+      <find>selectByExample</find>
+      <find>214214,</find>
+      <find>in</find>
+      <find>insertS</find>
+      <find>selectByP</find>
+      <find>insert</find>
+      <find>select</find>
+      <find>update</find>
+      <find>updateByExample</find>
     </findStrings>
     <replaceStrings>
       <replace>public</replace>
@@ -255,16 +207,18 @@
       <replace>key</replace>
       <replace>table-div</replace>
       <replace>Demand</replace>
-      <replace>goods</replace>
-      <replace>company</replace>
       <replace>默认排序</replace>
       <replace>所有部门</replace>
       <replace>data</replace>
-      <replace>gain</replace>
       <replace>sort</replace>
-      <replace>demand</replace>
+      <replace>goods</replace>
       <replace>user</replace>
+      <replace>gain</replace>
+      <replace>demand</replace>
       <replace>damage</replace>
+      <replace>company</replace>
+      <replace>gaingoods</replace>
+      <replace>$(&quot;#cid&quot;).val()</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -281,9 +235,7 @@
         <option value="$PROJECT_DIR$/src/mybatis/mybatisConfig.properties" />
         <option value="$PROJECT_DIR$/web/main.html" />
         <option value="$PROJECT_DIR$/web/js/main.js" />
-        <option value="$PROJECT_DIR$/src/mybatis/mybatisGeneratorConfig.xml" />
         <option value="$PROJECT_DIR$/src/com/dbtools/GetSqlSession.java" />
-        <option value="$PROJECT_DIR$/src/mybatis/mybatisConfig.xml" />
         <option value="$PROJECT_DIR$/src/com/entity/Goods.java" />
         <option value="$PROJECT_DIR$/src/com/dbtools/JsonUtil.java" />
         <option value="$PROJECT_DIR$/JavaEEHomework.iml" />
@@ -302,25 +254,33 @@
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml" />
-        <option value="$PROJECT_DIR$/src/com/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/mybatis/mybatisGeneratorRun.java" />
         <option value="$PROJECT_DIR$/web/main.jsp" />
+        <option value="$PROJECT_DIR$/src/com/entity/DamageExample.java" />
+        <option value="$PROJECT_DIR$/src/com/service/UserManager.java" />
+        <option value="$PROJECT_DIR$/src/com/service/DemandManager.java" />
+        <option value="$PROJECT_DIR$/src/com/service/DamageManager.java" />
         <option value="$PROJECT_DIR$/web/css/main.css" />
+        <option value="$PROJECT_DIR$/src/com/entity/GainGoods.java" />
         <option value="$PROJECT_DIR$/src/com/mapper/CompanyMapper.xml" />
+        <option value="$PROJECT_DIR$/src/com/mapper/DamageMapper.xml" />
         <option value="$PROJECT_DIR$/src/com/mapper/DemandMapper.xml" />
         <option value="$PROJECT_DIR$/src/com/mapper/GainMapper.xml" />
         <option value="$PROJECT_DIR$/src/com/mapper/GoodsMapper.xml" />
         <option value="$PROJECT_DIR$/src/com/mapper/UserMapper.xml" />
-        <option value="$PROJECT_DIR$/src/com/entity/DamageExample.java" />
-        <option value="$PROJECT_DIR$/src/com/mapper/DamageMapper.xml" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/main.jsp" />
-        <option value="$PROJECT_DIR$/src/com/service/GainManager.java" />
-        <option value="$PROJECT_DIR$/src/com/service/UserManager.java" />
-        <option value="$PROJECT_DIR$/src/com/service/DemandManager.java" />
-        <option value="$PROJECT_DIR$/src/com/service/DamageManager.java" />
-        <option value="$PROJECT_DIR$/src/com/service/GoodsManager.java" />
-        <option value="$PROJECT_DIR$/web/js/dataOption.js" />
+        <option value="$PROJECT_DIR$/src/mybatis/mybatisGeneratorConfig.xml" />
+        <option value="$PROJECT_DIR$/src/com/controller/DeleteController.java" />
         <option value="$PROJECT_DIR$/src/com/controller/SelectController.java" />
+        <option value="$PROJECT_DIR$/src/com/beans.xml" />
+        <option value="$PROJECT_DIR$/src/com/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/com/controller/AddController.java" />
+        <option value="$PROJECT_DIR$/src/com/service/GoodsManager.java" />
+        <option value="$PROJECT_DIR$/src/mybatis/mybatisConfig.xml" />
+        <option value="$PROJECT_DIR$/src/com/mapper/GainGoodsMapper.xml" />
+        <option value="$PROJECT_DIR$/src/com/service/GainManager.java" />
+        <option value="$PROJECT_DIR$/src/com/controller/TableController.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/main.jsp" />
+        <option value="$PROJECT_DIR$/web/js/dataOption.js" />
       </list>
     </option>
   </component>
@@ -373,8 +333,8 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -465,46 +425,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaEEHomework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaEEHomework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linearicons" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaEEHomework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaEEHomework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -542,6 +462,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="mybatis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaEEHomework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaEEHomework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -629,25 +567,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dbtools" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaEEHomework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaEEHomework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -703,22 +623,22 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Study\JavaEEHomework\web\WEB-INF\jsp" />
-      <recent name="E:\Study\JavaEEHomework\web" />
-      <recent name="E:\Study\JavaEEHomework\web\WEB-INF" />
-      <recent name="E:\Study\JavaEEHomework" />
-      <recent name="E:\Study\JavaEEHomework\web\WEB-INF\lib" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.dbtools" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Study\JavaEEHomework\web\js" />
       <recent name="E:\Study\JavaEEHomework\web" />
       <recent name="E:\Study\JavaEEHomework\web\css" />
       <recent name="E:\Study\JavaEEHomework\lib" />
       <recent name="E:\Study\JavaEEHomework\tld" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.dbtools" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Study\JavaEEHomework\src\com" />
+      <recent name="E:\Study\JavaEEHomework\web\WEB-INF\jsp" />
+      <recent name="E:\Study\JavaEEHomework\web" />
+      <recent name="E:\Study\JavaEEHomework\web\WEB-INF" />
+      <recent name="E:\Study\JavaEEHomework" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.index.jsp">
@@ -1397,11 +1317,15 @@
       <workItem from="1513215971166" duration="5967000" />
       <workItem from="1513228012953" duration="16668000" />
       <workItem from="1513304096545" duration="14767000" />
+      <workItem from="1513488134423" duration="1475000" />
+      <workItem from="1513490176549" duration="3637000" />
+      <workItem from="1513506337183" duration="4178000" />
+      <workItem from="1513649872136" duration="16879000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141769000" />
+    <option name="totallyTimeSpent" value="167938000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1414,7 +1338,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1436,10 +1360,10 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2923077" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28639054" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289941" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2311828" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24569893" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1495,7 +1419,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1504,72 +1428,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/JavaEEHomework.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="29" column="9" lean-forward="false" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/bootstrap.min.css" />
-    <entry file="file://$PROJECT_DIR$/web/css/font-awesome.min.css" />
-    <entry file="file://$PROJECT_DIR$/web/css/chartist-custom.css" />
-    <entry file="file://$PROJECT_DIR$/web/css/chartist.min.css" />
-    <entry file="file://$PROJECT_DIR$/web/css/style.css" />
-    <entry file="file://$PROJECT_DIR$/web/vendor/jquery/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/demo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/entity/Goods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3173">
-          <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dao/CompanyMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="70" column="32" lean-forward="false" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mybatis/mybatisGeneratorConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="58" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mybatis/mybatisConfig.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/entity/GoodsExample.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4085">
@@ -1585,19 +1443,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/entity/GainExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="526" column="24" lean-forward="false" selection-start-line="526" selection-start-column="24" selection-end-line="526" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/entity/UserExample.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="866" column="45" lean-forward="false" selection-start-line="866" selection-start-column="45" selection-end-line="866" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1614,7 +1463,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1623,7 +1471,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1631,7 +1478,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1648,15 +1494,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="39" lean-forward="false" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1684,142 +1521,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="1785" column="8" lean-forward="false" selection-start-line="1785" selection-start-column="8" selection-end-line="1785" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mybatis/mybatisConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="27" column="14" lean-forward="false" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mybatis/mybatisGeneratorRun.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mapper/DemandMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="307" column="1" lean-forward="false" selection-start-line="307" selection-start-column="1" selection-end-line="307" selection-end-column="1" />
-          <folding>
-            <marker date="1513234744723" expanded="true" signature="4774:4876" ph="select from demand" />
-            <marker date="1513234744723" expanded="true" signature="5159:5215" ph="delete from " />
-            <marker date="1513234744723" expanded="true" signature="5502:5520" ph="delete from " />
-            <marker date="1513234744723" expanded="true" signature="7955:7982" ph="select count... demand" />
-            <marker date="1513234744723" expanded="true" signature="9443:9783" ph="update deman... " />
-            <marker date="1513234744723" expanded="true" signature="10177:10765" ph="update deman... " />
-            <marker date="1513234744723" expanded="true" signature="11048:11342" ph="update deman... " />
-            <marker date="1513234744723" expanded="true" signature="11061:11342" ph="update &quot;dema... " />
-            <marker date="1513234744723" expanded="true" signature="11302:11342" ph="update deman... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mapper/GainMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="307" column="1" lean-forward="false" selection-start-line="307" selection-start-column="1" selection-end-line="307" selection-end-column="1" />
-          <folding>
-            <marker date="1513234744411" expanded="true" signature="4766:4866" ph="select from gain" />
-            <marker date="1513234744411" expanded="true" signature="5149:5203" ph="delete from " />
-            <marker date="1513234744411" expanded="true" signature="5488:5504" ph="delete from " />
-            <marker date="1513234744411" expanded="true" signature="7929:7954" ph="select count... gain" />
-            <marker date="1513234744411" expanded="true" signature="9413:9751" ph="update gain " />
-            <marker date="1513234744411" expanded="true" signature="10143:10729" ph="update gain " />
-            <marker date="1513234744411" expanded="true" signature="11010:11302" ph="update gain " />
-            <marker date="1513234744411" expanded="true" signature="11021:11302" ph="update &quot;gain... " />
-            <marker date="1513234744411" expanded="true" signature="11262:11302" ph="update gain " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mapper/GoodsMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4010">
-          <caret line="307" column="1" lean-forward="false" selection-start-line="307" selection-start-column="1" selection-end-line="307" selection-end-column="1" />
-          <folding>
-            <marker date="1513234744569" expanded="true" signature="4777:4884" ph="select from goods" />
-            <marker date="1513234744569" expanded="true" signature="5166:5227" ph="delete from " />
-            <marker date="1513234744569" expanded="true" signature="5513:5530" ph="delete from " />
-            <marker date="1513234744569" expanded="true" signature="7962:7988" ph="select count... goods" />
-            <marker date="1513234744569" expanded="true" signature="9456:9800" ph="update goods... " />
-            <marker date="1513234744569" expanded="true" signature="10193:10785" ph="update goods... " />
-            <marker date="1513234744569" expanded="true" signature="11067:11365" ph="update goods... " />
-            <marker date="1513234744569" expanded="true" signature="11079:11365" ph="update goods... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/mybatis-3.4.5.jar!/org/apache/ibatis/builder/xml/mybatis-3-mapper.dtd">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
           <caret line="242" column="0" lean-forward="false" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mapper/CompanyMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2794">
-          <caret line="251" column="1" lean-forward="false" selection-start-line="251" selection-start-column="1" selection-end-line="251" selection-end-column="1" />
-          <folding>
-            <marker date="1513234744312" expanded="true" signature="4492:4597" ph="select from company" />
-            <marker date="1513234744312" expanded="true" signature="4880:4939" ph="delete from " />
-            <marker date="1513234744312" expanded="true" signature="5227:5246" ph="delete from " />
-            <marker date="1513234744312" expanded="true" signature="5610:5752" ph="insert into company... " />
-            <marker date="1513234744312" expanded="true" signature="6906:6934" ph="select count... company" />
-            <marker date="1513234744312" expanded="true" signature="7998:8151" ph="update compa... " />
-            <marker date="1513234744312" expanded="true" signature="8546:8792" ph="update compa... " />
-            <marker date="1513234744312" expanded="true" signature="9076:9211" ph="update compa... " />
-            <marker date="1513234744312" expanded="true" signature="9090:9211" ph="update &quot;comp... " />
-            <marker date="1513234744312" expanded="true" signature="9153:9211" ph="update compa... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mapper/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="106" column="14" lean-forward="true" selection-start-line="106" selection-start-column="14" selection-end-line="106" selection-end-column="14" />
-          <folding>
-            <marker date="1513234744638" expanded="true" signature="5134:5234" ph="select from user" />
-            <marker date="1513234744638" expanded="true" signature="5517:5571" ph="delete from " />
-            <marker date="1513234744638" expanded="true" signature="5856:5872" ph="delete from " />
-            <marker date="1513234744638" expanded="true" signature="9191:9216" ph="select count... user" />
-            <marker date="1513234744638" expanded="true" signature="11183:11763" ph="update user " />
-            <marker date="1513234744638" expanded="true" signature="12155:13179" ph="update user " />
-            <marker date="1513234744638" expanded="true" signature="13460:13959" ph="update user " />
-            <marker date="1513234744638" expanded="true" signature="13471:13959" ph="update &quot;user... " />
-            <marker date="1513234744638" expanded="true" signature="13899:13959" ph="update user " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mapper/DamageMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
-          <folding>
-            <marker date="1513248727678" expanded="true" signature="4852:4954" ph="select from damage" />
-            <marker date="1513248727678" expanded="true" signature="5237:5293" ph="delete from " />
-            <marker date="1513248727678" expanded="true" signature="5580:5598" ph="delete from " />
-            <marker date="1513248727678" expanded="true" signature="8225:8252" ph="select count... damage" />
-            <marker date="1513248727678" expanded="true" signature="9817:10207" ph="update damag... " />
-            <marker date="1513248727678" expanded="true" signature="10601:11279" ph="update damag... " />
-            <marker date="1513248727678" expanded="true" signature="11562:11899" ph="update damag... " />
-            <marker date="1513248727678" expanded="true" signature="11859:11899" ph="update &quot;dama... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1827,7 +1532,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-399">
           <caret line="189" column="35" lean-forward="false" selection-start-line="189" selection-start-column="23" selection-end-line="189" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1835,41 +1539,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1444">
           <caret line="151" column="29" lean-forward="false" selection-start-line="151" selection-start-column="29" selection-end-line="151" selection-end-column="29" />
-          <folding>
-            <element signature="e#4138#4139#0" expanded="false" />
-            <element signature="e#4178#4179#0" expanded="false" />
-            <element signature="e#4210#4211#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="41" column="64" lean-forward="false" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/main.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2147">
-          <caret line="113" column="33" lean-forward="false" selection-start-line="113" selection-start-column="33" selection-end-line="113" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/service/DemandManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="43" column="33" lean-forward="false" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/service/DamageManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6">
+        <state relative-caret-position="703">
           <caret line="43" column="33" lean-forward="false" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
           <folding />
         </state>
@@ -1877,43 +1552,331 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/service/UserManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="684">
           <caret line="42" column="33" lean-forward="false" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/service/DemandManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="43" column="33" lean-forward="false" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5018">
+          <caret line="381" column="1" lean-forward="false" selection-start-line="381" selection-start-column="1" selection-end-line="381" selection-end-column="1" />
+          <folding>
+            <marker date="1513507117306" expanded="true" signature="5134:5234" ph="select from user" />
+            <marker date="1513507117306" expanded="true" signature="5517:5571" ph="delete from " />
+            <marker date="1513507117306" expanded="true" signature="5856:5872" ph="delete from " />
+            <marker date="1513507117306" expanded="true" signature="9191:9216" ph="select count... user" />
+            <marker date="1513507117306" expanded="true" signature="11183:11763" ph="update user " />
+            <marker date="1513507117306" expanded="true" signature="12155:13179" ph="update user " />
+            <marker date="1513507117306" expanded="true" signature="13460:13959" ph="update user " />
+            <marker date="1513507117306" expanded="true" signature="13471:13959" ph="update &quot;user... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mapper/GainMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5833">
+          <caret line="307" column="1" lean-forward="false" selection-start-line="307" selection-start-column="1" selection-end-line="307" selection-end-column="1" />
+          <folding>
+            <marker date="1513507117165" expanded="true" signature="4766:4866" ph="select from gain" />
+            <marker date="1513507117165" expanded="true" signature="5149:5203" ph="delete from " />
+            <marker date="1513507117165" expanded="true" signature="5488:5504" ph="delete from " />
+            <marker date="1513507117165" expanded="true" signature="7929:7954" ph="select count... gain" />
+            <marker date="1513507117165" expanded="true" signature="9413:9751" ph="update gain " />
+            <marker date="1513507117165" expanded="true" signature="10143:10729" ph="update gain " />
+            <marker date="1513507117165" expanded="true" signature="11010:11302" ph="update gain " />
+            <marker date="1513507117165" expanded="true" signature="11021:11302" ph="update &quot;gain... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mapper/DemandMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4011">
+          <caret line="307" column="1" lean-forward="false" selection-start-line="307" selection-start-column="1" selection-end-line="307" selection-end-column="1" />
+          <folding>
+            <marker date="1513507117538" expanded="true" signature="4774:4876" ph="select from demand" />
+            <marker date="1513507117538" expanded="true" signature="5159:5215" ph="delete from " />
+            <marker date="1513507117538" expanded="true" signature="5502:5520" ph="delete from " />
+            <marker date="1513507117538" expanded="true" signature="7955:7982" ph="select count... demand" />
+            <marker date="1513507117538" expanded="true" signature="9443:9783" ph="update deman... " />
+            <marker date="1513507117538" expanded="true" signature="10177:10765" ph="update deman... " />
+            <marker date="1513507117538" expanded="true" signature="11048:11342" ph="update deman... " />
+            <marker date="1513507117538" expanded="true" signature="11061:11342" ph="update &quot;dema... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mapper/DamageMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3992">
+          <caret line="323" column="1" lean-forward="false" selection-start-line="323" selection-start-column="1" selection-end-line="323" selection-end-column="1" />
+          <folding>
+            <marker date="1513507116821" expanded="true" signature="4850:4952" ph="select from damage" />
+            <marker date="1513507116821" expanded="true" signature="5235:5291" ph="delete from " />
+            <marker date="1513507116821" expanded="true" signature="5578:5596" ph="delete from " />
+            <marker date="1513507116821" expanded="true" signature="8223:8250" ph="select count... damage" />
+            <marker date="1513507116821" expanded="true" signature="9815:10205" ph="update damag... " />
+            <marker date="1513507116821" expanded="true" signature="10599:11277" ph="update damag... " />
+            <marker date="1513507116821" expanded="true" signature="11560:11897" ph="update damag... " />
+            <marker date="1513507116821" expanded="true" signature="11573:11897" ph="update &quot;dama... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mapper/CompanyMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="251" column="1" lean-forward="false" selection-start-line="251" selection-start-column="1" selection-end-line="251" selection-end-column="1" />
+          <folding>
+            <marker date="1513507117465" expanded="true" signature="4492:4597" ph="select from company" />
+            <marker date="1513507117465" expanded="true" signature="4880:4939" ph="delete from " />
+            <marker date="1513507117465" expanded="true" signature="5227:5246" ph="delete from " />
+            <marker date="1513507117465" expanded="true" signature="5610:5752" ph="insert into company... " />
+            <marker date="1513507117465" expanded="true" signature="6906:6934" ph="select count... company" />
+            <marker date="1513507117465" expanded="true" signature="7998:8151" ph="update compa... " />
+            <marker date="1513507117465" expanded="true" signature="8546:8792" ph="update compa... " />
+            <marker date="1513507117465" expanded="true" signature="9076:9211" ph="update compa... " />
+            <marker date="1513507117465" expanded="true" signature="9090:9211" ph="update &quot;comp... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="1797" column="15" lean-forward="true" selection-start-line="1797" selection-start-column="15" selection-end-line="1797" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mybatis/mybatisGeneratorConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="35" column="12" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="63" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mybatis/mybatisGeneratorRun.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/controller/DeleteController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="49" column="68" lean-forward="false" selection-start-line="49" selection-start-column="68" selection-end-line="49" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/controller/AddController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="32" column="39" lean-forward="false" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/controller/SelectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="117" column="17" lean-forward="false" selection-start-line="117" selection-start-column="17" selection-end-line="117" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/beans.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="44" lean-forward="true" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/entity/GainExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="526" column="24" lean-forward="false" selection-start-line="526" selection-start-column="24" selection-end-line="526" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/entity/Gain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mapper/GoodsMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="307" column="1" lean-forward="false" selection-start-line="307" selection-start-column="1" selection-end-line="307" selection-end-column="1" />
+          <folding>
+            <marker date="1513507117384" expanded="true" signature="4777:4884" ph="select from goods" />
+            <marker date="1513507117384" expanded="true" signature="5166:5227" ph="delete from " />
+            <marker date="1513507117384" expanded="true" signature="5513:5530" ph="delete from " />
+            <marker date="1513507117384" expanded="true" signature="7962:7988" ph="select count... goods" />
+            <marker date="1513507117384" expanded="true" signature="9456:9800" ph="update goods... " />
+            <marker date="1513507117384" expanded="true" signature="10193:10785" ph="update goods... " />
+            <marker date="1513507117384" expanded="true" signature="11067:11365" ph="update goods... " />
+            <marker date="1513507117384" expanded="true" signature="11079:11365" ph="update &quot;good... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mybatis/mybatisConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="27" column="52" lean-forward="false" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="29" column="34" lean-forward="false" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_111/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="128" column="17" lean-forward="false" selection-start-line="128" selection-start-column="17" selection-end-line="128" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/entity/GainGoods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1091">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/entity/GainGoodsExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="489" column="9" lean-forward="true" selection-start-line="489" selection-start-column="9" selection-end-line="489" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/service/GoodsManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-50">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="456">
+          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/mybatis-3.4.5.jar!/org/apache/ibatis/session/SqlSession.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="52" column="38" lean-forward="false" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dao/GainGoodsMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="78" column="23" lean-forward="false" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/controller/TableController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/service/GainManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="36" column="33" lean-forward="false" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-          <folding />
+        <state relative-caret-position="-179">
+          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/controller/SelectController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/mapper/GainGoodsMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="-408">
+          <caret line="211" column="29" lean-forward="false" selection-start-line="211" selection-start-column="14" selection-end-line="211" selection-end-column="29" />
+          <folding>
+            <marker date="1513658262627" expanded="true" signature="4506:4613" ph="select from gaingoods" />
+            <marker date="1513658262627" expanded="true" signature="4896:4957" ph="delete from " />
+            <marker date="1513658262627" expanded="true" signature="5247:5268" ph="delete from " />
+            <marker date="1513658262627" expanded="true" signature="5634:5768" ph="insert into gaingoods... " />
+            <marker date="1513658262627" expanded="true" signature="6936:6966" ph="select count... gaingoods" />
+            <marker date="1513658262627" expanded="true" signature="8038:8197" ph="update gaing... " />
+            <marker date="1513658262627" expanded="true" signature="8594:8848" ph="update gaing... " />
+            <marker date="1513658262627" expanded="true" signature="9134:9275" ph="update gaing... " />
+            <marker date="1513658262627" expanded="true" signature="9150:9275" ph="update &quot;gain... " />
+            <marker date="1513658262627" expanded="true" signature="9273:9275" ph="update gaing... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="171" column="128" lean-forward="false" selection-start-line="171" selection-start-column="128" selection-end-line="171" selection-end-column="128" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/dataOption.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1878">
-          <caret line="199" column="84" lean-forward="false" selection-start-line="199" selection-start-column="73" selection-end-line="199" selection-end-column="84" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1">
+          <caret line="726" column="217" lean-forward="false" selection-start-line="726" selection-start-column="217" selection-end-line="726" selection-end-column="217" />
+          <folding />
         </state>
       </provider>
     </entry>

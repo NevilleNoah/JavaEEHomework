@@ -6,6 +6,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 /**
  * Created by asus on 2017/12/13/013.
  */
@@ -22,9 +28,13 @@ public class LoginController {
     }*/
 
     @RequestMapping(value = "/checkLogin" , method = RequestMethod.POST)
-    public ModelAndView checkLogin(String cname, String username, String password, Model model) {
-        model.addAttribute("cname", cname);
+    public ModelAndView checkLogin(HttpServletRequest request, HttpServletResponse response, Model model) throws IOException {
+        String cname = request.getParameter("cname");
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        model.addAttribute("cid", 214214);
         model.addAttribute("username", username);
+
 
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("main");

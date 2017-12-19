@@ -76,7 +76,7 @@
                             <span>库存管理</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
                         <div id="subPages1" class="collapse ">
                             <ul class="nav">
-                                <li><a class="choose" onclick="getGoods(214214, '', '', '默认排序')">库存信息</a></li>
+                                <li><a class="choose" onclick="getGoods('', '', '默认排序')">库存信息</a></li>
                                 <li><a class="choose">添加总量</a></li>
                                 <li><a class="choose">减少总量</a></li>
                             </ul>
@@ -87,7 +87,7 @@
                             <span>需求管理</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
                         <div id="subPages2" class="collapse">
                             <ul class="nav">
-                                <li><a class="choose" onclick="getDemand(214214, '所有部门', '', '', '默认排序')">需求信息</a></li>
+                                <li><a class="choose" onclick="getDemand('所有部门', '', '', '默认排序')">需求信息</a></li>
                                 <li><a class="choose">添加需求</a></li>
                             </ul>
                         </div>
@@ -97,7 +97,7 @@
                             <span>员工管理</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
                         <div id="subPages3" class="collapse">
                             <ul class="nav">
-                                <li><a class="choose" onclick="getUser(214214, '所有部门', '', '', '默认排序')">员工信息</a></li>
+                                <li><a class="choose" onclick="getUser('所有部门', '', '', '默认排序')">员工信息</a></li>
                                 <li><a class="choose">添加员工</a></li>
                                 <li><a class="choose">离职员工</a></li>
                             </ul>
@@ -108,7 +108,7 @@
                             <span>领取/归还</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
                         <div id="subPages4" class="collapse ">
                             <ul class="nav">
-                                <li><a class="choose" onclick="getGain(214214, '所有部门', '', '', '默认排序')">信息记录</a></li>
+                                <li><a class="choose" onclick="getGain('所有部门', '', '', '默认排序')">信息记录</a></li>
                                 <li><a class="choose">领取物品</a></li>
                                 <li><a class="choose">归还物品</a></li>
                             </ul>
@@ -119,7 +119,7 @@
                             <span>损坏管理</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
                         <div id="subPages5" class="collapse ">
                             <ul class="nav">
-                                <li><a class="choose" onclick="getDamage(214214, '所有部门', '', '', '默认排序')">损坏记录</a></li>
+                                <li><a class="choose" onclick="getDamage('所有部门', '', '', '默认排序')">损坏记录</a></li>
                                 <li><a class="choose">添加记录</a></li>
                             </ul>
                         </div>
@@ -128,9 +128,60 @@
             </nav>
         </div>
     </div>
+    <input id="cid" type="hidden" value="${cid}"/>
     <div id="main-body">
+        <div class="panel panel-primary">
+            <div class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div id="header" class="navbar-header">
+                        <a id="title" class="navbar-brand">领取物品</a>
+                    </div>
+                    <div id="action-nav" class="collapse navbar-collapse">
+                        <div class="navbar-form navbar-right">
+                            <div class="form-group">
+                                <input id="search" type="text" class="form-control" placeholder="请输入员工编号"/>
+                                <input id="take-button" class="btn btn-primary" value="领取"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div><div id="take-title1">待领取的物品</div><div id="take-title2">物品库存信息</div></div>
+            <div id="take-board">
+                <div id="take-goods"  class="panel panel-primary">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>物品名称</th>
+                            <th class="td-center">领取数量</th>
+                            <th class="td-center">操作</th>
+                        </tr>
+                    </table>
+                </div>
+                <div  id="take-add-goods" class="panel panel-primary">
+                    <table  class="table table-striped">
+                        <tr>
+                            <th>物品名称</th>
+                            <th class="td-center">库存数量</th>
+                            <th class="td-center">领取数量</th>
+                            <th class="td-center">操作</th>
+                        </tr>
+                        <tr>
+                            <td>铅笔</td>
+                            <td class="td-center">3</td>
+                            <td class="td-center" ><input id="take-number" type="text"/></td>
+                            <td class="td-center"><input type="button" class="btn btn-primary" value="添加" onclick="addGainGoods('橡皮',1)"/></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 </div>
 
+<script>
 
+</script>
 </body>
 </html>

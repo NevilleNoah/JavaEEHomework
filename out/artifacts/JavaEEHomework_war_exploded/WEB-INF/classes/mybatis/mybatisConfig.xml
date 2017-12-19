@@ -25,6 +25,7 @@
         <mapper resource="com/mapper/GainMapper.xml"/>
         <mapper resource="com/mapper/GoodsMapper.xml"/>
         <mapper resource="com/mapper/UserMapper.xml"/>
+        <mapper resource="com/mapper/GainGoodsMapper.xml"/>
     </mappers>
 
 </configuration>
