@@ -43,8 +43,10 @@ var damageSortName4 = "按数量排序";
 var damageSortName5 = "按状态排序";
 /*全局变量声明结束*/
 
+/********************************************获取数据部分***************************************/
 /*第一级局部刷新开始*/
-function getGoods(cid, key, order, up) {
+function getGoods(key, order, up) {
+    var cid = $("#cid").val();
     $.ajax({
         type: "POST",
         url: "../select/getGoods.form",
@@ -55,9 +57,7 @@ function getGoods(cid, key, order, up) {
                 + '<div class="navbar navbar-inverse">'
                 + '<div class="container-fluid">'
                 + '<div id="header" class="navbar-header">'
-
                 + '<a id="title" class="navbar-brand">库存信息</a>'
-
                 + '</div>'
                 + '<div id="action-nav" class="collapse navbar-collapse">'
                 + '<div  class="navbar-form navbar-right">'
@@ -108,7 +108,8 @@ function getGoods(cid, key, order, up) {
 }
 
 
-function getGain(cid, part, key, order, up) {
+function getGain(part, key, order, up) {
+    var cid = $("#cid").val();
     $.ajax({
         type: "POST",
         url: "../select/getGain.form",
@@ -122,10 +123,12 @@ function getGain(cid, part, key, order, up) {
                 + '<a id="title" class="navbar-brand">领取/归还记录</a>'
                 + '</div>'
                 + '<div id="action-nav" class="collapse navbar-collapse">'
+                + '<div  class="navbar-form navbar-right">'
                 + '<div class="form-group">'
                 + '<input id="search" type="text" class="form-control" placeholder="请输入您要搜索的内容">'
                 + '</div>'
-                + '<input type="button" class="btn btn-default" onclick="gainTable()" value="搜索"/>'
+                + '<input type="button" class="btn btn-default" value="搜索" onclick="gainTable()"/>'
+                + '</div>'
                 + '<ul id="part-choose" class="nav navbar-nav">'
                 + '<li class="dropdown">'
                 + '<a id="part-name" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"'
@@ -180,7 +183,8 @@ function getGain(cid, part, key, order, up) {
 }
 
 
-function getDemand(cid, part, key, order, up) {
+function getDemand(part, key, order, up) {
+    var cid = $("#cid").val();
     $.ajax({
         type: "POST",
         url: "../select/getDemand.form",
@@ -194,10 +198,12 @@ function getDemand(cid, part, key, order, up) {
                 + '<a id="title" class="navbar-brand">需求信息</a>'
                 + '</div>'
                 + '<div id="action-nav" class="collapse navbar-collapse">'
+                + '<div  class="navbar-form navbar-right">'
                 + '<div class="form-group">'
                 + '<input id="search" type="text" class="form-control" placeholder="请输入您要搜索的内容">'
                 + '</div>'
-                + '<input type="button" class="btn btn-default" onclick="demandTable()" value="搜索"/>'
+                + '<input type="button" class="btn btn-default" value="搜索" onclick="demandTable()"/>'
+                + '</div>'
                 + '<ul id="part-choose" class="nav navbar-nav">'
                 + '<li class="dropdown">'
                 + '<a id="part-name" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"'
@@ -252,7 +258,8 @@ function getDemand(cid, part, key, order, up) {
 }
 
 
-function getDamage(cid, part, key, order, up) {
+function getDamage(part, key, order, up) {
+    var cid = $("#cid").val();
     $.ajax({
         type: "POST",
         url: "../select/getDamage.form",
@@ -268,10 +275,12 @@ function getDamage(cid, part, key, order, up) {
 
                 + '</div>'
                 + '<div id="action-nav" class="collapse navbar-collapse">'
+                + '<div  class="navbar-form navbar-right">'
                 + '<div class="form-group">'
                 + '<input id="search" type="text" class="form-control" placeholder="请输入您要搜索的内容">'
                 + '</div>'
-                + '<input type="button" class="btn btn-default" onclick="damageTable()" value="搜索"/>'
+                + '<input type="button" class="btn btn-default" value="搜索" onclick="damageTable()"/>'
+                + '</div>'
                 + '<ul id="part-choose" class="nav navbar-nav">'
                 + '<li class="dropdown">'
                 + '<a id="part-name" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"'
@@ -326,8 +335,8 @@ function getDamage(cid, part, key, order, up) {
 }
 
 
-function getUser(cid, part, key, order, up) {
-
+function getUser(part, key, order, up) {
+    var cid = $("#cid").val();
     $.ajax({
         type: "POST",
         url: "../select/getUser.form",
@@ -344,10 +353,12 @@ function getUser(cid, part, key, order, up) {
 
                 + '</div>'
                 + '<div id="action-nav" class="collapse navbar-collapse">'
+                + '<div  class="navbar-form navbar-right">'
                 + '<div class="form-group">'
                 + '<input id="search" type="text" class="form-control" placeholder="请输入您要搜索的内容">'
                 + '</div>'
-                + '<input type="button" class="btn btn-default" onclick="userTable()" value="搜索"/>'
+                + '<input type="button" class="btn btn-default" value="搜索" onclick="userable()"/>'
+                + '</div>'
                 + '<ul id="part-choose" class="nav navbar-nav">'
                 + '<li class="dropdown">'
                 + '<a id="part-name" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"'
@@ -407,11 +418,13 @@ function getUser(cid, part, key, order, up) {
 
 /* 第二级局部刷新开始 */
 function goodsTable() {
-    var cid = 214214;
+
+    var cid =$("#cid").val();
     var key = $("#search").val();
     var orderName = $("#sort-name").text();
     var order = null;
     var up = $("#up-name").text();
+
     switch (orderName) {
         case goodsSortName1:order="default";
             break;
@@ -443,7 +456,7 @@ function goodsTable() {
 }
 
 function gainTable() {
-    var cid = 214214;
+    var cid = $("#cid").val();
     var part = $("#part-name").text();
     var key = $("#search").val();
     var orderName = $("#sort-name").text();
@@ -480,7 +493,7 @@ function gainTable() {
 
 
 function demandTable() {
-    var cid = 214214;
+    var cid = $("#cid").val();
     var part = $("#part-name").text();
     var key = $("#search").val();
     var orderName = $("#sort-name").text();
@@ -516,7 +529,7 @@ function demandTable() {
 }
 
 function damageTable() {
-    var cid = 214214;
+    var cid = $("#cid").val();
     var part = $("#part-name").text();
     var key = $("#search").val();
     var orderName = $("#sort-name").text();
@@ -552,7 +565,7 @@ function damageTable() {
 }
 
 function userTable() {
-    var cid = 214214;
+    var cid = $("#cid").val();
     var part = $("#part-name").text();
     var key = $("#search").val();
     var orderName = $("#sort-name").text();
@@ -662,6 +675,80 @@ function userTableBySort(sortName) {
     $("#sort-name").html(sortName + "<span class='caret'></span>");
     userTable();
 }
+/******************************************************获取数据部分结束************************************/
 
+/******************************************************操作部分******************************************/
+/*//领取物品，“搜索”
+function searchGainGoods() {
+    var cid =$("#cid").val();
+    var key = $("#search").val();
+    var orderName = $("#sort-name").text();
+    var order = null;
+    var up = $("#up-name").text();
+
+    switch (orderName) {
+        case goodsSortName1:order="default";
+            break;
+        case goodsSortName2:order="gname";
+            break;
+        case goodsSortName3:order="classify";
+            break;
+        case goodsSortName5:order="store";
+            break
+    }
+    $.ajax({
+        type: "POST",
+        url: "../select/getGoods.form",
+        data: {cid: cid, key: key, order: order, up: up},
+        dataType: "json",
+        success: function (goodsList) {
+            var html = '<table class="table table-striped" id="mainTable"> <tr> <th>商品名称</th> <th>商品类别</th> <th>价格</th> <th>库存</th> <th>总量</th> </tr>';
+            for (var i = 0; i < goodsList.length; i++) {
+                html = html + "<tr><td>" + goodsList[i].gname + "</td><td>" + goodsList[i].classify + "</td><td>" + goodsList[i].cost + "</td><td>" + goodsList[i].store + "</td><td>" + goodsList[i].total + "</td></tr>";
+
+            }
+            html = html + "</table>";
+            $("#mainTable").html(html);
+
+        }
+    });
+}*/
+//领取物品，“添加”
+function addGainGoods(gname, number) {
+    var cid = $("#cid").val();
+    $.ajax({
+        type: "POST",
+        url: "../table/onTakingGoods.form",
+        data: {cid: cid, gname: gname, number: number},
+        dataType: "json",
+        success: function (data) {
+            var html = '<table class="table table-striped"><tr><th>物品名称</th><th class="td-center">领取数量</th><th class="td-center">操作</th></tr>';
+            for (var i = 0; i < data.length; i++) {
+                html = html + "<tr><td>" + data[i].gname + "</td><td class='td-center'>" + data[i].number + "</td><td><input type='button' class='btn btn-primary' value='取消' onclick='deleteGainGoods(\""+data[i].gname+"\")'/></td></tr>";
+            }
+            html = html + "</table>";
+            $("#take-goods").html(html);
+        }
+    });
+}
+
+//领取物品，“取消”
+function deleteGainGoods(gname) {
+    var cid = $("#cid").val();
+    $.ajax({
+        type: "POST",
+        url: "../table/cancelTakingGoods.form",
+        data: {cid: cid, gname: gname},
+        dataType: "json",
+        success: function (data) {
+            var html = '<table class="table table-striped"><tr><th>物品名称</th><th class="td-center">领取数量</th><th class="td-center">操作</th></tr>';
+            for (var i = 0; i < data.length; i++) {
+                html = html + "<tr><td>" + data[i].gname + "</td><td class='td-center'>" + data[i].number + "</td><td><input type='button' class='btn btn-primary' value='取消' onclick='deleteGainGoods(\""+data[i].gname+"\")'/></td></tr>";
+            }
+            html = html + "</table>";
+            $("#take-goods").html(html);
+        }
+    });
+}
 
 

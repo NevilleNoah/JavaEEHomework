@@ -20,6 +20,7 @@ import java.util.Map;
 import static com.service.DamageManager.selectDamage;
 import static com.service.DemandManager.selectDemand;
 import static com.service.GainManager.selectGain;
+import static com.service.GainManager.selectGainGoods;
 import static com.service.GoodsManager.*;
 import static com.service.UserManager.selectUser;
 
@@ -32,7 +33,7 @@ public class SelectController {
 
     @RequestMapping("/getGoods")
     @ResponseBody
-    public List<Goods> getGoods(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public static List<Goods> getGoods(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         Integer cid = Integer.valueOf(request.getParameter("cid"));
         String key = request.getParameter("key");
@@ -47,7 +48,7 @@ public class SelectController {
 
     @RequestMapping("/getGain")
     @ResponseBody
-    public List<Gain> getGain(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public static List<Gain> getGain(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         Integer cid = Integer.valueOf(request.getParameter("cid"));
         String part = request.getParameter("part");
@@ -63,7 +64,7 @@ public class SelectController {
 
     @RequestMapping("/getDamage")
     @ResponseBody
-    public List<Damage> getDamage(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public static List<Damage> getDamage(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         Integer cid = Integer.valueOf(request.getParameter("cid"));
         String part = request.getParameter("part");
@@ -80,7 +81,7 @@ public class SelectController {
 
     @RequestMapping("/getDemand")
     @ResponseBody
-    public List<Demand> getDemand(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public static List<Demand> getDemand(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         Integer cid = Integer.valueOf(request.getParameter("cid"));
         String part = request.getParameter("part");
@@ -97,7 +98,7 @@ public class SelectController {
 
     @RequestMapping("/getUser")
     @ResponseBody
-    public List<User> getUser(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public static List<User> getUser(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         Integer cid = Integer.valueOf(request.getParameter("cid"));
         String part = request.getParameter("part");
@@ -112,13 +113,16 @@ public class SelectController {
     }
 
 
+    @RequestMapping("/getGainGoods")
+    @ResponseBody
+    public static List<GainGoods> getGainGoods(HttpServletRequest request, HttpServletResponse response) throws  IOException {
 
+        Integer cid = Integer.valueOf(request.getParameter("cid"));
 
+        List<GainGoods> gainGoodsList = selectGainGoods(cid);
 
+        return gainGoodsList;
 
-
-
-
-
+    }
 
 }
