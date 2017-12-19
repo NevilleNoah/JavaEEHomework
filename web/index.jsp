@@ -1,4 +1,4 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%--
   Created by IntelliJ IDEA.
   User: asus
@@ -50,7 +50,6 @@
             <input id="submit" type="submit" class="btn btn-primary" value="提交"/>
         </form>
     </div>
-
 </div>
 
 </body>
