@@ -109,7 +109,7 @@
                         <div id="subPages4" class="collapse ">
                             <ul class="nav">
                                 <li><a class="choose" onclick="getGain('所有部门', '', '', '默认排序')">信息记录</a></li>
-                                <li><a class="choose">领取物品</a></li>
+                                <li><a class="choose" onclick="enterGainGoods('', '', '默认排序')">领取物品</a></li>
                                 <li><a class="choose">归还物品</a></li>
                             </ul>
                         </div>
@@ -130,52 +130,7 @@
     </div>
     <input id="cid" type="hidden" value="${cid}"/>
     <div id="main-body">
-        <div class="panel panel-primary">
-            <div class="navbar navbar-inverse">
-                <div class="container-fluid">
-                    <div id="header" class="navbar-header">
-                        <a id="title" class="navbar-brand">领取物品</a>
-                    </div>
-                    <div id="action-nav" class="collapse navbar-collapse">
-                        <div class="navbar-form navbar-right">
-                            <div class="form-group">
-                                <input id="search" type="text" class="form-control" placeholder="请输入员工编号"/>
-                                <input id="take-button" class="btn btn-primary" value="领取"/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div><div id="take-title1">待领取的物品</div><div id="take-title2">物品库存信息</div></div>
-            <div id="take-board">
-                <div id="take-goods"  class="panel panel-primary">
-                    <table class="table table-striped">
-                        <tr>
-                            <th>物品名称</th>
-                            <th class="td-center">领取数量</th>
-                            <th class="td-center">操作</th>
-                        </tr>
-                    </table>
-                </div>
-                <div  id="take-add-goods" class="panel panel-primary">
-                    <table  class="table table-striped">
-                        <tr>
-                            <th>物品名称</th>
-                            <th class="td-center">库存数量</th>
-                            <th class="td-center">领取数量</th>
-                            <th class="td-center">操作</th>
-                        </tr>
-                        <tr>
-                            <td>铅笔</td>
-                            <td class="td-center">3</td>
-                            <td class="td-center" ><input id="take-number" type="text"/></td>
-                            <td class="td-center"><input type="button" class="btn btn-primary" value="添加" onclick="addGainGoods('橡皮',1)"/></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
 
-        </div>
     </div>
 
 </div>

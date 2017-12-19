@@ -94,7 +94,7 @@ public class GainManager {
         sqlSession.commit();
         sqlSession.close();
 
-        return gainGoods != null;
+        return gainGoods.size()>0;
     }
 
     public static void addGainGoods(Integer cid, String gname, Integer number) throws IOException {
