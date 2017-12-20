@@ -59,7 +59,6 @@ public class TableController {
     @RequestMapping("/clearTakingGoods")
     @ResponseBody
     public static void clearTakingGoods(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        System.out.println("启动了");
         Integer cid = Integer.valueOf(request.getParameter("cid"));
 
         clearGainGoods(cid);
@@ -81,5 +80,17 @@ public class TableController {
         goodsList = selectGoods(cid, key, order, up);
 
         return goodsList;
+    }
+
+    @RequestMapping("/doTakeGoods")
+    public static void doTakeGoods(HttpServletRequest request, HttpServletResponse response) {
+
+    }
+
+    @RequestMapping("/doReturnGoods")
+    public static void doReturnGoods(HttpServletRequest request, HttpServletResponse response) {
+        Integer cid = Integer.valueOf(request.getParameter("cid"));
+        Integer id = Integer.valueOf(request.getParameter("id"));
+        String gname = request.getParameter("gname");
     }
 }

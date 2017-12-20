@@ -41,6 +41,13 @@ var damageSortName2 = "按时间排序";
 var damageSortName3 = "按名称排序";
 var damageSortName4 = "按数量排序";
 var damageSortName5 = "按状态排序";
+
+var returnSortName1="默认排序";
+var returnSortName2="按姓名排序";
+var returnSortName3="按员工编号排序";
+var returnSortName4="按领取时间排序";
+var returnSortName5="按物品名称排序"
+
 /*全局变量声明结束*/
 
 /********************************************获取数据部分***************************************/
@@ -170,7 +177,7 @@ function getGain(part, key, order, up) {
                 + '</div>';
             html = html + '<div id="table-div" class="panel-body"><table class="table table-striped" id="mainTable"> <tr> <th>物品名称</th> <th>行为</th> <th>时间</th> <th>数量</th> </tr>';
             for (var i = 0; i < gainList.length; i++) {
-                html = html + "<tr><td>" + gainList[i].gname + "</td><td>" + gainList[i].action + "</td><td>" + gainList[i].time + "</td><td>" + gainList[i].number + "</td></tr>";
+                html = html + "<tr><td>" + gainList[i].gname + "</td><td>" + gainList[i].action + "</td><td>" + gainList[i].gtime + "</td><td>" + gainList[i].number + "</td></tr>";
             }
             html = html + "</table></div>";
             $("#main-body").html(html);
@@ -322,7 +329,7 @@ function getDamage(part, key, order, up) {
                 + '</div>';
             html = html + '<div id="table-div" class="panel-body"><table class="table table-striped" id="mainTable"> <tr> <th>物品名称</th> <th>员工号</th> <th>数量</th> <th>时间</th> <th>状态</th> <th>原因</th> </tr>';
             for (var i = 0; i < damageList.length; i++) {
-                html = html + "<tr><td>" + damageList[i].gname + "</td><td>" + damageList[i].id + "</td><td>" + damageList[i].number + "</td><td>" + damageList[i].time + "</td><td>" + damageList[i].station + "</td><td>" + damageList[i].cause + "</td></tr>";
+                html = html + "<tr><td>" + damageList[i].gname + "</td><td>" + damageList[i].id + "</td><td>" + damageList[i].number + "</td><td>" + damageList[i].gtime + "</td><td>" + damageList[i].station + "</td><td>" + damageList[i].cause + "</td></tr>";
             }
             html = html + "</table></div>";
             $("#main-body").html(html);
@@ -347,9 +354,7 @@ function getUser(part, key, order, up) {
                 + '<div class="navbar navbar-inverse">'
                 + '<div class="container-fluid">'
                 + '<div id="header" class="navbar-header">'
-
                 + '<a id="title" class="navbar-brand">员工信息</a>'
-
                 + '</div>'
                 + '<div id="action-nav" class="collapse navbar-collapse">'
                 + '<div  class="navbar-form navbar-right">'
@@ -413,6 +418,79 @@ function getUser(part, key, order, up) {
         }
     });
 }
+
+function getReturn(part, key, order, up) {
+    var cid = $("#cid").val();
+    $.ajax({
+        type: "POST",
+        url: "../select/getReturn.form",
+        data: {cid: cid, part: part, key: key, order: order, up: up},
+        dataType: "json",
+        success: function (returnList) {
+            var html = '<div class="panel panel-primary">'
+                + '<div class="navbar navbar-inverse">'
+                + '<div class="container-fluid">'
+                + '<div id="header" class="navbar-header">'
+                + '<a id="title" class="navbar-brand">归还物品</a>'
+                + '</div>'
+                + '<div id="action-nav" class="collapse navbar-collapse">'
+                + '<div  class="navbar-form navbar-right">'
+                + '<div class="form-group">'
+                + '<input id="search" type="text" class="form-control" placeholder="请输入您要搜索的内容">'
+                + '</div>'
+                + '<input type="button" class="btn btn-default" value="搜索" onclick="gainTable()"/>'
+                + '</div>'
+                + '<ul id="part-choose" class="nav navbar-nav">'
+                + '<li class="dropdown">'
+                + '<a id="part-name" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"'
+                + 'aria-haspopup="true" aria-expanded="false">所有部门<span class="caret"></span></a>'
+                + '<ul class="dropdown-menu">'
+                + '<li><a id="part1" href="#" onclick="returnTableByPart(partName1)">所有部门</a></li>'
+                + '<li><a id="part2" href="#" onclick="returnTableByPart(partName2)">业务部</a></li>'
+                + '<li><a id="part3" href="#" onclick="returnTableByPart(partName3)">人事部</a></li>'
+                + '<li><a id="part4" href="#" onclick="returnTableByPart(partName4)">财政部</a></li>'
+                + '<li><a id="part5" href="#" onclick="returnTableByPart(partName5)">管理部</a></li>'
+                + '</ul>'
+                + '</li>'
+                + '</ul>'
+                + '<ul id="sort-choose" class="nav navbar-nav">'
+                + '<li class="dropdown">'
+                + '<a id="sort-name" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"'
+                + 'aria-haspopup="true" aria-expanded="false">默认排序<span class="caret"></span></a>'
+                + '<ul class="dropdown-menu">'
+                + '<li><a href="#" onclick="returnTableBySort(returnSortName1)">默认排序</a></li>'
+                + '<li><a href="#" onclick="returnTableBySort(returnSortName3)">按员工编号排序</a></li>'
+                + '<li><a href="#" onclick="returnTableBySort(returnSortName4)">按时间排序</a></li>'
+                + '<li><a href="#" onclick="returnTableBySort(returnSortName4)">按物品名称排序</a></li>'
+                + '</ul>'
+                + '</li>'
+                + '</ul>'
+                + '<ul id="up-choose" class="nav navbar-nav">'
+                + '<li class="dropdown">'
+                + '<a id="up-name" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"'
+                + 'aria-haspopup="true" aria-expanded="false">升序/降序<span class="caret"></span></a>'
+                + '<ul class="dropdown-menu">'
+                + '<li><a href="#" onclick="returnTableByUp(upName1)">升序/降序</a></li>'
+                + '<li><a href="#" onclick="returnTableByUp(upName2)">升序</a></li>'
+                + '<li><a href="#" onclick="returnTableByUp(upName3)">降序</a></li>'
+                + '</ul>'
+                + '</li>'
+                + '</ul>'
+                + '</div>'
+                + '</div>'
+                + '</div>';
+            html = html + '<div id="table-div" class="panel-body"> <table class="table table-striped" id="mainTable"> <tr> <th>员工编号</th><th>物品名称</th><th>领取时间</th><th>数量</th> <th class="td-center">归还数量</th><th class="td-center">操作</th></tr>';
+            for (var i = 0; i < returnList.length; i++) {
+                html = html + "<tr><td id='user-id"+i+"'>" + returnList[i].id + "</td><td id='gname"+i+"'>" + returnList[i].gname +"</td><td>"+returnList[i].gtime+"</td><td>" + returnList[i].number + "</td><td class='td-center'><input type='text' id='return-number"+i+"'/></td><td class='td-center'><input class='btn btn-primary' type='button' value='归还' onclick='doReturnGoods()'/></td></tr>";
+            }
+            html = html + "</table></div>";
+            $("#main-body").html(html);
+        },
+        error: function () {
+            alert("error");
+        }
+    });
+}
 /*第一级局部刷新结束*/
 
 /* 第二级局部刷新开始 */
@@ -451,6 +529,48 @@ function goodsTable() {
             for (var i = 0; i < goodsList.length; i++) {
                 html = html + "<tr><td>" + goodsList[i].gname + "</td><td>" + goodsList[i].classify + "</td><td>" + goodsList[i].cost + "</td><td>" + goodsList[i].store + "</td><td>" + goodsList[i].total + "</td></tr>";
 
+            }
+            html = html + "</table>";
+            $("#mainTable").html(html);
+
+        }
+    });
+}
+
+function returnTable() {
+
+    var cid = $("#cid").val();
+    var key = $("#search").val();
+    var orderName = $("#sort-name").text();
+    var order = null;
+    var up = $("#up-name").text();
+
+    switch (orderName) {
+        case returnSortName1:
+            order = "default";
+            break;
+        case returnSortName2:
+            order = "name";
+            break;
+        case returnSortName3:
+            order = "userid";
+            break;
+        case returnSortName4:
+            order = "time";
+            break;
+        case returnSortName5:
+            order = "gname";
+            break
+    }
+    $.ajax({
+        type: "POST",
+        url: "../select/getReturn.form",
+        data: {cid: cid, key: key, order: order, up: up},
+        dataType: "json",
+        success: function (returnList) {
+            var html = '<table class="table table-striped" id="mainTable"> <tr> <th>员工编号</th><th>物品名称</th><th>领取时间</th><th>数量</th> <th class="td-center">归还数量</th><th class="td-center">操作</th></tr>';
+            for (var i = 0; i < returnList.length; i++) {
+                html = html + "<tr><td id='user-id"+i+"'>" + returnList[i].id + "</td><td id='gname"+i+"'>" + returnList[i].gname +"</td><td>"+returnList[i].gtime+"</td><td>" + returnList[i].number + "</td><td class='td-center'><input type='text' id='return-number"+i+"'/></td>" + returnList[i].time + "</td><td class='td-center'><input class='btn btn-primary' type='button' value='归还' onclick='doReturnGoods("+i+")'/></td></tr>";
             }
             html = html + "</table>";
             $("#mainTable").html(html);
@@ -673,6 +793,10 @@ function gainGoodsTable() {
 /* 第三级调用开始 */
 
 //按部门
+function returnTableByPart(partName) {
+    $("#part-name").html(partName + "<span class='caret'></span>");
+    returnTable();
+}
 function gainTableByPart(partName) {
     $("#part-name").html(partName + "<span class='caret'></span>");
     gainTable();
@@ -697,6 +821,10 @@ function gainGoodsTableByUp(upName) {
     gainGoodsTable();
 }
 //升序降序
+function returnTableByUp(upName) {
+    $("#up-name").html(upName + "<span class='caret'></span>");
+    returnTable();
+}
 function goodsTableByUp(upName) {
     $("#up-name").html(upName + "<span class='caret'></span>");
     goodsTable();
@@ -725,6 +853,10 @@ function gainGoodsTableByUp(upName) {
     gainGoodsTable();
 }
 //排序依据
+function returnTableBySort(sortName) {
+    $("#sort-name").html(sortName + "<span class='caret'></span>");
+    returnTable();
+}
 function goodsTableBySort(sortName) {
     $("#sort-name").html(sortName + "<span class='caret'></span>");
     goodsTable();
@@ -772,7 +904,6 @@ function enterGainGoods(key, order, up) {
                 + '<a id="title" class="navbar-brand">领取物品</a>'
                 + '</div>'
                 + '<div id="action-nav" class="collapse navbar-collapse">'
-
                 + '<ul id="sort-choose" class="nav navbar-nav">'
                 + '<li class="dropdown">'
                 + '<a id="sort-name" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"'
@@ -799,7 +930,7 @@ function enterGainGoods(key, order, up) {
                 + '<div class="navbar-form navbar-right">'
                 + '<div class="form-group">'
                 + '<input id="userid" type="text" class="form-control" placeholder="请输入员工编号"/>'
-                + '<input id="take-button" class="btn btn-primary" value="领取"/>'
+                + '<input id="take-button" class="btn btn-primary" value="领取" onclick="doTakeGoods()"/>'
                 + '</div>'
                 + '</div>'
                 + '<div  class="navbar-form navbar-left">'
@@ -855,7 +986,6 @@ function addGainGoods(gname, no) {
     var tid = "#take-number"+no;
     var cid = $("#cid").val();
     var number = $(tid.toString()).val();
-    alert(number);
     $.ajax({
         type: "POST",
         url: "../table/onTakingGoods.form",
@@ -887,6 +1017,36 @@ function deleteGainGoods(gname) {
             }
             html = html + "</table>";
             $("#take-goods").html(html);
+        }
+    });
+}
+
+//领取物品，“领取”
+function doTakeGoods() {
+    $.ajax({
+        type:"POST",
+        url:"../table/doTakeGoods.form",
+        success:function() {
+            alert("领取成功!");
+            var html="";
+            $("#take-goods").html(html);
+        }
+    })
+}
+
+//归还物品，“归还”
+function doReturnGoods(no) {
+    var cid = $("#cid").val();
+    var tid = "#user-id"+no;
+    var id = $(tid.toString()).text();
+    var tgname = "#gname"+no;
+    var gname = $(tgname.toString()).text();
+    $.ajax({
+        type:"POST",
+        url:"../table/doReturnGoods.form",
+        data:{cid:cid, id:id, gname:gname},
+        success:function() {
+
         }
     });
 }

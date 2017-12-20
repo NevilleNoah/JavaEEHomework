@@ -110,7 +110,7 @@
                             <ul class="nav">
                                 <li><a class="choose" onclick="getGain('所有部门', '', '', '默认排序')">信息记录</a></li>
                                 <li><a class="choose" onclick="enterGainGoods('', '', '默认排序')">领取物品</a></li>
-                                <li><a class="choose">归还物品</a></li>
+                                <li><a class="choose" onclick="getReturn('所有部门','','','默认排序')">归还物品</a></li>
                             </ul>
                         </div>
                     </li>
@@ -132,7 +132,6 @@
     <div id="main-body">
 
     </div>
-
 </div>
 
 <script>

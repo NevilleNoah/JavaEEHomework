@@ -34,9 +34,9 @@ public class UserManager {
             }
         } else {
             if(part.equals("所有部门")) {
-                userExample.or().andCidEqualTo(companyId).andNameLike("%"+key+"%");
+                userExample.or().andCidEqualTo(companyId).andEnameLike("%"+key+"%");
             } else {
-                userExample.or().andCidEqualTo(companyId).andPartEqualTo(part).andNameLike("%"+key+"%");
+                userExample.or().andCidEqualTo(companyId).andPartEqualTo(part).andEnameLike("%"+key+"%");
             }
         }
         //设置升序降序或默认排序
