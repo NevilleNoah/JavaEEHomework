@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="../../vendor/linearicons/style.css?v=<%= System.currentTimeMillis()%>">
     <link rel="stylesheet" href="../../vendor/chartist/css/chartist-custom.css?v=<%= System.currentTimeMillis()%>">
     <link rel="stylesheet" href="../../css/demo.css?v=<%= System.currentTimeMillis()%>">
+    <link rel="stylesheet" href="../../css/formStyle.css?v=<%= System.currentTimeMillis()%>">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700">
     <link rel="stylesheet" href="../../css/main.css?v=<%= System.currentTimeMillis()%>">
     <script>
@@ -134,46 +135,74 @@
             <div class="navbar navbar-inverse">
                 <div class="container-fluid">
                     <div id="header" class="navbar-header">
-                        <a id="title" class="navbar-brand">领取物品</a>
+                        <a id="title" class="navbar-brand">添加员工</a>
                     </div>
-                    <div id="action-nav" class="collapse navbar-collapse">
-                        <div class="navbar-form navbar-right">
-                            <div class="form-group">
-                                <input id="search" type="text" class="form-control" placeholder="请输入员工编号"/>
-                                <input id="take-button" class="btn btn-primary" value="领取"/>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
-            <div><div id="take-title1">待领取的物品</div><div id="take-title2">物品库存信息</div></div>
-            <div id="take-board">
-                <div id="take-goods"  class="panel panel-primary">
-                    <table class="table table-striped">
-                        <tr>
-                            <th>物品名称</th>
-                            <th class="td-center">领取数量</th>
-                            <th class="td-center">操作</th>
-                        </tr>
-                    </table>
+
+
+
+            <form action="/employee/employeeAdd.form" method="post" class="form">
+                <br/>
+                <div class="position">
+                <div>
+                    工号：<input type="text" class="" placeholder="请输入员工号" name="id">
                 </div>
-                <div  id="take-add-goods" class="panel panel-primary">
-                    <table  class="table table-striped">
-                        <tr>
-                            <th>物品名称</th>
-                            <th class="td-center">库存数量</th>
-                            <th class="td-center">领取数量</th>
-                            <th class="td-center">操作</th>
-                        </tr>
-                        <tr>
-                            <td>铅笔</td>
-                            <td class="td-center">3</td>
-                            <td class="td-center" ><input id="take-number" type="text"/></td>
-                            <td class="td-center"><input type="button" class="btn btn-primary" value="添加" onclick="addGainGoods('橡皮',1)"/></td>
-                        </tr>
-                    </table>
+                <br/>
+                <div>
+                    管理员：<input type="text" class="" placeholder="请输入0或1" name="ismanager">
                 </div>
-            </div>
+                <br/>
+                <div>
+                    姓名：<input type="text" class="" placeholder="请输入姓名" name="ename">
+                </div>
+                <br/>
+                <div>
+                    性别：<input type="text" class="" placeholder="请输入员性别" name="sex">
+                </div>
+                <br/>
+                <div>
+                    年龄：<input type="text" class="" placeholder="请输入年龄" name="age">
+                </div>
+                <br/>
+                <div>
+                   时间：<input type="text" class="" placeholder="请输入入职时间" name="intime">
+                </div>
+                <br/>
+                <div>
+                    电话：<input type="text" class="" placeholder="请输入电话" name="phone">
+                </div>
+                <br/>
+                <div>
+                    住址：<input type="text" class="" placeholder="请输入住址" name="address">
+                </div>
+                <br/>
+                <br/>
+                <div>
+                    <input type="text" id="company" name="cid">
+                </div>
+                <div>
+                     部门：<input type="text" class="" placeholder="请输入部门" name="part">
+                </div>
+
+                <br/>
+                    <div>
+                        <input type="text" class="" value="2017.5.6" name="outtime">
+                    </div>
+
+                    <br/>
+                    <div>
+                        <input type="text" class="" value="haha" name="img">
+                    </div>
+
+                    <br/>
+                <div>
+                    <input id="submit" class="button" type="submit" value="提交"/>
+                </div>
+                </div>
+            </form>
+
 
         </div>
     </div>
@@ -181,7 +210,8 @@
 </div>
 
 <script>
-
+    var cid = $("#cid").val();
+    document.getElementById('company').value=cid;
 </script>
 </body>
 </html>

@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<form>
+<form action="" method="post" class="demo2">
     <br/>
     <div>
         <input type="text" class="" placeholder="请输入员工号">
@@ -42,7 +42,7 @@
         <input type="text" class="" placeholder="请输入住址">
     </div>
     <div>
-        <input id="submit" type="submit" value="提交"/>
+        <input id="submit" class="button" type="submit" value="提交"/>
     </div>
 
 </form>

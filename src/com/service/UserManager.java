@@ -1,12 +1,20 @@
 package com.service;
 
+import com.dao.GainGoodsMapper;
+import com.dao.UserMapper;
 import com.dbtools.GetSqlSession;
+import com.entity.GainGoods;
+import com.entity.GainGoodsExample;
 import com.entity.User;
 import com.entity.UserExample;
 import org.apache.ibatis.session.SqlSession;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;
 import java.util.List;
+
+import static com.dbtools.GetSqlSession.getSqlSession;
 
 /**
  * Created by asus on 2017/12/12/012.
@@ -59,4 +67,38 @@ public class UserManager {
         sqlSession.close();
         return userList;
     }
+
+
+
+
+    public static void addUser( Integer id, Integer ismanager, String ename, String sex, Integer age, String intime, String outtime, String img, Integer phone, String address, Integer cid, String part) throws IOException {
+
+        SqlSession sqlSession = getSqlSession();
+
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("com/beans.xml");
+        User user = (User) applicationContext.getBean("user");
+
+
+        user.setId(id);
+        user.setIsmanager(ismanager);
+        user.setEname(ename);
+        user.setSex(sex);
+        user.setAge(age);
+        user.setIntime(intime);
+        user.setOuttime(outtime);
+        user.setImg(img);
+        user.setPhone(phone);
+        user.setAddress(address);
+        user.setCid(cid);
+        user.setPart(part);
+
+
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+        userMapper.insert(user);
+
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
+
 }
