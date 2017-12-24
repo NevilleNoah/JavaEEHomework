@@ -152,7 +152,7 @@
     </selectKey>
     insert into gain (gname, action, gtime, 
       number, cid, part)
-    values (#{gname,jdbcType=VARCHAR}, #{action,jdbcType=INTEGER}, #{gtime,jdbcType=VARCHAR}, 
+    values (#{gname,jdbcType=VARCHAR}, #{action,jdbcType=INTEGER}, #{gtime,jdbcType=DATESTAMP},
       #{number,jdbcType=INTEGER}, #{cid,jdbcType=INTEGER}, #{part,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.entity.Gain">
@@ -313,4 +313,10 @@
       part = #{part,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <insert id="take" parameterType="java.lang.Integer">
+    insert into gain (id,gname, action, gtime,
+      number, cid, part)
+    select #{userid,jdbcType=Integer},gname,0,CURRENT_TIMESTAMP,number,cid,part from gaingoods
+  </insert>
 </mapper>

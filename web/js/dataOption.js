@@ -188,6 +188,100 @@ function getGain(part, key, order, up) {
     });
 }
 
+//进入领取
+function enterGainGoods(key, order, up) {
+    var cid = $("#cid").val();
+
+    $.ajax({
+        type: "POST",
+        url: "../table/enterGainGoods.form",
+        data: {cid: cid, key: key, order: order, up: up},
+
+        success: function (data) {
+            var html = '<div class="panel panel-primary">'
+                + '<div class="navbar navbar-inverse">'
+                + '<div class="container-fluid">'
+                + '<div id="header" class="navbar-header">'
+                + '<a id="title" class="navbar-brand">领取物品</a>'
+                + '</div>'
+                + '<div id="action-nav" class="collapse navbar-collapse">'
+                + '<ul id="sort-choose" class="nav navbar-nav">'
+                + '<li class="dropdown">'
+                + '<a id="sort-name" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"'
+                + 'aria-haspopup="true" aria-expanded="false">默认排序<span class="caret"></span></a>'
+                + '<ul class="dropdown-menu">'
+                + '<li><a href="#" onclick="gainGoodsTableBySort(goodsSortName1)">默认排序</a></li>'
+                + '<li><a href="#" onclick="gainGoodsTableBySort(goodsSortName2)">按名称排序</a></li>'
+                + '<li><a href="#" onclick="gainGoodsTableBySort(goodsSortName3)">按类别排序</a></li>'
+                + '<li><a href="#" onclick="gainGoodsTableBySort(goodsSortName5)">按库存排序</a></li>'
+                + '</ul>'
+                + '</li>'
+                + '</ul>'
+                + '<ul id="up-choose" class="nav navbar-nav">'
+                + '<li class="dropdown">'
+                + '<a id="up-name" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"'
+                + 'aria-haspopup="true" aria-expanded="false">升序/降序<span class="caret"></span></a>'
+                + '<ul class="dropdown-menu">'
+                + '<li><a href="#" onclick="gainGoodsTableByUp(upName1)">升序/降序</a></li>'
+                + '<li><a href="#" onclick="gainGoodsTableByUp(upName2)">升序</a></li>'
+                + '<li><a href="#" onclick="gainGoodsTableByUp(upName3)">降序</a></li>'
+                + '</ul>'
+                + '</li>'
+                + '</ul>'
+                + '<div class="navbar-form navbar-right">'
+                + '<div class="form-group">'
+                + '<input id="userid" type="text" class="form-control" placeholder="请输入员工编号"/>'
+                + '<input id="take-button" class="btn btn-primary" value="领取" onclick="doTakeGoods()"/>'
+                + '</div>'
+                + '</div>'
+                + '<div  class="navbar-form navbar-left">'
+                + '<div class="form-group">'
+                + '<input id="search" type="text" class="form-control" placeholder="请输入您要搜索的内容">'
+                + '</div>'
+                + '<input type="button" class="btn btn-default" value="搜索" onclick="gainGoodsTable()"/>'
+                + '</div>'
+                + '</div>'
+                + '</div>'
+                + '</div>'
+                + '<div><div id="take-title1">待领取的物品</div><div id="take-title2">物品库存信息</div></div>'
+                + '<div id="take-board">'
+                + '<div id="take-goods"  class="panel panel-primary">'
+                + '<table class="table table-striped">'
+                + '<tr>'
+                + '<th>物品名称</th>'
+                + '<th class="td-center">领取数量</th>'
+                + '<th class="td-center">操作</th>'
+                + '</tr>'
+                + '</table>'
+                + '</div>'
+                + '<div  id="take-add-goods" class="panel panel-primary">'
+                + '<table  class="table table-striped">'
+                + '<tr>'
+                + '<th>物品名称</th>'
+                + '<th class="td-center">物品类别</th>'
+                + '<th class="td-center">库存数量</th>'
+                + '<th class="td-center">领取数量</th>'
+                + '<th class="td-center">操作</th>'
+                + '</tr>';
+
+            for(var i = 0; i < data.length; i++) {
+                html = html + '<tr><td>'+data[i].gname+'</td>'
+                    + '<td class="td-center">'+data[i].classify+'</td>'
+                    + '<td class="td-center">'+data[i].store+'</td>'
+                    + '<td class="td-center"><input id="take-number'+i+'\" type="text"/></td>'
+                    + '<td class="td-center"><input type="button" class="btn btn-primary" value="添加" onclick="addGainGoods(\''+data[i].gname+'\','+i+')"/></td></tr>';
+            }
+            html = html + '</table>'
+                + '</div>'
+                + '</div>';
+
+            $("#main-body").html(html);
+        },
+        error: function () {
+            alert("error");
+        }
+    });
+}
 
 function getDemand(part, key, order, up) {
     var cid = $("#cid").val();
@@ -887,100 +981,7 @@ function gainGoodsTableBySort(sortName) {
 /******************************************************获取数据部分结束************************************/
 
 /******************************************************操作部分******************************************/
-//进入领取
-function enterGainGoods(key, order, up) {
-    var cid = $("#cid").val();
 
-    $.ajax({
-        type: "POST",
-        url: "../table/enterGainGoods.form",
-        data: {cid: cid, key: key, order: order, up: up},
-
-        success: function (data) {
-            var html = '<div class="panel panel-primary">'
-                + '<div class="navbar navbar-inverse">'
-                + '<div class="container-fluid">'
-                + '<div id="header" class="navbar-header">'
-                + '<a id="title" class="navbar-brand">领取物品</a>'
-                + '</div>'
-                + '<div id="action-nav" class="collapse navbar-collapse">'
-                + '<ul id="sort-choose" class="nav navbar-nav">'
-                + '<li class="dropdown">'
-                + '<a id="sort-name" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"'
-                + 'aria-haspopup="true" aria-expanded="false">默认排序<span class="caret"></span></a>'
-                + '<ul class="dropdown-menu">'
-                + '<li><a href="#" onclick="gainGoodsTableBySort(goodsSortName1)">默认排序</a></li>'
-                + '<li><a href="#" onclick="gainGoodsTableBySort(goodsSortName2)">按名称排序</a></li>'
-                + '<li><a href="#" onclick="gainGoodsTableBySort(goodsSortName3)">按类别排序</a></li>'
-                + '<li><a href="#" onclick="gainGoodsTableBySort(goodsSortName5)">按库存排序</a></li>'
-                + '</ul>'
-                + '</li>'
-                + '</ul>'
-                + '<ul id="up-choose" class="nav navbar-nav">'
-                + '<li class="dropdown">'
-                + '<a id="up-name" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"'
-                + 'aria-haspopup="true" aria-expanded="false">升序/降序<span class="caret"></span></a>'
-                + '<ul class="dropdown-menu">'
-                + '<li><a href="#" onclick="gainGoodsTableByUp(upName1)">升序/降序</a></li>'
-                + '<li><a href="#" onclick="gainGoodsTableByUp(upName2)">升序</a></li>'
-                + '<li><a href="#" onclick="gainGoodsTableByUp(upName3)">降序</a></li>'
-                + '</ul>'
-                + '</li>'
-                + '</ul>'
-                + '<div class="navbar-form navbar-right">'
-                + '<div class="form-group">'
-                + '<input id="userid" type="text" class="form-control" placeholder="请输入员工编号"/>'
-                + '<input id="take-button" class="btn btn-primary" value="领取" onclick="doTakeGoods()"/>'
-                + '</div>'
-                + '</div>'
-                + '<div  class="navbar-form navbar-left">'
-                + '<div class="form-group">'
-                + '<input id="search" type="text" class="form-control" placeholder="请输入您要搜索的内容">'
-                + '</div>'
-                + '<input type="button" class="btn btn-default" value="搜索" onclick="gainGoodsTable()"/>'
-                + '</div>'
-                + '</div>'
-                + '</div>'
-                + '</div>'
-                + '<div><div id="take-title1">待领取的物品</div><div id="take-title2">物品库存信息</div></div>'
-                + '<div id="take-board">'
-                + '<div id="take-goods"  class="panel panel-primary">'
-                + '<table class="table table-striped">'
-                + '<tr>'
-                + '<th>物品名称</th>'
-                + '<th class="td-center">领取数量</th>'
-                + '<th class="td-center">操作</th>'
-                + '</tr>'
-                + '</table>'
-                + '</div>'
-                + '<div  id="take-add-goods" class="panel panel-primary">'
-                + '<table  class="table table-striped">'
-                + '<tr>'
-                + '<th>物品名称</th>'
-                + '<th class="td-center">物品类别</th>'
-                + '<th class="td-center">库存数量</th>'
-                + '<th class="td-center">领取数量</th>'
-                + '<th class="td-center">操作</th>'
-                + '</tr>';
-
-                for(var i = 0; i < data.length; i++) {
-                html = html + '<tr><td>'+data[i].gname+'</td>'
-                + '<td class="td-center">'+data[i].classify+'</td>'
-                + '<td class="td-center">'+data[i].store+'</td>'
-                + '<td class="td-center"><input id="take-number'+i+'\" type="text"/></td>'
-                + '<td class="td-center"><input type="button" class="btn btn-primary" value="添加" onclick="addGainGoods(\''+data[i].gname+'\','+i+')"/></td></tr>';
-                }
-                html = html + '</table>'
-                + '</div>'
-                + '</div>';
-
-            $("#main-body").html(html);
-        },
-        error: function () {
-            alert("error");
-        }
-    });
-}
 //领取物品，“添加”
 function addGainGoods(gname, no) {
     var tid = "#take-number"+no;
@@ -1023,15 +1024,16 @@ function deleteGainGoods(gname) {
 
 //领取物品，“领取”
 function doTakeGoods() {
+    var userid = $("#userid").val();
     $.ajax({
         type:"POST",
         url:"../table/doTakeGoods.form",
+        data:{userid:userid},
         success:function() {
             alert("领取成功!");
-            var html="";
-            $("#take-goods").html(html);
+            enterGainGoods('','','');
         }
-    })
+    });
 }
 
 //归还物品，“归还”

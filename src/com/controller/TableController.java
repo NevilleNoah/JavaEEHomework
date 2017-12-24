@@ -84,7 +84,7 @@ public class TableController {
 
     @RequestMapping("/doTakeGoods")
     public static void doTakeGoods(HttpServletRequest request, HttpServletResponse response) {
-
+        Integer userid = Integer.valueOf(request.getParameter("userid"));
     }
 
     @RequestMapping("/doReturnGoods")
