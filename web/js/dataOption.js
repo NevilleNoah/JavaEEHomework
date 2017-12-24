@@ -182,7 +182,7 @@ function getGain(part, key, order, up) {
                 } else {
                     var action = "归还";
                 }
-                html = html + "<tr><td>" + gainList[i].gname + "</td><td>" + action + "</td><td>" + gainList[i].gtime + "</td><td>" + gainList[i].number + "</td></tr>";
+                html = html + "<tr><td>" + gainList[i].gname + "</td><td>" + gainList[i].id+"</td><td>"+action + "</td><td>" + gainList[i].gtime + "</td><td>" + gainList[i].number + "</td></tr>";
             }
             html = html + "</table></div>";
             $("#main-body").html(html);
@@ -428,7 +428,7 @@ function getDamage(part, key, order, up) {
                 + '</div>';
             html = html + '<div id="table-div" class="panel-body"><table class="table table-striped" id="mainTable"> <tr> <th>物品名称</th> <th>员工号</th> <th>数量</th> <th>时间</th> <th>状态</th> <th>原因</th> </tr>';
             for (var i = 0; i < damageList.length; i++) {
-                html = html + "<tr><td>" + damageList[i].gname + "</td><td>" + damageList[i].id + "</td><td>" + damageList[i].number + "</td><td>" + damageList[i].gtime + "</td><td>" + damageList[i].station + "</td><td>" + damageList[i].cause + "</td></tr>";
+                html = html + "<tr><td>" + damageList[i].gname + "</td><td>" + damageList[i].id + "</td><td>" + damageList[i].number + "</td><td>" + damageList[i].time + "</td><td>" + damageList[i].station + "</td><td>" + damageList[i].cause + "</td></tr>";
             }
             html = html + "</table></div>";
             $("#main-body").html(html);
@@ -710,7 +710,7 @@ function gainTable() {
         success: function (gainList) {
             var html = '<table class="table table-striped" id="mainTable"> <tr> <th>物品名称</th> <th>行为</th> <th>时间</th> <th>数量</th> </tr>';
             for (var i = 0; i < gainList.length; i++) {
-                html = html + "<tr><td>" + gainList[i].gname + "</td><td>" + gainList[i].action + "</td><td>" + gainList[i].time + "</td><td>" + gainList[i].number + "</td></tr>";
+                html = html + "<tr><td>" + gainList[i].gname + "</td><td>" + gainList[i].action + "</td><td>" + gainList[i].gtime + "</td><td>" + gainList[i].number + "</td></tr>";
             }
             html = html + "</table>";
             $("#mainTable").html(html);
