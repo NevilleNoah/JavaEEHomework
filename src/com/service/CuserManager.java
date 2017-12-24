@@ -1,8 +1,8 @@
 package com.service;
 
 import com.dbtools.GetSqlSession;
-import com.entity.User;
-import com.entity.UserExample;
+import com.entity.Cuser;
+import com.entity.CuserExample;
 import org.apache.ibatis.session.SqlSession;
 
 import java.io.IOException;
@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Created by asus on 2017/12/12/012.
  */
-public class UserManager {
+public class CuserManager {
     /**
      * 搜索员工信息
      * @param companyId 公司ID
@@ -21,22 +21,22 @@ public class UserManager {
      * @return
      * @throws IOException
      */
-    public static List<User> selectUser(Integer companyId, String part, String key, String order, String up) throws IOException {
+    public static List<Cuser> selectCuser(Integer companyId, String part, String key, String order, String up) throws IOException {
         SqlSession sqlSession = GetSqlSession.getSqlSession();
-        UserExample userExample = new UserExample();
+        CuserExample cuserExample = new CuserExample();
 
         //关键字为空则搜索全部，否则根据关键字搜索
         if(key == null || key.length() == 0) {
             if(part.equals("所有部门")) {
-                userExample.or().andCidEqualTo(companyId);
+                cuserExample.or().andCidEqualTo(companyId);
             } else {
-                userExample.or().andCidEqualTo(companyId).andPartEqualTo(part);
+                cuserExample.or().andCidEqualTo(companyId).andPartEqualTo(part);
             }
         } else {
             if(part.equals("所有部门")) {
-                userExample.or().andCidEqualTo(companyId).andEnameLike("%"+key+"%");
+                cuserExample.or().andCidEqualTo(companyId).andEnameLike("%"+key+"%");
             } else {
-                userExample.or().andCidEqualTo(companyId).andPartEqualTo(part).andEnameLike("%"+key+"%");
+                cuserExample.or().andCidEqualTo(companyId).andPartEqualTo(part).andEnameLike("%"+key+"%");
             }
         }
         //设置升序降序或默认排序
@@ -44,19 +44,19 @@ public class UserManager {
             String sortWay;
             if (up.equals("升序")) {
                 sortWay = " ASC";
-                userExample.setOrderByClause(order + sortWay);
+                cuserExample.setOrderByClause(order + sortWay);
             } else if (up.equals("降序")) {
                 sortWay = " DESC";
-                userExample.setOrderByClause(order + sortWay);
+                cuserExample.setOrderByClause(order + sortWay);
             } else {
 
             }
         }
 
-        List<User> userList = sqlSession.selectList("com.dao.UserMapper.selectByExample", userExample);
+        List<Cuser> cuserList = sqlSession.selectList("com.dao.CuserMapper.selectByExample", cuserExample);
 
         sqlSession.commit();
         sqlSession.close();
-        return userList;
+        return cuserList;
     }
 }

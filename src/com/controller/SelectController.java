@@ -2,28 +2,22 @@ package com.controller;
 
 import com.entity.*;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.portlet.ModelAndView;
 
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
+import static com.service.CuserManager.selectCuser;
 import static com.service.DamageManager.selectDamage;
 import static com.service.DemandManager.selectDemand;
 import static com.service.GainManager.selectGain;
 import static com.service.GainManager.selectGainGoods;
 import static com.service.GainManager.selectReturn;
 import static com.service.GoodsManager.*;
-import static com.service.UserManager.selectUser;
+
 
 /**
  * Created by asus on 2017/12/10/010.
@@ -97,9 +91,9 @@ public class SelectController {
         return demandList;
     }
 
-    @RequestMapping("/getUser")
+    @RequestMapping("/getCuser")
     @ResponseBody
-    public static List<User> getUser(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public static List<Cuser> getCuser(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         Integer cid = Integer.valueOf(request.getParameter("cid"));
         String part = request.getParameter("part");
@@ -107,10 +101,10 @@ public class SelectController {
         String order = request.getParameter("order");
         String up = request.getParameter("up");
 
-        List<User> userList;
-        userList = selectUser(cid, part, str, order, up);
+        List<Cuser> cuserList;
+        cuserList = selectCuser(cid, part, str, order, up);
 
-        return userList;
+        return cuserList;
     }
 
 
