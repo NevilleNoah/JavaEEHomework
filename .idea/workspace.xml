@@ -2,10 +2,248 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5edad083-3930-4073-a4cb-94122a823370" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/js/dataOption.js" afterPath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/js/dataOption.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/mybatis/mybatisGeneratorConfig.xml" afterPath="$PROJECT_DIR$/out/production/JavaEEHomework/mybatis/mybatisGeneratorConfig.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/dataOption.js" afterPath="$PROJECT_DIR$/web/js/dataOption.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/applicationContext.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/beans.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/controller/AddController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/controller/DeleteController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/controller/EmployeeController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/controller/LoginController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/controller/SelectController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/controller/TableController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/dao/CompanyMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/dao/CuserMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/dao/DamageMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/dao/DemandMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/dao/GainGoodsMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/dao/GainMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/dao/GoodsMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/dbtools/GetSqlSession.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/Company.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/CompanyExample$Criteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/CompanyExample$Criterion.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/CompanyExample$GeneratedCriteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/CompanyExample.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/Cuser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/CuserExample$Criteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/CuserExample$Criterion.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/CuserExample$GeneratedCriteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/CuserExample.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/Damage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/DamageExample$Criteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/DamageExample$Criterion.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/DamageExample$GeneratedCriteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/DamageExample.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/Demand.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/DemandExample$Criteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/DemandExample$Criterion.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/DemandExample$GeneratedCriteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/DemandExample.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/Gain.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/GainExample$Criteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/GainExample$Criterion.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/GainExample$GeneratedCriteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/GainExample.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/GainGoods.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/GainGoodsExample$Criteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/GainGoodsExample$Criterion.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/GainGoodsExample$GeneratedCriteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/GainGoodsExample.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/Goods.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/GoodsExample$Criteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/GoodsExample$Criterion.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/GoodsExample$GeneratedCriteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/entity/GoodsExample.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/CompanyMapper.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/CuserMapper.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/DamageMapper.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/DemandMapper.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/GainGoodsMapper.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/GainMapper.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/mapper/GoodsMapper.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/service/CuserManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/service/DamageManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/service/DemandManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/service/GainManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/com/service/GoodsManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/mybatis/mybatisConfig.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/mybatis/mybatisConfig.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/mybatis/mybatisGeneratorConfig.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/classes/mybatis/mybatisGeneratorRun.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/dispatcher-servlet.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/jsp/main.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/lib/aopalliance-1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/lib/commons-logging-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/lib/jackson-annotations-2.9.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/lib/jackson-core-2.9.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/lib/jackson-databind-2.9.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/lib/mybatis-3.4.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/lib/mybatis-generator-core-1.3.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/lib/spring-aop-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/lib/spring-aspects-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/lib/spring-beans-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/lib/spring-context-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/lib/spring-context-support-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/lib/spring-core-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/lib/spring-expression-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/lib/spring-instrument-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/lib/spring-instrument-tomcat-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/lib/spring-jdbc-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/lib/spring-jms-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/lib/spring-messaging-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/lib/spring-orm-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/lib/spring-oxm-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/lib/spring-test-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/lib/spring-tx-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/lib/spring-web-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/lib/spring-webmvc-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/lib/spring-webmvc-portlet-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/lib/spring-websocket-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/tld/c-1_0-rt.tld" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/tld/c-1_0.tld" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/tld/c.tld" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/tld/fmt-1_0-rt.tld" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/tld/fmt-1_0.tld" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/tld/fmt.tld" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/tld/fn.tld" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/tld/permittedTaglibs.tld" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/tld/scriptfree.tld" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/tld/sql-1_0-rt.tld" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/tld/sql-1_0.tld" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/tld/sql.tld" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/tld/x-1_0-rt.tld" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/tld/x-1_0.tld" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/tld/x.tld" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/WEB-INF/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/adduser.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/css/demo.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/css/formStyle.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/css/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/css/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/index.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/js/dataOption.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/js/klorofil-common.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/bootstrap/css/bootstrap-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/bootstrap/css/bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/bootstrap/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/bootstrap/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/bootstrap/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/bootstrap/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/bootstrap/js/npm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/chartist/css/chartist-custom.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/chartist/css/chartist-custom.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/chartist/css/chartist.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/chartist/css/chartist.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/chartist/js/chartist.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/chartist/js/chartist.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/chartist/map/chartist.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/chartist/map/chartist.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/chartist/scss/chartist.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/font-awesome/css/font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/font-awesome/css/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/font-awesome/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/font-awesome/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/font-awesome/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/font-awesome/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/font-awesome/fonts/fontawesome-webfont.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/jquery-slimscroll/jquery.slimscroll.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/jquery-slimscroll/jquery.slimscroll.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/jquery.easy-pie-chart/angular.easypiechart.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/jquery.easy-pie-chart/angular.easypiechart.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/jquery.easy-pie-chart/easypiechart.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/jquery.easy-pie-chart/easypiechart.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/jquery.easy-pie-chart/jquery.easypiechart.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/jquery/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/jquery/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/jquery/jquery.min.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/linearicons/fonts/Linearicons-Free.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/linearicons/fonts/Linearicons-Free.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/linearicons/fonts/Linearicons-Free.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/linearicons/fonts/Linearicons-Free.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/linearicons/fonts/Linearicons-Free.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/linearicons/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/toastr/toastr.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/toastr/toastr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/toastr/toastr.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/JavaEEHomework_war_exploded/vendor/toastr/toastr.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/beans.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/controller/AddController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/controller/DeleteController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/controller/EmployeeController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/controller/LoginController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/controller/SelectController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/controller/TableController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/dao/CompanyMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/dao/CuserMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/dao/DamageMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/dao/DemandMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/dao/GainGoodsMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/dao/GainMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/dao/GoodsMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/dbtools/GetSqlSession.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/Company.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/CompanyExample$Criteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/CompanyExample$Criterion.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/CompanyExample$GeneratedCriteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/CompanyExample.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/Cuser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/CuserExample$Criteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/CuserExample$Criterion.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/CuserExample$GeneratedCriteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/CuserExample.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/Damage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/DamageExample$Criteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/DamageExample$Criterion.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/DamageExample$GeneratedCriteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/DamageExample.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/Demand.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/DemandExample$Criteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/DemandExample$Criterion.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/DemandExample$GeneratedCriteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/DemandExample.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/Gain.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/GainExample$Criteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/GainExample$Criterion.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/GainExample$GeneratedCriteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/GainExample.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/GainGoods.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/GainGoodsExample$Criteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/GainGoodsExample$Criterion.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/GainGoodsExample$GeneratedCriteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/GainGoodsExample.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/Goods.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/GoodsExample$Criteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/GoodsExample$Criterion.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/GoodsExample$GeneratedCriteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/entity/GoodsExample.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/CompanyMapper.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/CuserMapper.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/DamageMapper.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/DemandMapper.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/GainGoodsMapper.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/GainMapper.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/mapper/GoodsMapper.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/service/CuserManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/service/DamageManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/service/DemandManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/service/GainManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/com/service/GoodsManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/mybatis/mybatisConfig.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/mybatis/mybatisConfig.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/mybatis/mybatisGeneratorConfig.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/JavaEEHomework/mybatis/mybatisGeneratorRun.class" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -85,7 +323,7 @@
             <entry file="file://$PROJECT_DIR$/web/js/dataOption.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="122">
-                  <caret line="707" column="69" lean-forward="true" selection-start-line="707" selection-start-column="69" selection-end-line="707" selection-end-column="69" />
+                  <caret line="707" column="69" lean-forward="false" selection-start-line="707" selection-start-column="69" selection-end-line="707" selection-end-column="69" />
                   <folding />
                 </state>
               </provider>
@@ -159,7 +397,7 @@
             <entry file="file://$PROJECT_DIR$/src/mybatis/mybatisGeneratorConfig.xml">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="246">
-                  <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+                  <caret line="32" column="30" lean-forward="false" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
                   <folding />
                 </state>
               </provider>
@@ -1552,12 +1790,12 @@
       <workItem from="1513842655260" duration="609000" />
       <workItem from="1513851355831" duration="78000" />
       <workItem from="1514086279227" duration="6310000" />
-      <workItem from="1514101217212" duration="4476000" />
+      <workItem from="1514101217212" duration="4618000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176699000" />
+    <option name="totallyTimeSpent" value="176841000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1570,7 +1808,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1595,7 +1833,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27573964" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289941" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25107527" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25107527" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289941" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1929,7 +2167,7 @@
     <entry file="file://$PROJECT_DIR$/src/mybatis/mybatisGeneratorConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
-          <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+          <caret line="32" column="30" lean-forward="false" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -1974,7 +2212,7 @@
     <entry file="file://$PROJECT_DIR$/web/js/dataOption.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
-          <caret line="707" column="69" lean-forward="true" selection-start-line="707" selection-start-column="69" selection-end-line="707" selection-end-column="69" />
+          <caret line="707" column="69" lean-forward="false" selection-start-line="707" selection-start-column="69" selection-end-line="707" selection-end-column="69" />
           <folding />
         </state>
       </provider>
