@@ -1,4 +1,4 @@
-<%--
++<%--
   Created by IntelliJ IDEA.
   User: asus
   Date: 2017/12/7/007
@@ -131,7 +131,7 @@
     </div>
     <input id="cid" type="hidden" value="${cid}"/>
     <div id="main-body">
-<<<<<<< HEAD
+        <<<<<<< HEAD
         <div class="panel panel-primary">
             <div class="navbar navbar-inverse">
                 <div class="container-fluid">
@@ -147,47 +147,47 @@
             <form action="/employee/employeeAdd.form" method="post" class="form">
                 <br/>
                 <div class="position">
-                <div>
-                    工号：<input type="text" class="" placeholder="请输入员工号" name="id">
-                </div>
-                <br/>
-                <div>
-                    管理员：<input type="text" class="" placeholder="请输入0或1" name="ismanager">
-                </div>
-                <br/>
-                <div>
-                    姓名：<input type="text" class="" placeholder="请输入姓名" name="ename">
-                </div>
-                <br/>
-                <div>
-                    性别：<input type="text" class="" placeholder="请输入员性别" name="sex">
-                </div>
-                <br/>
-                <div>
-                    年龄：<input type="text" class="" placeholder="请输入年龄" name="age">
-                </div>
-                <br/>
-                <div>
-                   时间：<input type="text" class="" placeholder="请输入入职时间" name="intime">
-                </div>
-                <br/>
-                <div>
-                    电话：<input type="text" class="" placeholder="请输入电话" name="phone">
-                </div>
-                <br/>
-                <div>
-                    住址：<input type="text" class="" placeholder="请输入住址" name="address">
-                </div>
-                <br/>
-                <br/>
-                <div>
-                    <input type="text" id="company" name="cid">
-                </div>
-                <div>
-                     部门：<input type="text" class="" placeholder="请输入部门" name="part">
-                </div>
+                    <div>
+                        工号：<input type="text" class="" placeholder="请输入员工号" name="id">
+                    </div>
+                    <br/>
+                    <div>
+                        管理员：<input type="text" class="" placeholder="请输入0或1" name="ismanager">
+                    </div>
+                    <br/>
+                    <div>
+                        姓名：<input type="text" class="" placeholder="请输入姓名" name="ename">
+                    </div>
+                    <br/>
+                    <div>
+                        性别：<input type="text" class="" placeholder="请输入员性别" name="sex">
+                    </div>
+                    <br/>
+                    <div>
+                        年龄：<input type="text" class="" placeholder="请输入年龄" name="age">
+                    </div>
+                    <br/>
+                    <div>
+                        时间：<input type="text" class="" placeholder="请输入入职时间" name="intime">
+                    </div>
+                    <br/>
+                    <div>
+                        电话：<input type="text" class="" placeholder="请输入电话" name="phone">
+                    </div>
+                    <br/>
+                    <div>
+                        住址：<input type="text" class="" placeholder="请输入住址" name="address">
+                    </div>
+                    <br/>
+                    <br/>
+                    <div>
+                        <input type="text" id="company" name="cid">
+                    </div>
+                    <div>
+                        部门：<input type="text" class="" placeholder="请输入部门" name="part">
+                    </div>
 
-                <br/>
+                    <br/>
                     <div>
                         <input type="text" class="" value="2017.5.6" name="outtime">
                     </div>
@@ -198,20 +198,20 @@
                     </div>
 
                     <br/>
-                <div>
-                    <input id="submit" class="button" type="submit" value="提交"/>
-                </div>
+                    <div>
+                        <input id="submit" class="button" type="submit" value="提交"/>
+                    </div>
                 </div>
             </form>
 
 
-
-    </div>
 </div>
+        </div>
+    </div>
 
-<script>
-    var cid = $("#cid").val();
-    document.getElementById('company').value=cid;
-</script>
+    <script>
+        var cid = $("#cid").val();
+        document.getElementById('company').value=cid;
+    </script>
 </body>
 </html>
