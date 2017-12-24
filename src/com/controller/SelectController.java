@@ -21,6 +21,7 @@ import static com.service.DamageManager.selectDamage;
 import static com.service.DemandManager.selectDemand;
 import static com.service.GainManager.selectGain;
 import static com.service.GainManager.selectGainGoods;
+import static com.service.GainManager.selectReturn;
 import static com.service.GoodsManager.*;
 import static com.service.UserManager.selectUser;
 
@@ -123,6 +124,22 @@ public class SelectController {
 
         return gainGoodsList;
 
+    }
+
+    @RequestMapping("/getReturn")
+    @ResponseBody
+    public static List<Gain> getReturn(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+        Integer cid = Integer.valueOf(request.getParameter("cid"));
+        String part = request.getParameter("part");
+        String str = request.getParameter("str");
+        String order = request.getParameter("order");
+        String up = request.getParameter("up");
+
+        List<Gain> returnList;
+        returnList = selectReturn(cid, part, str, order, up);
+
+        return returnList;
     }
 
 }

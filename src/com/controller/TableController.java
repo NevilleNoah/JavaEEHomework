@@ -1,6 +1,7 @@
 package com.controller;
 
 import com.entity.GainGoods;
+import com.entity.Goods;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -11,6 +12,7 @@ import java.io.IOException;
 import java.util.List;
 
 import static com.service.GainManager.*;
+import static com.service.GoodsManager.selectGoods;
 
 /**
  * Created by asus on 2017/12/19/019.
@@ -52,5 +54,43 @@ public class TableController {
         List<GainGoods> gainGoodsList = selectGainGoods(cid);
 
         return gainGoodsList;
+    }
+
+    @RequestMapping("/clearTakingGoods")
+    @ResponseBody
+    public static void clearTakingGoods(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        Integer cid = Integer.valueOf(request.getParameter("cid"));
+
+        clearGainGoods(cid);
+
+    }
+
+    @RequestMapping("/enterGainGoods")
+    @ResponseBody
+    public static List<Goods> enterGainGoods(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+        Integer cid = Integer.valueOf(request.getParameter("cid"));
+        String key = request.getParameter("key");
+        String order = request.getParameter("order");
+        String up = request.getParameter("up");
+
+        clearGainGoods(cid);
+
+        List<Goods> goodsList;
+        goodsList = selectGoods(cid, key, order, up);
+
+        return goodsList;
+    }
+
+    @RequestMapping("/doTakeGoods")
+    public static void doTakeGoods(HttpServletRequest request, HttpServletResponse response) {
+
+    }
+
+    @RequestMapping("/doReturnGoods")
+    public static void doReturnGoods(HttpServletRequest request, HttpServletResponse response) {
+        Integer cid = Integer.valueOf(request.getParameter("cid"));
+        Integer id = Integer.valueOf(request.getParameter("id"));
+        String gname = request.getParameter("gname");
     }
 }
