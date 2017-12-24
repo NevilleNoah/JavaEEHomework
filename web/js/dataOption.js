@@ -345,7 +345,7 @@ function getUser(part, key, order, up) {
     var cid = $("#cid").val();
     $.ajax({
         type: "POST",
-        url: "../select/getUser.form",
+        url: "../select/getCuser.form",
         data: {cid: cid, part: part, key: key, order: order, up: up},
         dataType: "json",
         success: function (userList) {
@@ -408,7 +408,7 @@ function getUser(part, key, order, up) {
                 if (userList[i].outtime == null) {
                     userList[i].outtime = "未离职";
                 }
-                html = html + "<tr><td>" + userList[i].name + "</td> <td>" + userList[i].sex + "</td> <td>" + userList[i].age + "</td> <td>" + userList[i].intime + "</td>  <td>" + userList[i].outtime + "</td> <td>" + userList[i].phone + "</td> <td>+" + userList[i].address + "</td> </tr>";
+                html = html + "<tr><td>" + userList[i].ename + "</td> <td>" + userList[i].sex + "</td> <td>" + userList[i].age + "</td> <td>" + userList[i].intime + "</td>  <td>" + userList[i].outtime + "</td> <td>" + userList[i].phone + "</td> <td>+" + userList[i].address + "</td> </tr>";
             }
             html = html + "</table></div>";
             $("#main-body").html(html);
@@ -729,7 +729,7 @@ function userTable() {
     }
     $.ajax({
         type: "POST",
-        url: "../select/getUser.form",
+        url: "../select/getCuser.form",
         data: {cid: cid, part: part, key: key, order: order, up: up},
         dataType: "json",
         success: function (userList) {
@@ -738,7 +738,7 @@ function userTable() {
                 if (userList[i].outtime == null) {
                     userList[i].outtime = "未离职";
                 }
-                html = html + "<tr><td>" + userList[i].name + "</td> <td>" + userList[i].sex + "</td> <td>" + userList[i].age + "</td> <td>" + userList[i].intime + "</td>  <td>" + userList[i].outtime + "</td> <td>" + userList[i].phone + "</td> <td>+" + userList[i].address + "</td> </tr>";
+                html = html + "<tr><td>" + userList[i].ename + "</td> <td>" + userList[i].sex + "</td> <td>" + userList[i].age + "</td> <td>" + userList[i].intime + "</td>  <td>" + userList[i].outtime + "</td> <td>" + userList[i].phone + "</td> <td>+" + userList[i].address + "</td> </tr>";
             }
             html = html + "</table>";
             $("#mainTable").html(html);

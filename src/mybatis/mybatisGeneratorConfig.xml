@@ -33,7 +33,7 @@
         </javaClientGenerator>
 
 
-        <table schema="office management" tableName="user" domainObjectName="User">
+        <table schema="office management" tableName="cuser" domainObjectName="Cuser">
             <property name="useActualColumnNames" value="true"/>
             <generatedKey column="id" sqlStatement="DB2" identity="true" />
         </table>
@@ -48,7 +48,7 @@
             <generatedKey column="gname" sqlStatement="DB2" identity="true" />
         </table>
 
-        <!--<table schema="office management" tableName="demand" domainObjectName="Demand">
+        <table schema="office management" tableName="demand" domainObjectName="Demand">
             <property name="useActualColumnNames" value="true"/>
             <generatedKey column="id" sqlStatement="DB2" identity="true" />
         </table>

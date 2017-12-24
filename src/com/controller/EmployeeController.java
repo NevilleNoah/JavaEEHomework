@@ -43,7 +43,7 @@ public class EmployeeController {
 
 
 
-        addUser(id, ismanager, ename, sex, age, intime, outtime, img, phone, address, cid, part);
+        addCuser(id, ismanager, ename, sex, age, intime, outtime, img, phone, address, cid, part);
 
     }
 }
