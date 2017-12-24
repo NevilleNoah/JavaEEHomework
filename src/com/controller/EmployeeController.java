@@ -13,8 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
+import static com.service.CuserManager.addCuser;
 import static com.service.GainManager.addGainGoods;
-import static com.service.UserManager.addUser;
+import static com.service.CuserManager.addCuser;
 
 /**
  * Created by asus on 2017/12/17/017.
@@ -25,7 +26,7 @@ public class EmployeeController {
 
     @RequestMapping("/employeeAdd")
     @ResponseBody
-    public static void gainGoodsAdd(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public static void employeeAdd(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         Integer id = Integer.valueOf(request.getParameter("id"));
         Integer ismanager = Integer.valueOf(request.getParameter("ismanager"));
