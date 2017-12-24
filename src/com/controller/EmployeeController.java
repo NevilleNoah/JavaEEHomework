@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
+import static com.service.CuserManager.addCuser;
 import static com.service.GainManager.addGainGoods;
-import static com.service.UserManager.addUser;
 
 /**
  * Created by asus on 2017/12/17/017.
