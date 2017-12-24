@@ -1,0 +1,12 @@
+.form{
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 500px;
+    background: rgba(146, 153, 156, 0.69);
+    padding: 25px 15px 25px 10px;
+    border:1px solid #826ae4;
+    text-align:center;
+    font-weight:bold;
+    input-font: #f5f2ff;
+    input-text: #000000;
+}
