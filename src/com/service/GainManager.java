@@ -12,6 +12,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static com.dbtools.GetSqlSession.*;
+
+
 /**
  * Created by asus on 2017/12/12/012.
  */
@@ -27,7 +30,7 @@ public class GainManager {
      * @throws IOException
      */
     public static List<Gain> selectGain(Integer companyId, String part, String key, String order, String up) throws IOException {
-        SqlSession sqlSession = GetSqlSession.getSqlSession();
+        SqlSession sqlSession = getSqlSession();
         GainExample gainExample = new GainExample();
 
         //关键字为空则搜索全部，否则根据关键字搜索
@@ -58,7 +61,7 @@ public class GainManager {
     }
 
     public static List<GainGoods> selectGainGoods(Integer cid) throws IOException {
-        SqlSession sqlSession = GetSqlSession.getSqlSession();
+        SqlSession sqlSession = getSqlSession();
         GainGoodsExample gainGoodsExample = new GainGoodsExample();
         gainGoodsExample.or().andCidEqualTo(cid);
 
@@ -71,7 +74,7 @@ public class GainManager {
 
     public static void clearGainGoods(Integer cid) throws IOException {
 
-        SqlSession sqlSession = GetSqlSession.getSqlSession();
+        SqlSession sqlSession = getSqlSession();
 
         GainGoodsExample gainGoodsExample = new GainGoodsExample();
         gainGoodsExample.or().andCidEqualTo(cid);
@@ -84,7 +87,7 @@ public class GainManager {
 
 
     public static boolean gainGoodsCheckRepeat(Integer cid, String gname) throws IOException {
-        SqlSession sqlSession = GetSqlSession.getSqlSession();
+        SqlSession sqlSession = getSqlSession();
 
         GainGoodsExample example = new GainGoodsExample();
         example.or().andCidEqualTo(cid).andGnameLike(gname);
@@ -99,7 +102,7 @@ public class GainManager {
 
     public static void addGainGoods(Integer cid, String gname, Integer number) throws IOException {
 
-        SqlSession sqlSession = GetSqlSession.getSqlSession();
+        SqlSession sqlSession = getSqlSession();
 
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("com/beans.xml");
         GainGoods gainGoods = (GainGoods) applicationContext.getBean("gainGoods");
@@ -117,7 +120,7 @@ public class GainManager {
 
     public static void deleteGainGoods(Integer cid, String gname) throws IOException {
 
-        SqlSession sqlSession = GetSqlSession.getSqlSession();
+        SqlSession sqlSession = getSqlSession();
 
         GainGoodsMapper gainGoodsMapper = sqlSession.getMapper(GainGoodsMapper.class);
 
@@ -132,7 +135,7 @@ public class GainManager {
 
     public static void updateGainGoods(Integer cid, String gname, Integer number) throws IOException {
 
-        SqlSession sqlSession = GetSqlSession.getSqlSession();
+        SqlSession sqlSession = getSqlSession();
 
         GainGoodsExample example = new GainGoodsExample();
         example.or().andCidEqualTo(cid).andGnameEqualTo(gname);

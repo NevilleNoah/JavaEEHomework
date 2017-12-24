@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5edad083-3930-4073-a4cb-94122a823370" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/controller/TableController.java" afterPath="$PROJECT_DIR$/src/com/controller/TableController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/controller/EmployeeController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/formStyle.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/service/CuserManager.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/beans.xml" afterPath="$PROJECT_DIR$/src/com/beans.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mapper/CuserMapper.xml" afterPath="$PROJECT_DIR$/src/com/mapper/CuserMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mapper/GainMapper.xml" afterPath="$PROJECT_DIR$/src/com/mapper/GainMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/dataOption.js" afterPath="$PROJECT_DIR$/web/js/dataOption.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/service/GainManager.java" afterPath="$PROJECT_DIR$/src/com/service/GainManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/main.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/main.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/adduser.jsp" afterPath="$PROJECT_DIR$/web/adduser.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -31,46 +35,46 @@
             <entry file="file://$PROJECT_DIR$/src/com/controller/TableController.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="460">
-                  <caret line="86" column="56" lean-forward="true" selection-start-line="86" selection-start-column="56" selection-end-line="86" selection-end-column="56" />
+                  <caret line="86" column="56" lean-forward="false" selection-start-line="86" selection-start-column="56" selection-end-line="86" selection-end-column="56" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="CuserMapper.xml" pinned="false" current-in-tab="false">
+          <file leaf-file-name="CuserMapper.xml" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/mapper/CuserMapper.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="577">
+                <state relative-caret-position="595">
                   <caret line="395" column="0" lean-forward="false" selection-start-line="395" selection-start-column="0" selection-end-line="395" selection-end-column="0" />
                   <folding>
-                    <marker date="1514094019663" expanded="true" signature="5141:5242" ph="select from cuser" />
-                    <marker date="1514094019663" expanded="true" signature="5525:5580" ph="delete from " />
-                    <marker date="1514094019663" expanded="true" signature="5866:5883" ph="delete from " />
-                    <marker date="1514094019663" expanded="true" signature="9213:9239" ph="select count... cuser" />
-                    <marker date="1514094019663" expanded="true" signature="11210:11793" ph="update cuser... " />
-                    <marker date="1514094019663" expanded="true" signature="12186:13214" ph="update cuser... " />
-                    <marker date="1514094019663" expanded="true" signature="13496:13998" ph="update cuser... " />
-                    <marker date="1514094019663" expanded="true" signature="13508:13998" ph="update &quot;cuse... " />
+                    <marker date="1514100967817" expanded="true" signature="5141:5242" ph="select from cuser" />
+                    <marker date="1514100967817" expanded="true" signature="5525:5580" ph="delete from " />
+                    <marker date="1514100967817" expanded="true" signature="5866:5883" ph="delete from " />
+                    <marker date="1514100967817" expanded="true" signature="9213:9239" ph="select count... cuser" />
+                    <marker date="1514100967817" expanded="true" signature="11210:11793" ph="update cuser... " />
+                    <marker date="1514100967817" expanded="true" signature="12186:13214" ph="update cuser... " />
+                    <marker date="1514100967817" expanded="true" signature="13496:13998" ph="update cuser... " />
+                    <marker date="1514100967817" expanded="true" signature="13508:13998" ph="update &quot;cuse... " />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="GainMapper.xml" pinned="false" current-in-tab="true">
+          <file leaf-file-name="GainMapper.xml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/mapper/GainMapper.xml">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="748">
                   <caret line="319" column="30" lean-forward="false" selection-start-line="319" selection-start-column="30" selection-end-line="319" selection-end-column="30" />
                   <folding>
-                    <marker date="1514094665435" expanded="true" signature="4769:4869" ph="select from gain" />
-                    <marker date="1514094665435" expanded="true" signature="5152:5206" ph="delete from " />
-                    <marker date="1514094665435" expanded="true" signature="5491:5507" ph="delete from " />
-                    <marker date="1514094665435" expanded="true" signature="7939:7964" ph="select count... gain" />
-                    <marker date="1514094665435" expanded="true" signature="9426:9766" ph="update gain " />
-                    <marker date="1514094665435" expanded="true" signature="10158:10747" ph="update gain " />
-                    <marker date="1514094665435" expanded="true" signature="11028:11322" ph="update gain " />
-                    <marker date="1514094665435" expanded="true" signature="11395:11557" ph="insert into gain... " />
-                    <marker date="1514094665435" expanded="true" signature="11467:11557" ph="select ##{use... gaingoods" />
+                    <marker date="1514100962128" expanded="true" signature="4769:4869" ph="select from gain" />
+                    <marker date="1514100962128" expanded="true" signature="5152:5206" ph="delete from " />
+                    <marker date="1514100962128" expanded="true" signature="5491:5507" ph="delete from " />
+                    <marker date="1514100962128" expanded="true" signature="7939:7964" ph="select count... gain" />
+                    <marker date="1514100962128" expanded="true" signature="9426:9766" ph="update gain " />
+                    <marker date="1514100962128" expanded="true" signature="10158:10747" ph="update gain " />
+                    <marker date="1514100962128" expanded="true" signature="11028:11322" ph="update gain " />
+                    <marker date="1514100962128" expanded="true" signature="11395:11557" ph="insert into gain... " />
+                    <marker date="1514100962128" expanded="true" signature="11467:11557" ph="select ##{use... gaingoods" />
                   </folding>
                 </state>
               </provider>
@@ -80,7 +84,7 @@
             <entry file="file://$PROJECT_DIR$/web/js/dataOption.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="164">
-                  <caret line="1030" column="25" lean-forward="true" selection-start-line="1030" selection-start-column="25" selection-end-line="1030" selection-end-column="25" />
+                  <caret line="1030" column="25" lean-forward="false" selection-start-line="1030" selection-start-column="25" selection-end-line="1030" selection-end-column="25" />
                   <folding />
                 </state>
               </provider>
@@ -96,14 +100,15 @@
                 <state relative-caret-position="-437">
                   <caret line="154" column="11" lean-forward="false" selection-start-line="154" selection-start-column="11" selection-end-line="154" selection-end-column="11" />
                   <folding>
-                    <marker date="1514094665435" expanded="true" signature="4769:4869" ph="select from gain" />
-                    <marker date="1514094665435" expanded="true" signature="5152:5206" ph="delete from " />
-                    <marker date="1514094665435" expanded="true" signature="5491:5507" ph="delete from " />
-                    <marker date="1514094665435" expanded="true" signature="7939:7964" ph="select count... gain" />
-                    <marker date="1514094665435" expanded="true" signature="9426:9766" ph="update gain " />
-                    <marker date="1514094665435" expanded="true" signature="10158:10747" ph="update gain " />
-                    <marker date="1514094665435" expanded="true" signature="11028:11322" ph="update gain " />
-                    <marker date="1514094665435" expanded="true" signature="11395:11467" ph="insert into gain... " />
+                    <marker date="1514100962128" expanded="true" signature="4769:4869" ph="select from gain" />
+                    <marker date="1514100962128" expanded="true" signature="5152:5206" ph="delete from " />
+                    <marker date="1514100962128" expanded="true" signature="5491:5507" ph="delete from " />
+                    <marker date="1514100962128" expanded="true" signature="7939:7964" ph="select count... gain" />
+                    <marker date="1514100962128" expanded="true" signature="9426:9766" ph="update gain " />
+                    <marker date="1514100962128" expanded="true" signature="10158:10747" ph="update gain " />
+                    <marker date="1514100962128" expanded="true" signature="11028:11322" ph="update gain " />
+                    <marker date="1514100962128" expanded="true" signature="11395:11557" ph="insert into gain... " />
+                    <marker date="1514100962128" expanded="true" signature="11467:11557" ph="select ##{use... gaingoods" />
                   </folding>
                 </state>
               </provider>
@@ -1414,12 +1419,12 @@
       <workItem from="1513675860630" duration="12980000" />
       <workItem from="1513842655260" duration="609000" />
       <workItem from="1513851355831" duration="78000" />
-      <workItem from="1514086279227" duration="5971000" />
+      <workItem from="1514086279227" duration="6310000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171884000" />
+    <option name="totallyTimeSpent" value="172223000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1432,7 +1437,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1700,9 +1705,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1292">
           <caret line="78" column="66" lean-forward="false" selection-start-line="78" selection-start-column="51" selection-end-line="78" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1807,7 +1810,7 @@
     <entry file="file://$PROJECT_DIR$/web/js/dataOption.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
-          <caret line="1030" column="25" lean-forward="true" selection-start-line="1030" selection-start-column="25" selection-end-line="1030" selection-end-column="25" />
+          <caret line="1030" column="25" lean-forward="false" selection-start-line="1030" selection-start-column="25" selection-end-line="1030" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1823,25 +1826,8 @@
     <entry file="file://$PROJECT_DIR$/src/com/controller/TableController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
-          <caret line="86" column="56" lean-forward="true" selection-start-line="86" selection-start-column="56" selection-end-line="86" selection-end-column="56" />
+          <caret line="86" column="56" lean-forward="false" selection-start-line="86" selection-start-column="56" selection-end-line="86" selection-end-column="56" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mapper/CuserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="395" column="0" lean-forward="false" selection-start-line="395" selection-start-column="0" selection-end-line="395" selection-end-column="0" />
-          <folding>
-            <marker date="1514094019663" expanded="true" signature="5141:5242" ph="select from cuser" />
-            <marker date="1514094019663" expanded="true" signature="5525:5580" ph="delete from " />
-            <marker date="1514094019663" expanded="true" signature="5866:5883" ph="delete from " />
-            <marker date="1514094019663" expanded="true" signature="9213:9239" ph="select count... cuser" />
-            <marker date="1514094019663" expanded="true" signature="11210:11793" ph="update cuser... " />
-            <marker date="1514094019663" expanded="true" signature="12186:13214" ph="update cuser... " />
-            <marker date="1514094019663" expanded="true" signature="13496:13998" ph="update cuser... " />
-            <marker date="1514094019663" expanded="true" signature="13508:13998" ph="update &quot;cuse... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1850,15 +1836,32 @@
         <state relative-caret-position="748">
           <caret line="319" column="30" lean-forward="false" selection-start-line="319" selection-start-column="30" selection-end-line="319" selection-end-column="30" />
           <folding>
-            <marker date="1514094665435" expanded="true" signature="4769:4869" ph="select from gain" />
-            <marker date="1514094665435" expanded="true" signature="5152:5206" ph="delete from " />
-            <marker date="1514094665435" expanded="true" signature="5491:5507" ph="delete from " />
-            <marker date="1514094665435" expanded="true" signature="7939:7964" ph="select count... gain" />
-            <marker date="1514094665435" expanded="true" signature="9426:9766" ph="update gain " />
-            <marker date="1514094665435" expanded="true" signature="10158:10747" ph="update gain " />
-            <marker date="1514094665435" expanded="true" signature="11028:11322" ph="update gain " />
-            <marker date="1514094665435" expanded="true" signature="11395:11557" ph="insert into gain... " />
-            <marker date="1514094665435" expanded="true" signature="11467:11557" ph="select ##{use... gaingoods" />
+            <marker date="1514100962128" expanded="true" signature="4769:4869" ph="select from gain" />
+            <marker date="1514100962128" expanded="true" signature="5152:5206" ph="delete from " />
+            <marker date="1514100962128" expanded="true" signature="5491:5507" ph="delete from " />
+            <marker date="1514100962128" expanded="true" signature="7939:7964" ph="select count... gain" />
+            <marker date="1514100962128" expanded="true" signature="9426:9766" ph="update gain " />
+            <marker date="1514100962128" expanded="true" signature="10158:10747" ph="update gain " />
+            <marker date="1514100962128" expanded="true" signature="11028:11322" ph="update gain " />
+            <marker date="1514100962128" expanded="true" signature="11395:11557" ph="insert into gain... " />
+            <marker date="1514100962128" expanded="true" signature="11467:11557" ph="select ##{use... gaingoods" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mapper/CuserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="395" column="0" lean-forward="false" selection-start-line="395" selection-start-column="0" selection-end-line="395" selection-end-column="0" />
+          <folding>
+            <marker date="1514100967817" expanded="true" signature="5141:5242" ph="select from cuser" />
+            <marker date="1514100967817" expanded="true" signature="5525:5580" ph="delete from " />
+            <marker date="1514100967817" expanded="true" signature="5866:5883" ph="delete from " />
+            <marker date="1514100967817" expanded="true" signature="9213:9239" ph="select count... cuser" />
+            <marker date="1514100967817" expanded="true" signature="11210:11793" ph="update cuser... " />
+            <marker date="1514100967817" expanded="true" signature="12186:13214" ph="update cuser... " />
+            <marker date="1514100967817" expanded="true" signature="13496:13998" ph="update cuser... " />
+            <marker date="1514100967817" expanded="true" signature="13508:13998" ph="update &quot;cuse... " />
           </folding>
         </state>
       </provider>
