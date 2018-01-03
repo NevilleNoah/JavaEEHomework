@@ -85,15 +85,17 @@ public class TableController {
     }
 
     @RequestMapping("/doTakeGoods")
-    public static void doTakeGoods(HttpServletRequest request, HttpServletResponse response) {
-        Integer userid = Integer.valueOf(request.getParameter("userid"));
+    public static void doTakeGoods(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        Integer cid = Integer.valueOf(request.getParameter("cid"));
+        Integer id = Integer.valueOf(request.getParameter("userid"));
+
+        takeGoods(cid, id);
     }
 
     @RequestMapping("/doReturnGoods")
     public static void doReturnGoods(HttpServletRequest request, HttpServletResponse response) {
         Integer cid = Integer.valueOf(request.getParameter("cid"));
         Integer id = Integer.valueOf(request.getParameter("id"));
-        String gname = request.getParameter("gname");
 
 
     }

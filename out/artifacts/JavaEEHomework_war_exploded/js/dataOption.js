@@ -1244,6 +1244,7 @@ function deleteGainGoods(gname) {
 
 //领取物品，“领取”
 function doTakeGoods() {
+    var cid = $("#cid").val();
     var userid = $("#userid").val();
     $.ajax({
         type:"POST",

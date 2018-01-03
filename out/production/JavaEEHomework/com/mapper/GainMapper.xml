@@ -314,9 +314,22 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
 
-  <!--<insert id="take" parameterType="java.lang.Integer">-->
-   <!-- insert into gain (id,gname, action, gtime,
-      number, cid, part)
-    select #{userid,jdbcType=Integer},gname,0,CURRENT_TIMESTAMP,number,cid,part from gaingoods
--->  <!--</insert>-->
+
+  <insert id="take" parameterType="java.lang.Integer">
+    CREATE PROCEDURE p48 ()
+    BEGIN
+
+    DECLARE e VARCHAR(20);
+    SET e =(SELECT part FROM cuser
+    WHERE id={#id,jdbcType=INTEGER } and cid={#cid,jdbcType=INTEGER});
+
+
+    insert into gain(id,gname,action,gtime,number,cid,part)
+    select {#id,jdbcType=INTEGER},gname,'0',CURRENT_TIMESTAMP,number,{#cid,jdbcType=INTEGER},e
+    from gaingoods
+    where gname='保险柜';
+
+    END;
+    CALL p48();
+  </insert>
 </mapper>
