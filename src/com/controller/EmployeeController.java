@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.net.URLDecoder;
 import java.util.List;
 
 import static com.service.CuserManager.addCuser;
@@ -21,11 +22,11 @@ import static com.service.GainManager.addGainGoods;
  */
 @Controller
 @RequestMapping("/employee")
-public class EmployeeController {
+public class  EmployeeController {
 
     @RequestMapping("/employeeAdd")
     @ResponseBody
-    public static void gainGoodsAdd(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public static void cuserAdd(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         Integer id = Integer.valueOf(request.getParameter("id"));
         Integer ismanager = Integer.valueOf(request.getParameter("ismanager"));
@@ -39,6 +40,18 @@ public class EmployeeController {
         String part = request.getParameter("part");
         String outtime = request.getParameter("outtime");
         String img = request.getParameter("img");
+
+
+
+
+        ename = new String(ename.getBytes("ISO-8859-1"),"UTF-8");
+        sex = new String(sex.getBytes("ISO-8859-1"),"UTF-8");
+        intime = new String(intime.getBytes("ISO-8859-1"),"UTF-8");
+        address = new String(address.getBytes("ISO-8859-1"),"UTF-8");
+        part = new String(part.getBytes("ISO-8859-1"),"UTF-8");
+        outtime = new String(outtime.getBytes("ISO-8859-1"),"UTF-8");
+        img = new String(img.getBytes("ISO-8859-1"),"UTF-8");
+
 
 
 

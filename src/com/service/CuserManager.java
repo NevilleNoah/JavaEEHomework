@@ -91,8 +91,9 @@ public class CuserManager {
         cuser.setPart(part);
 
 
-        CuserMapper userMapper = sqlSession.getMapper(CuserMapper.class);
-        userMapper.insert(cuser);
+        CuserMapper cuserMapper = sqlSession.getMapper(CuserMapper.class);
+
+        cuserMapper.insert(cuser);
 
         sqlSession.commit();
         sqlSession.close();

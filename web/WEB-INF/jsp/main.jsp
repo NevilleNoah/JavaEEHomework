@@ -152,7 +152,7 @@
                     </div>
                     <br/>
                     <div>
-                        管理员：<input type="text" class="" placeholder="请输入0或1" name="ismanager">
+                        管员：<input type="text" class="" placeholder="请输入0或1" name="ismanager">
                     </div>
                     <br/>
                     <div>
@@ -179,22 +179,24 @@
                         住址：<input type="text" class="" placeholder="请输入住址" name="address">
                     </div>
                     <br/>
-                    <br/>
-                    <div>
-                        <input type="text" id="company" name="cid">
-                    </div>
                     <div>
                         部门：<input type="text" class="" placeholder="请输入部门" name="part">
                     </div>
+                    <br/>
+
+                    <div>
+                        <input type="hidden" id="company" name="cid">
+                    </div>
+
 
                     <br/>
                     <div>
-                        <input type="text" class="" value="2017.5.6" name="outtime">
+                        <input type="hidden" class="" value="" name="outtime">
                     </div>
 
                     <br/>
                     <div>
-                        <input type="text" class="" value="haha" name="img">
+                        <input type="hidden" class="" value="" name="img">
                     </div>
 
                     <br/>

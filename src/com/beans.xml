@@ -4,5 +4,6 @@
        xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="gainGoods" class="com.entity.GainGoods"/>
-    <bean id="user" class="com.entity.Cuser"/>
+    <bean id="cuser" class="com.entity.Cuser"/>
+    <bean id="login" class="com.entity.Login"/>
 </beans>

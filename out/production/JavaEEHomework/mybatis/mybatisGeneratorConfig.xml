@@ -33,13 +33,17 @@
         </javaClientGenerator>
 
 
+        <!--<table schema="office management" tableName="cuser" domainObjectName="Cuser">
             <property name="useActualColumnNames" value="true"/>
             <generatedKey column="id" sqlStatement="DB2" identity="true" />
+        </table>-->
 
+        <table schema="office management" tableName="gain" domainObjectName="Gain">
             <property name="useActualColumnNames" value="true"/>
             <generatedKey column="id" sqlStatement="DB2" identity="true" />
         </table>
 
+        <!--<table schema="office management" tableName="goods" domainObjectName="Goods">
             <property name="useActualColumnNames" value="true"/>
             <generatedKey column="gname" sqlStatement="DB2" identity="true" />
         </table>
