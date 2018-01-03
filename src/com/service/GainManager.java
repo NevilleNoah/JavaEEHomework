@@ -1,6 +1,7 @@
 package com.service;
 
 import com.dao.GainGoodsMapper;
+import com.dao.GainMapper;
 import com.dbtools.GetSqlSession;
 import com.entity.*;
 import org.apache.ibatis.session.SqlSession;
@@ -184,5 +185,19 @@ public class GainManager {
         sqlSession.close();
         return gainList;
     }
+
+    public static void takeGoods(Integer cid, Integer id) throws IOException {
+        SqlSession sqlSession = GetSqlSession.getSqlSession();
+
+        GainMapper gainMapper = sqlSession.getMapper(GainMapper.class);
+        gainMapper.take(cid, id);
+
+
+
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
+
 }
 
