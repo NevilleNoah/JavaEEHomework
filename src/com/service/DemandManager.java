@@ -1,10 +1,15 @@
 package com.service;
 
+import com.dao.DemandMapper;
+import com.dao.GoodsMapper;
 import com.dbtools.GetSqlSession;
 import com.entity.Demand;
 import com.entity.DemandExample;
 import com.entity.Demand;
+import com.entity.Goods;
 import org.apache.ibatis.session.SqlSession;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;
 import java.util.List;
@@ -59,5 +64,24 @@ public class DemandManager {
         sqlSession.commit();
         sqlSession.close();
         return demandList;
+    }
+
+    public static void doAddNewDemand(Integer cid, String gname, String classify, Integer need, String part) throws IOException {
+        System.out.println("doAddNewDemand执行了");
+        SqlSession sqlSession  = GetSqlSession.getSqlSession();
+        DemandMapper mapper = sqlSession.getMapper(DemandMapper.class);
+
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("com/beans.xml");
+        Demand demand = (Demand) applicationContext.getBean("demand");
+        demand.setCid(cid);
+        demand.setGname(gname);
+        demand.setClassify(classify);
+        demand.setNeed(need);
+        demand.setPart(part);
+
+        mapper.insert(demand);
+
+        sqlSession.commit();
+        sqlSession.close();
     }
 }

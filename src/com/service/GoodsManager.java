@@ -1,9 +1,13 @@
 package com.service;
 
+import com.dao.GainMapper;
+import com.dao.GoodsMapper;
 import com.dbtools.GetSqlSession;
 import com.entity.Goods;
 import com.entity.GoodsExample;
 import org.apache.ibatis.session.SqlSession;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;
 import java.util.List;
@@ -52,7 +56,53 @@ public class GoodsManager {
     }
 
 
+    public static void doAddGoods(Integer cid, String gname, Integer change) throws IOException {
+        SqlSession sqlSession  = GetSqlSession.getSqlSession();
+        GoodsMapper mapper = sqlSession.getMapper(GoodsMapper.class);
 
+        mapper.addGoods(cid, gname, change);
 
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
+    public static void doSubGoods(Integer cid, String gname, Integer change) throws IOException {
+        SqlSession sqlSession  = GetSqlSession.getSqlSession();
+        GoodsMapper mapper = sqlSession.getMapper(GoodsMapper.class);
+
+        mapper.subGoods(cid, gname, change);
+
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
+    public static void doRemoveGoods(Integer cid, String gname) throws IOException {
+        SqlSession sqlSession  = GetSqlSession.getSqlSession();
+        GoodsMapper mapper = sqlSession.getMapper(GoodsMapper.class);
+
+        mapper.removeGoods(cid, gname);
+
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
+    public static void doAddNewGoods(Integer cid, String gname, String classify, Integer total, Double cost) throws IOException {
+        SqlSession sqlSession  = GetSqlSession.getSqlSession();
+        GoodsMapper mapper = sqlSession.getMapper(GoodsMapper.class);
+
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("com/beans.xml");
+        Goods goods = (Goods)applicationContext.getBean("goods");
+        goods.setGname(gname);
+        goods.setCid(cid);
+        goods.setClassify(classify);
+        goods.setTotal(total);
+        goods.setStore(total);
+        goods.setCost(cost);
+        goods.setImg(null);
+        mapper.insert(goods);
+
+        sqlSession.commit();
+        sqlSession.close();
+    }
 
 }

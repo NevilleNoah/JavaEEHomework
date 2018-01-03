@@ -261,7 +261,7 @@
     set id = #{record.id,jdbcType=INTEGER},
       gname = #{record.gname,jdbcType=VARCHAR},
       action = #{record.action,jdbcType=INTEGER},
-      gtime = #{record.gtime,jdbcType=TIMESTAMP},
+      gtime = #{record.gtime,jdbcType=DATESTAMP},
       number = #{record.number,jdbcType=INTEGER},
       cid = #{record.cid,jdbcType=INTEGER},
       part = #{record.part,jdbcType=VARCHAR}

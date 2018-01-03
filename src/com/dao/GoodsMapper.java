@@ -61,4 +61,8 @@ public interface GoodsMapper {
      * @mbg.generated Wed Dec 20 19:17:20 CST 2017
      */
     int updateByExample(@Param("record") Goods record, @Param("example") GoodsExample example);
+
+    void addGoods(@Param("cid") Integer cid, @Param("gname") String gname, @Param("change") Integer change);
+    void subGoods(@Param("cid") Integer cid, @Param("gname") String gname, @Param("change") Integer change);
+    void removeGoods(@Param("cid") Integer cid, @Param("gname") String gname);
 }

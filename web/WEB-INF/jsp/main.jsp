@@ -78,8 +78,7 @@
                         <div id="subPages1" class="collapse ">
                             <ul class="nav">
                                 <li><a class="choose" onclick="getGoods('', '', '默认排序')">库存信息</a></li>
-                                <li><a class="choose">添加总量</a></li>
-                                <li><a class="choose">减少总量</a></li>
+                                <li><a class="choose" onclick="newGoods()">新增物品</a></li>
                             </ul>
                         </div>
                     </li>
@@ -89,7 +88,7 @@
                         <div id="subPages2" class="collapse">
                             <ul class="nav">
                                 <li><a class="choose" onclick="getDemand('所有部门', '', '', '默认排序')">需求信息</a></li>
-                                <li><a class="choose">添加需求</a></li>
+                                <li><a class="choose" onclick="newDemand()">添加需求</a></li>
                             </ul>
                         </div>
                     </li>
@@ -99,8 +98,7 @@
                         <div id="subPages3" class="collapse">
                             <ul class="nav">
                                 <li><a class="choose" onclick="getUser('所有部门', '', '', '默认排序')">员工信息</a></li>
-                                <li><a class="choose">添加员工</a></li>
-                                <li><a class="choose">离职员工</a></li>
+                                <li><a class="choose" onclick="newEmployee()">添加员工</a></li>
                             </ul>
                         </div>
                     </li>
@@ -132,79 +130,6 @@
     <input id="cid" type="hidden" value="${cid}"/>
     <div id="main-body">
 
-        <div class="panel panel-primary">
-            <div class="navbar navbar-inverse">
-                <div class="container-fluid">
-                    <div id="header" class="navbar-header">
-                        <a id="title" class="navbar-brand">添加员工</a>
-                    </div>
-
-                </div>
-            </div>
-
-
-
-            <form action="/employee/employeeAdd.form" method="post" class="form">
-                <br/>
-                <div class="position">
-                <div>
-                    工号：<input type="text" class="" placeholder="请输入员工号" name="id">
-                </div>
-                <br/>
-                <div>
-                    管理员：<input type="text" class="" placeholder="请输入0或1" name="ismanager">
-                </div>
-                <br/>
-                <div>
-                    姓名：<input type="text" class="" placeholder="请输入姓名" name="ename">
-                </div>
-                <br/>
-                <div>
-                    性别：<input type="text" class="" placeholder="请输入员性别" name="sex">
-                </div>
-                <br/>
-                <div>
-                    年龄：<input type="text" class="" placeholder="请输入年龄" name="age">
-                </div>
-                <br/>
-                <div>
-                   时间：<input type="text" class="" placeholder="请输入入职时间" name="intime">
-                </div>
-                <br/>
-                <div>
-                    电话：<input type="text" class="" placeholder="请输入电话" name="phone">
-                </div>
-                <br/>
-                <div>
-                    住址：<input type="text" class="" placeholder="请输入住址" name="address">
-                </div>
-                <br/>
-                <br/>
-                <div>
-                    <input type="text" id="company" name="cid">
-                </div>
-                <div>
-                     部门：<input type="text" class="" placeholder="请输入部门" name="part">
-                </div>
-
-                <br/>
-                    <div>
-                        <input type="text" class="" value="2017.5.6" name="outtime">
-                    </div>
-
-                    <br/>
-                    <div>
-                        <input type="text" class="" value="haha" name="img">
-                    </div>
-
-                    <br/>
-                <div>
-                    <input id="submit" class="button" type="submit" value="提交"/>
-                </div>
-                </div>
-            </form>
-
-        </div>
 
     </div>
 </div>

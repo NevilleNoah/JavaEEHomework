@@ -36,24 +36,24 @@
         <!--<table schema="office management" tableName="cuser" domainObjectName="Cuser">
             <property name="useActualColumnNames" value="true"/>
             <generatedKey column="id" sqlStatement="DB2" identity="true" />
-        </table>-->
+        </table>
 
         <table schema="office management" tableName="gain" domainObjectName="Gain">
             <property name="useActualColumnNames" value="true"/>
             <generatedKey column="id" sqlStatement="DB2" identity="true" />
         </table>
 
-        <!--<table schema="office management" tableName="goods" domainObjectName="Goods">
+        <table schema="office management" tableName="goods" domainObjectName="Goods">
             <property name="useActualColumnNames" value="true"/>
             <generatedKey column="gname" sqlStatement="DB2" identity="true" />
-        </table>
+        </table>-->
 
-        <table schema="office management" tableName="demand" domainObjectName="Demand">
+        <!--<table schema="office management" tableName="demand" domainObjectName="Demand">
             <property name="useActualColumnNames" value="true"/>
             <generatedKey column="id" sqlStatement="DB2" identity="true" />
-        </table>
+        </table>-->
 
-        <table schema="office management" tableName="damage" domainObjectName="Damage">
+        <!--<table schema="office management" tableName="damage" domainObjectName="Damage">
             <property name="useActualColumnNames" value="true"/>
             <generatedKey column="id" sqlStatement="DB2" identity="true" />
         </table>
@@ -67,6 +67,11 @@
             <property name="useActualColumnNames" value="true"/>
             <generatedKey column="id" sqlStatement="DB2" identity="true" />
         </table>-->
+
+        <table schema="office management" tableName="login" domainObjectName="Login">
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="id" sqlStatement="DB2" identity="true" />
+        </table>
 
     </context>
 </generatorConfiguration>

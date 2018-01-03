@@ -58,7 +58,6 @@ function getGoods(key, order, up) {
         type: "POST",
         url: "../select/getGoods.form",
         data: {cid: cid, key: key, order: order, up: up},
-
         success: function (goodsList) {
             var html = '<div class="panel panel-primary">'
                 + '<div class="navbar navbar-inverse">'
@@ -100,9 +99,9 @@ function getGoods(key, order, up) {
                 + '</div>'
                 + '</div>'
                 + '</div>';
-            html = html + '<div id="table-div" class="panel-body"><table class="table table-striped" id="mainTable"> <tr> <th>物品名称</th> <th>物品类别</th> <th>价格</th> <th>库存</th> <th>总量</th> </tr>';
+            html = html + '<div id="table-div" class="panel-body"><table class="table table-striped" id="mainTable"> <tr> <th>物品名称</th> <th>物品类别</th> <th>价格</th> <th>库存</th> <th>总量</th><th class="td-center">操作</th></tr>';
             for (var i = 0; i < goodsList.length; i++) {
-                html = html + "<tr><td>" + goodsList[i].gname + "</td><td>" + goodsList[i].classify + "</td><td>" + goodsList[i].cost + "</td><td>" + goodsList[i].store + "</td><td>" + goodsList[i].total + "</td></tr>";
+                html = html + "<tr><td id='gname"+i+"'>" + goodsList[i].gname + "</td><td>" + goodsList[i].classify + "</td><td>" + goodsList[i].cost + "</td><td>" + goodsList[i].store + "</td><td>" + goodsList[i].total + "</td><td style='width: 400px'><input id='change"+i+"' type='text' placeholder='改变量' style='width: 80px'/><input id='add"+i+"' type='button' class='btn btn-primary margin-left' value='增加' onclick='addGoods("+i+")'/><input id='sub"+i+"' type='button' class='btn btn-primary margin-left' value='减少' onclick='subGoods("+i+")'/><input id='remove"+i+"' type='button' class='btn btn-primary margin-left' value='移除' onclick='removeGoods("+i+")'/></td></tr>";
             }
             html = html + "</table></div>";
             $("#main-body").html(html);
@@ -113,6 +112,169 @@ function getGoods(key, order, up) {
     });
 }
 
+function newGoods() {
+    var html = '<div class="panel panel-primary">'
+        +'<div class="navbar navbar-inverse">'
+        +'<div class="container-fluid">'
+        +'<div id="header" class="navbar-header">'
+        +'<a id="title" class="navbar-brand">新增物品</a>'
+        +'</div>'
+        +'</div>'
+        +'</div>'
+        +'<div id="small-body">'
+        +'<form class="form-horizontal">'
+        +'<div class="form-group">'
+        +'<label for="gname" class="col-sm-4 control-label">物品名称</label>'
+        +'<div class="col-sm-5">'
+        +'<input type="text" class="form-control" id="gname" placeholder="请输入物品名称">'
+        +'</div>'
+        +'</div>'
+        +'<div class="form-group">'
+        +'<label for="classify" class="col-sm-4 control-label">物品类别</label>'
+        +'<div class="col-sm-5">'
+        +'<input type="text" class="form-control" id="classify" placeholder="请输入物品类别">'
+        +'</div>'
+        +'</div>'
+        +'<div class="form-group">'
+        +'<label for="total" class="col-sm-4 control-label">物品数量</label>'
+        +'<div class="col-sm-5">'
+        +'<input type="text" class="form-control" id="total" placeholder="请输入物品数量">'
+        +'</div>'
+        +'</div>'
+        +'<div class="form-group">'
+        +'<label for="cost" class="col-sm-4 control-label">物品单价</label>'
+        +'<div class="col-sm-5">'
+        +'<input type="text" class="form-control" id="cost" placeholder="请输入物品单价">'
+        +'</div>'
+        +'</div>'
+        +'<div class="form-group">'
+        +'<div class="col-sm-offset-4 col-sm-5">'
+        +'<input type="button" class="btn btn-default" onclick="addNewGoods()" value="提交"/>'
+        +'</div>'
+        +'</div>'
+        +'</form>'
+        +'</div>'
+        +'</div>';
+    $("#main-body").html(html);
+
+}
+
+function newDemand() {
+    var html = '<div class="panel panel-primary">'
+        +'<div class="navbar navbar-inverse">'
+        +'<div class="container-fluid">'
+        +'<div id="header" class="navbar-header">'
+        +'<a id="title" class="navbar-brand">添加需求</a>'
+        +'</div>'
+        +'</div>'
+        +'</div>'
+        +'<div id="small-body">'
+        +'<form class="form-horizontal">'
+        +'<div class="form-group">'
+        +'<label for="gname" class="col-sm-4 control-label">物品名称</label>'
+        +'<div class="col-sm-5">'
+        +'<input type="text" class="form-control" id="gname" placeholder="请输入物品名称">'
+        +'</div>'
+        +'</div>'
+        +'<div class="form-group">'
+        +'<label for="classify" class="col-sm-4 control-label">物品类别</label>'
+        +'<div class="col-sm-5">'
+        +'<input type="text" class="form-control" id="classify" placeholder="请输入物品类别">'
+        +'</div>'
+        +'</div>'
+        +'<div class="form-group">'
+        +'<label for="need" class="col-sm-4 control-label">需求数量</label>'
+        +'<div class="col-sm-5">'
+        +'<input type="text" class="form-control" id="need" placeholder="请输入物品数量">'
+        +'</div>'
+        +'</div>'
+        +'<div class="form-group">'
+        +'<label for="part" class="col-sm-4 control-label">部门名称</label>'
+        +'<div class="col-sm-5">'
+        +'<input type="text" class="form-control" id="part" placeholder="请输入部门名称">'
+        +'</div>'
+        +'</div>'
+        +'<div class="form-group">'
+        +'<div class="col-sm-offset-4 col-sm-5">'
+        +'<input type="button" class="btn btn-default" onclick="addNewDemand()" value="提交"/>'
+        +'</div>'
+        +'</div>'
+        +'</form>'
+        +'</div>'
+        +'</div>';
+    $("#main-body").html(html);
+}
+
+function newEmployee() {
+    var html = '<div class="panel panel-primary">'
+        +'<div class="navbar navbar-inverse">'
+        +'<div class="container-fluid">'
+        +'<div id="header" class="navbar-header">'
+        +'<a id="title" class="navbar-brand">添加员工</a>'
+        +'</div>'
+        +'</div>'
+        +'</div>'
+        +'<div id="small-body">'
+        +'<form class="form-horizontal">'
+        +'<div class="form-group">'
+        +'<label for="ename" class="col-sm-4 control-label">姓名</label>'
+        +'<div class="col-sm-5">'
+        +'<input type="text" class="form-control" id="ename" placeholder="请输入姓名">'
+        +'</div>'
+        +'</div>'
+        +'<div class="form-group">'
+        +'<label for="sex" class="col-sm-4 control-label">性别</label>'
+        +'<div class="col-sm-5">'
+        +'<input type="text" class="form-control" id="sex" placeholder="请输入性别">'
+        +'</div>'
+        +'</div>'
+        +'<div class="form-group">'
+        +'<label for="age" class="col-sm-4 control-label">年龄</label>'
+        +'<div class="col-sm-5">'
+        +'<input type="text" class="form-control" id="age" placeholder="请输入年龄">'
+        +'</div>'
+        +'</div>'
+        +'<div class="form-group">'
+        +'<label for="id" class="col-sm-4 control-label">员工编号</label>'
+        +'<div class="col-sm-5">'
+        +'<input type="text" class="form-control" id="id" placeholder="请输入员工编号">'
+        +'</div>'
+        +'</div>'
+        +'<div class="form-group">'
+        +'<label for="intime" class="col-sm-4 control-label">入职时间</label>'
+        +'<div class="col-sm-5">'
+        +'<input type="text" class="form-control" id="intime" placeholder="请输入入职时间">'
+        +'</div>'
+        +'</div>'
+        +'<div class="form-group">'
+        +'<label for="part" class="col-sm-4 control-label">部门</label>'
+        +'<div class="col-sm-5">'
+        +'<input type="text" class="form-control" id="part" placeholder="请输入部门">'
+        +'</div>'
+        +'</div>'
+        +'<div class="form-group">'
+        +'<label for="phone" class="col-sm-4 control-label">联系电话</label>'
+        +'<div class="col-sm-5">'
+        +'<input type="text" class="form-control" id="phone" placeholder="请输入联系电话">'
+        +'</div>'
+        +'</div>'
+        +'<div class="form-group">'
+        +'<label for="address" class="col-sm-4 control-label">住址</label>'
+        +'<div class="col-sm-5">'
+        +'<input type="text" class="form-control" id="address" placeholder="请输入住址">'
+        +'</div>'
+        +'</div>'
+        +'<div class="form-group">'
+        +'<div class="col-sm-offset-4 col-sm-5">'
+        +'<input type="button" class="btn btn-default" onclick="addNewEmployee()" value="提交"/>'
+        +'</div>'
+        +'</div>'
+        +'</form>'
+        +'</div>'
+        +'</div>';
+    $("#main-body").html(html);
+
+}
 
 function getGain(part, key, order, up) {
     var cid = $("#cid").val();
@@ -502,12 +664,12 @@ function getUser(part, key, order, up) {
                 + '</div>'
                 + '</div>'
                 + '</div>';
-            html = html + '<div id="table-div" class="panel-body"><table class="table table-striped" id="mainTable"> <tr> <th>姓名</th> <th>性别</th> <th>年龄</th> <th>入职时间</th> <th>退休时间</th>  <th>电话</th>  <th>住址</th> </tr>';
+            html = html + '<div id="table-div" class="panel-body"><table class="table table-striped" id="mainTable"> <tr> <th>姓名</th> <th>性别</th> <th>年龄</th> <th>入职时间</th> <th>退休时间</th>  <th>电话</th><th>住址</th><th class="td-center">离职操作</th></tr>';
             for (var i = 0; i < userList.length; i++) {
                 if (userList[i].outtime == null) {
                     userList[i].outtime = "未离职";
                 }
-                html = html + "<tr><td>" + userList[i].ename + "</td> <td>" + userList[i].sex + "</td> <td>" + userList[i].age + "</td> <td>" + userList[i].intime + "</td>  <td>" + userList[i].outtime + "</td> <td>" + userList[i].phone + "</td> <td>+" + userList[i].address + "</td> </tr>";
+                html = html + "<tr><td id='ename"+i+"'>" + userList[i].ename + "</td><td>" + userList[i].sex + "</td> <td>" + userList[i].age + "</td><td>" + userList[i].intime + "</td>  <td>" + userList[i].outtime + "</td> <td>" + userList[i].phone + "</td> <td>" + userList[i].address + "</td><td width='350px'><input id='set-out-time"+i+"' type='text' width='100px' placeholder='时间'><input id='out"+i+"' type='button' value='离职' onclick='out("+i+")' class='btn btn-primary margin-left'/></td></tr>";
             }
             html = html + "</table></div>";
             $("#main-body").html(html);
@@ -624,10 +786,9 @@ function goodsTable() {
         data: {cid: cid, key: key, order: order, up: up},
         dataType: "json",
         success: function (goodsList) {
-            var html = '<table class="table table-striped" id="mainTable"><tr><th>物品名称</th> <th>物品类别</th> <th>价格</th> <th>库存</th> <th>总量</th> </tr>';
+            var html = '<table class="table table-striped" id="mainTable"> <tr> <th>物品名称</th> <th>物品类别</th> <th>价格</th> <th>库存</th> <th>总量</th><th class="td-center">操作</th></tr>';
             for (var i = 0; i < goodsList.length; i++) {
-                html = html + "<tr><td>" + goodsList[i].gname + "</td><td>" + goodsList[i].classify + "</td><td>" + goodsList[i].cost + "</td><td>" + goodsList[i].store + "</td><td>" + goodsList[i].total + "</td></tr>";
-
+                html = html + "<tr><td id='gname"+i+"'>" + goodsList[i].gname + "</td><td>" + goodsList[i].classify + "</td><td>" + goodsList[i].cost + "</td><td>" + goodsList[i].store + "</td><td>" + goodsList[i].total + "</td><td style='width: 400px'><input id='change"+i+"' type='text' placeholder='改变量' style='width: 80px'/><input id='add"+i+"' type='button' class='btn btn-primary margin-left' value='增加' onclick='addGoods("+i+")'/><input id='sub"+i+"' type='button' class='btn btn-primary margin-left' value='减少' onclick='subGoods("+i+")'/><input id='remove"+i+"' type='button' class='btn btn-primary margin-left' value='移除' onclick='removeGoods(no)'/></td></tr>";
             }
             html = html + "</table>";
             $("#mainTable").html(html);
@@ -832,13 +993,15 @@ function userTable() {
         data: {cid: cid, part: part, key: key, order: order, up: up},
         dataType: "json",
         success: function (userList) {
-            var html = '<table class="table table-striped" id="mainTable"> <tr> <th>姓名</th> <th>性别</th> <th>年龄</th> <th>入职时间</th> <th>退休时间</th>  <th>电话</th>  <th>住址</th> </tr>';
+            var html = '<table class="table table-striped" id="mainTable"> <tr> <th>姓名</th> <th>性别</th> <th>年龄</th> <th>入职时间</th> <th>退休时间</th>  <th>电话</th><th>住址</th><th class="td-center">离职操作</th></tr>';
             for (var i = 0; i < userList.length; i++) {
                 if (userList[i].outtime == null) {
                     userList[i].outtime = "未离职";
                 }
-                html = html + "<tr><td>" + userList[i].ename + "</td> <td>" + userList[i].sex + "</td> <td>" + userList[i].age + "</td> <td>" + userList[i].intime + "</td>  <td>" + userList[i].outtime + "</td> <td>" + userList[i].phone + "</td> <td>+" + userList[i].address + "</td> </tr>";
+                html = html + "<tr><td id='ename"+i+"'>" + userList[i].ename + "</td><td>" + userList[i].sex + "</td> <td>" + userList[i].age + "</td><td>" + userList[i].intime + "</td>  <td>" + userList[i].outtime + "</td> <td>" + userList[i].phone + "</td> <td>" + userList[i].address + "</td><td width='350px'><input id='set-out-time"+i+"' type='text' width='100px' placeholder='时间'><input id='out"+i+"' type='button' value='离职' onclick='out("+i+")' class='btn btn-primary margin-left'/></td></tr>";
             }
+            html = html + "</table></div>";
+
             html = html + "</table>";
             $("#mainTable").html(html);
 
@@ -986,6 +1149,58 @@ function gainGoodsTableBySort(sortName) {
 /******************************************************获取数据部分结束************************************/
 
 /******************************************************操作部分******************************************/
+//库存信息，“增加”
+function addGoods(no) {
+    var cid = $("#cid").val();
+    var gnameId="#gname"+no;
+    var changeId="#change"+no;
+    var gname = $(gnameId.toString()).text();
+    var change = $(changeId.toString()).val();
+    $.ajax({
+        type:"POST",
+        url:"../table/addGoods.form",
+        data:{cid:cid, gname:gname, change:change},
+        dataType:"json",
+        error:function () {
+            goodsTable();
+        }
+    });
+}
+//库存信息，“减少”
+function subGoods(no) {
+    var cid = $("#cid").val();
+    var gnameId="#gname"+no;
+    var changeId="#change"+no;
+    var gname = $(gnameId.toString()).text();
+    var change = $(changeId.toString()).val();
+    $.ajax({
+        type:"POST",
+        url:"../table/subGoods.form",
+        data:{cid:cid, gname:gname, change:change},
+        dataType:"json",
+        error:function () {
+            goodsTable();
+        }
+    });
+}
+//库存信息，“移除”
+function removeGoods(no) {
+    var cid = $("#cid").val();
+    var gnameId="#gname"+no;
+    var gname = $(gnameId.toString()).text();
+    $.ajax({
+        type:"POST",
+        url:"../table/removeGoods.form",
+        data:{cid:cid, gname:gname},
+        dataType:"json",
+        error:function () {
+            goodsTable();
+        }
+    });
+}
+
+
+
 
 //领取物品，“添加”
 function addGainGoods(gname, no) {
@@ -1057,5 +1272,66 @@ function doReturnGoods(no) {
         }
     });
 }
+
+function addNewGoods() {
+    var cid = $("#cid").val();
+    var gname = $("#gname").val();
+    var classify = $("#classify").val();
+    var total = $("#total").val();
+    var cost = $("#cost").val();
+    var part = $("#part").val();
+    $.ajax({
+        type:"POST",
+        url:"../table/addNewGoods.form",
+        data:{cid:cid, gname:gname, classify:classify, total:total, cost:cost, part:part},
+        success:function (data) {
+            alert("插入成功");
+            newGoods();
+        }
+    });
+}
+
+function addNewDemand() {
+    var cid = $("#cid").val();
+    var gname = $("#gname").val();
+    var classify = $("#classify").val();
+    var need = $("#need").val();
+    var part = $("#part").val();
+    /*if((!part.isEqual("财政部"))||(!part.isEqual("业务部"))||(!part.isEqual("人事部"))||(!part.isEqual("管理部"))) {
+        alert("部门不存在");
+        return;
+    }*/
+    $.ajax({
+        type:"POST",
+        url:"../table/addNewDemand.form",
+        data:{cid:cid, gname:gname, classify:classify, need:need, part:part},
+        success:function (data) {
+            alert("需求添加成功");
+            newDemand();
+        }
+    });
+}
+
+function addNewEmployee() {
+    var cid = $("#cid").val();
+    var ename = $("#ename").val();
+    var sex = $("#sex").val();
+    var age = $("#age").val();
+    var intime = $("#intime").val();
+    var part = $("#part").val();
+    var phone = $("#phone").val();
+    var address = $("#address").val();
+    $.ajax({
+        type:"POST",
+        url:"../table/addNewEmployee.form",
+        data:{cid:cid, id:id, ename:ename, sex:sex, age:age, intime:intime, phone:phone, address:address, part:part},
+        success:function (data) {
+            alert("添加员工成功");
+            newEmployee();
+        }
+    });
+}
+
+
 
 
