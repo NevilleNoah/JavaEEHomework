@@ -109,6 +109,17 @@ public class TableController {
 
     }
 
+    @RequestMapping("/returnAll")
+    @ResponseBody
+    public static void returnAll(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        Integer cid = Integer.valueOf(request.getParameter("cid"));
+        Integer id = Integer.valueOf(request.getParameter("id"));
+        String gname = request.getParameter("gname");
+
+        returnAllGoods(cid, id, gname);
+
+    }
+
     @RequestMapping("/addGoods")
     public static void addGoods(HttpServletRequest request, HttpServletResponse response) throws IOException {
         Integer cid = Integer.valueOf(request.getParameter("cid"));

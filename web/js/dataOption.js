@@ -436,11 +436,11 @@ function getGain(part, key, order, up) {
             for (var i = 0; i < gainList.length; i++) {
                 var action;
                 if(gainList[i].action == 0) {
-                    action = "领取";
+                    action = "使用中";
                 } else {
-                    action = "归还";
+                    action = "已归还";
                 }
-                html = html + "<tr><td>" + gainList[i].gname + "</td><td>" + gainList[i].id+"</td><td>"+action + "</td><td>" + gainList[i].gtime + "</td><td>" + gainList[i].number + "</td></tr>";
+                html = html + "<tr><td>" + gainList[i].gname + "</td><td>" + gainList[i].id+"</td><td>"+action + "</td><td>" + gainList[i].gtime + "</td><td>" + gainList[i].gnumber + "</td></tr>";
             }
             html = html + "</table></div>";
             $("#main-body").html(html);
@@ -837,7 +837,7 @@ function getReturn(part, key, order, up) {
                 + '</div>';
             html = html + '<div id="table-div" class="panel-body"> <table class="table table-striped" id="mainTable"> <tr> <th>员工编号</th><th>物品名称</th><th>领取时间</th><th>数量</th> <th class="td-center">归还数量</th><th class="td-center">操作</th></tr>';
             for (var i = 0; i < returnList.length; i++) {
-                html = html + "<tr><td id='user-id"+i+"'>" + returnList[i].id + "</td><td id='gname"+i+"'>" + returnList[i].gname +"</td><td>"+returnList[i].gtime+"</td><td>" + returnList[i].number + "</td><td class='td-center'><input type='text' id='return-number"+i+"'/></td><td class='td-center'><input class='btn btn-primary' type='button' value='归还' onclick='doReturnGoods("+i+")'/></td></tr>";
+                html = html + "<tr><td id='user-id"+i+"'>" + returnList[i].id + "</td><td id='gname"+i+"'>" + returnList[i].gname +"</td><td>"+returnList[i].gtime+"</td><td>" + returnList[i].number + "</td><td class='td-center'><input type='text' id='return-number"+i+"'/></td><td class='td-center'><input class='btn btn-primary' type='button' value='归还' onclick='doReturnGoods("+i+")'/><input class='btn btn-primary margin-left' type='button' value='全部归还' onclick='returnAll("+i+")'/></td></tr>";
             }
             html = html + "</table></div>";
             $("#main-body").html(html);
@@ -1421,9 +1421,7 @@ function doTakeGoods() {
 function doReturnGoods(no) {
     var cid = $("#cid").val();
     var tid = "#user-id"+no;
-    alert(tid);
     var id = $(tid.toString()).text();
-    alert(id);
     var tgname = "#gname"+no;
     var gname = $(tgname.toString()).text();
     var numberid ="#return-number"+no;
@@ -1438,6 +1436,26 @@ function doReturnGoods(no) {
         }
     });
 }
+
+//归还物品，“归还”
+function returnAll(no) {
+    var cid = $("#cid").val();
+    var tid = "#user-id"+no;
+    var id = $(tid.toString()).text();
+    var tgname = "#gname"+no;
+    var gname = $(tgname.toString()).text();
+
+    $.ajax({
+        type:"POST",
+        url:"../table/returnAll.form",
+        data:{cid:cid, id:id, gname:gname},
+        success:function() {
+            alert("归还成功");
+            getReturn('所有部门','','','默认排序');
+        }
+    });
+}
+
 
 function addNewGoods() {
     var cid = $("#cid").val();
@@ -1504,7 +1522,7 @@ function out(no) {
     var cid = $("#cid").val();
     var enameId = "#ename"+no;
     var setOutTimeId = "#set-out-time"+no;
-    var ename = $(enameId).val();
+    var ename = $(enameId).text();
     var setOutTime = $(setOutTimeId).val();
 
     $.ajax({

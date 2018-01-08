@@ -118,6 +118,16 @@ public class GoodsManager {
         sqlSession.close();
     }
 
+    public static void returnAllGoods(Integer cid, Integer id, String gname) throws IOException {
+        SqlSession sqlSession  = GetSqlSession.getSqlSession();
+
+        GainMapper gainMapper = sqlSession.getMapper(GainMapper.class);
+        gainMapper.returnAll(cid, id, gname);
+
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
     public static List<ForClassify> classify(Integer cid) throws IOException {
         SqlSession sqlSession  = GetSqlSession.getSqlSession();
 
