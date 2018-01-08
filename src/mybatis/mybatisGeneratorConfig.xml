@@ -6,7 +6,7 @@
 <generatorConfiguration>
     <properties resource="mybatis/mybatisConfig.properties"/>
 
-    <classPathEntry location="E:\Study\JavaEEHomework\lib\mysql-connector-java-5.1.44-bin.jar" />
+    <classPathEntry location="D:\javaee\JavaEEHomework\lib" />
 
     <context id="DB2Tables" targetRuntime="MyBatis3">
         <jdbcConnection driverClass="${driver}"
@@ -19,16 +19,16 @@
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
 
-        <javaModelGenerator targetPackage="com.entity" targetProject="E:\Study\JavaEEHomework\src">
+        <javaModelGenerator targetPackage="com.entity" targetProject="D:\javaee\JavaEEHomework\src">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="com.mapper"  targetProject="E:\Study\JavaEEHomework\src">
+        <sqlMapGenerator targetPackage="com.mapper"  targetProject="D:\javaee\JavaEEHomework\src">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
 
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.dao"  targetProject="E:\Study\JavaEEHomework\src">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.dao"  targetProject="D:\javaee\JavaEEHomework\src">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
 
