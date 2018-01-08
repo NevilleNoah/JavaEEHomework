@@ -1,5 +1,6 @@
-body {
-    text-align: center;
+body{
+    width: 100%;
+    height: 100%;
 }
 .panel {
     width: 300px;
@@ -18,3 +19,36 @@ body {
 #login-form {
     text-align: center;
 }
+
+.chengshi{
+    float: left;
+    width: 700px;
+    height: 550px;
+    margin-left: 140px;
+    margin-top: 80px;
+}
+.eform{
+    float: right;
+    margin-right:160px;
+    margin-top:0px;
+
+}
+.biaoti{
+
+    text-align: left;
+    font-size: 28px;
+    letter-spacing: 10px;
+    top:10px;
+    font-weight:500;
+    margin-left: 40px;
+    color: #e1e6ea;
+}
+.rectangle{
+    top:0px;
+    width: 100%;
+    height: 70px;
+    background:#0f0f0f;
+    overflow:hidden;
+
+}
+

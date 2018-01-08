@@ -13,6 +13,8 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import static com.service.LoginManager.checklogin;
+
 /**
  * Created by asus on 2017/12/13/013.
  */
@@ -30,29 +32,32 @@ public class LoginController {
 
     @RequestMapping(value = "/checkLogin" , method = RequestMethod.POST)
     public ModelAndView checkLogin(HttpServletRequest request, HttpServletResponse response, Model model) throws IOException {
-        String cname = request.getParameter("cname");
-        String username = request.getParameter("username");
+        Integer cid = Integer.valueOf(request.getParameter("cid"));
+        Integer id = Integer.valueOf(request.getParameter("id"));
         String password = request.getParameter("password");
-        model.addAttribute("cid", 214214);
-        model.addAttribute("username", username);
 
+        String ename  = checklogin(cid, id, password);
+
+        if (ename==null) {
+            // 如果记录集非空，表明有匹配的用户名和密码，登陆成功
+            response.sendRedirect("../index.jsp");
+            System.out.println("登录失败，用户名或密码不正确");
+        }
+        System.out.println("ename的值为"+ename);
+        model.addAttribute("cid",cid);
+        model.addAttribute("id", id);
+        model.addAttribute("ename", ename);
 
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("main");
         return modelAndView;
-    }
 
-
-    @RequestMapping("/inLogin")
-    @ResponseBody
-    public static void login(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
-        Integer cid = Integer.valueOf(request.getParameter("cid"));
-        Integer id = Integer.valueOf(request.getParameter("id"));
-        Integer password = Integer.valueOf(request.getParameter("password"));
 
 
     }
+
+
+
 }
 
 

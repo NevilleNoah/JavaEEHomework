@@ -1,6 +1,7 @@
 package com.service;
 
-import com.entity.Cuser;
+import com.dao.LoginMapper;
+import com.entity.Login;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -14,26 +15,33 @@ import static com.dbtools.GetSqlSession.getSqlSession;
  */
 public class LoginManager {
 
-    public static void checklogin( Integer id, Integer password, Integer cid) throws IOException {
+    public static String checklogin( Integer cid, Integer id, String password) throws IOException {
 
         SqlSession sqlSession = getSqlSession();
-
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("com/beans.xml");
-        Login login = (Cuser) applicationContext.getBean("cuser");
+        Login login = (Login) applicationContext.getBean("login");
 
 
-        login.setId(id);
-        login.setPassword(password);
-        login.setCid(cid);
+        LoginMapper mapper = sqlSession.getMapper(LoginMapper.class);
+        String  ename = mapper.selectLogin(cid, id, password);
 
 
 
-        LoginMapper cuserMapper = sqlSession.getMapper(Login.class);
 
-        cuserMapper.insert(cuser);
 
         sqlSession.commit();
+
         sqlSession.close();
+
+
+
+
+            return ename;
+
+
+
+
+
     }
 
 }

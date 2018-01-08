@@ -1786,6 +1786,9 @@ ul.activity-timeline > li {
 .choose:hover{
   cursor: pointer;
 }
+.margin-left {
+  margin-left: 20px;
+}
 #take-goods {
   margin-left: 20px;
   width: 400px;
@@ -1828,3 +1831,23 @@ ul.activity-timeline > li {
 #take-board {
   height: 540px;
 }
+#small-body {
+  width: 500px;
+  margin: 0px auto;
+  text-align: center;
+}
+.ename{
+  margin-top:13px;
+  float: right;
+  margin-right: 20px;
+  font-size: 16px;
+  color: #c0c0c0;
+}
+
+
+.eout a:hover{
+  color: #c7bec3;
+
+
+}
+

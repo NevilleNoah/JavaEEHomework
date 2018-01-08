@@ -93,4 +93,6 @@ public interface GainMapper {
      * @mbg.generated Sun Dec 24 17:08:12 CST 2017
      */
     int updateByPrimaryKey(Gain record);
+
+    void take(Integer cid, Integer id);
 }
