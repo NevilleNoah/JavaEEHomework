@@ -392,7 +392,13 @@
       address = #{address,jdbcType=VARCHAR},
       cid = #{cid,jdbcType=INTEGER},
       part = #{part,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER};
+  </update>
+
+  <update id="out">
+    update cuser
+    set outtime=#{time,jdbcType=VARCHAR}
+    where cid=#{cid,jdbcType=INTEGER} and ename=#{ename,jdbcType=VARCHAR};
   </update>
   
 

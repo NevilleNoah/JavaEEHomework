@@ -99,5 +99,15 @@ public class CuserManager {
         sqlSession.close();
     }
 
+    public static void doOutEmployee(Integer cid, String ename, String time) throws IOException {
+        SqlSession sqlSession = getSqlSession();
+
+        CuserMapper mapper = sqlSession.getMapper(CuserMapper.class);
+        mapper.out(cid, ename, time);
+
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
 
 }

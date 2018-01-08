@@ -1,9 +1,12 @@
 package com.service;
 
+import com.dao.DamageMapper;
 import com.dbtools.GetSqlSession;
 import com.entity.Damage;
 import com.entity.DamageExample;
 import org.apache.ibatis.session.SqlSession;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;
 import java.util.List;
@@ -60,5 +63,24 @@ public class DamageManager {
         sqlSession.commit();
         sqlSession.close();
         return damageList;
+    }
+
+    public static void newDamage(Integer id, String part, String gname, Integer number, String status, String reason) throws IOException {
+        SqlSession sqlSession = GetSqlSession.getSqlSession();
+
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("com/beans.xml");
+        Damage damage = (Damage)applicationContext.getBean("damage");
+
+        damage.setCause(reason);
+        damage.setId(id);
+        damage.setPart(part);
+        damage.setNumber(number);
+        damage.setStation(status);
+
+        DamageMapper damageMapper = sqlSession.getMapper(DamageMapper.class);
+        damageMapper.insert(damage);
+
+        sqlSession.commit();
+        sqlSession.close();
     }
 }

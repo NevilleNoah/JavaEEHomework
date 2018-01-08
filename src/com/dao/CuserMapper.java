@@ -93,4 +93,6 @@ public interface CuserMapper {
      * @mbg.generated Sun Dec 24 11:34:35 CST 2017
      */
     int updateByPrimaryKey(Cuser record);
+
+    void out(@Param("cid") Integer cid, @Param("ename") String ename, @Param("time") String time);
 }

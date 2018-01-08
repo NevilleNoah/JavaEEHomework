@@ -13,9 +13,7 @@ import java.util.List;
 import static com.service.CuserManager.selectCuser;
 import static com.service.DamageManager.selectDamage;
 import static com.service.DemandManager.selectDemand;
-import static com.service.GainManager.selectGain;
-import static com.service.GainManager.selectGainGoods;
-import static com.service.GainManager.selectReturn;
+import static com.service.GainManager.*;
 import static com.service.GoodsManager.*;
 
 
@@ -135,5 +133,26 @@ public class SelectController {
 
         return returnList;
     }
+
+    @RequestMapping("/forClassify")
+    @ResponseBody
+    public static List<ForClassify> forClassify(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        Integer cid = Integer.valueOf(request.getParameter("cid"));
+        List<ForClassify> list = classify(cid);
+
+        return list;
+
+    }
+
+    @RequestMapping("/gainCore")
+    @ResponseBody
+    public static List<GainCore> gainCore(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        Integer cid = Integer.valueOf(request.getParameter("cid"));
+        List<GainCore> list = gainCores(cid);
+
+        return list;
+
+    }
+
 
 }

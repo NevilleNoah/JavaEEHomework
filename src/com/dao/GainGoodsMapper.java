@@ -93,4 +93,6 @@ public interface GainGoodsMapper {
      * @mbg.generated Sun Dec 17 18:59:31 CST 2017
      */
     int updateByPrimaryKey(GainGoods record);
+
+
 }

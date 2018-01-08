@@ -22,7 +22,6 @@ var demandSortName1 = "默认排序";
 var demandSortName2 = "按名称排序";
 var demandSortName3 = "按类别排序";
 var demandSortName4 = "按需求数量排序";
-var demandSortName5 = "按花费排序";
 
 var userSortName1 = "默认排序";
 var userSortName2 = "按姓名排序";
@@ -52,8 +51,103 @@ var returnSortName5="按物品名称排序"
 
 /********************************************获取数据部分***************************************/
 /*第一级局部刷新开始*/
+function getChart() {
+    view();
+    classify();
+    gainCore();
+}
+
+function view() {
+    var html = '<div class="chart-div"><div id="chart1" class="ct-chart ct-perfect-fourth"></div><div id="chart1-span"><span>仓库各类物品数量分布表</span></div></div>'
+                +'<div class="chart-div"><div id="chart2" class="ct-chart ct-perfect-fourth"></div><div id="chart2-span"><span>领取量较高的物品示意表</span></div></div>';
+    $("#main-body").html(html);
+}
+function classify() {
+    var cid = $("#cid").val();
+    $.ajax({
+        type: "POST",
+        url: "../select/forClassify.form",
+        data: {cid:cid},
+        success:function(data) {
+            var classify = [];
+            var number = [];
+            for(var i = 0;i<data.length;i++) {
+                classify[classify.length]=data[i].classify;
+                number[number.length]=data[i].number;
+            }
+
+            var d = {
+                labels:classify,
+                series:number
+            };
+            var options = {
+                labelInterpolationFnc: function(value) {
+                    return value[0]
+                }
+            };
+
+            var responsiveOptions = [
+                ['screen and (min-width: 640px)', {
+                    chartPadding: 30,
+                    labelOffset: 100,
+                    labelDirection: 'explode',
+                    labelInterpolationFnc: function(value) {
+                        return value;
+                    }
+                }],
+                ['screen and (min-width: 1024px)', {
+                    labelOffset: 60,
+                    chartPadding: 100
+                }]
+            ];
+
+            new Chartist.Pie('#chart1', d, options, responsiveOptions);
+        }
+
+
+    });
+
+
+}
+
+function gainCore() {
+    var cid = $("#cid").val();
+    $.ajax({
+        type: "POST",
+        url: "../select/gainCore.form",
+        data: {cid:cid},
+        success:function(info) {
+            var gname = [];
+            var number = [];
+            var tmp;
+            if(info.length>10) {
+                tmp = 10;
+            } else {
+                tmp = info.length;
+            }
+            for(var i = 0;i<tmp;i++) {
+                gname[gname.length]=info[i].gname;
+                number[number.length]=info[i].number;
+            }
+
+            new Chartist.Bar('#chart2', {
+                labels: gname,
+                series: number
+            }, {
+                distributeSeries: true
+            });
+
+        }
+
+
+    });
+
+
+}
+
 function getGoods(key, order, up) {
     var cid = $("#cid").val();
+
     $.ajax({
         type: "POST",
         url: "../select/getGoods.form",
@@ -264,6 +358,7 @@ function newEmployee() {
         +'<input type="text" class="form-control" id="address" placeholder="请输入住址">'
         +'</div>'
         +'</div>'
+
         +'<div class="form-group">'
         +'<div class="col-sm-offset-4 col-sm-5">'
         +'<input type="button" class="btn btn-default" onclick="addNewEmployee()" value="提交"/>'
@@ -339,12 +434,13 @@ function getGain(part, key, order, up) {
                 + '</div>';
             html = html + '<div id="table-div" class="panel-body"><table class="table table-striped" id="mainTable"> <tr> <th>物品名称</th><th>员工编号</th> <th>行为</th> <th>时间</th> <th>数量</th> </tr>';
             for (var i = 0; i < gainList.length; i++) {
-                if(gainList[i].action = 0) {
-                    var action = "领取";
+                var action;
+                if(gainList[i].action == 0) {
+                    action = "使用中";
                 } else {
-                    var action = "归还";
+                    action = "已归还";
                 }
-                html = html + "<tr><td>" + gainList[i].gname + "</td><td>" + gainList[i].id+"</td><td>"+action + "</td><td>" + gainList[i].gtime + "</td><td>" + gainList[i].number + "</td></tr>";
+                html = html + "<tr><td>" + gainList[i].gname + "</td><td>" + gainList[i].id+"</td><td>"+action + "</td><td>" + gainList[i].gtime + "</td><td>" + gainList[i].gnumber + "</td></tr>";
             }
             html = html + "</table></div>";
             $("#main-body").html(html);
@@ -398,7 +494,7 @@ function enterGainGoods(key, order, up) {
                 + '<div class="navbar-form navbar-right">'
                 + '<div class="form-group">'
                 + '<input id="userid" type="text" class="form-control" placeholder="请输入员工编号"/>'
-                + '<input id="take-button" class="btn btn-primary" value="领取" onclick="doTakeGoods()"/>'
+                + '<input id="take-button" type="button" class="btn btn-primary" value="领取" onclick="doTakeGoods()"/>'
                 + '</div>'
                 + '</div>'
                 + '<div  class="navbar-form navbar-left">'
@@ -493,7 +589,6 @@ function getDemand(part, key, order, up) {
                 + '<li><a href="#" onclick="demandTableBySort(demandSortName2)">按名称排序</a></li>'
                 + '<li><a href="#" onclick="demandTableBySort(demandSortName3)">按类别排序</a></li>'
                 + '<li><a href="#" onclick="demandTableBySort(demandSortName4)">按需求数量排序</a></li>'
-                + '<li><a href="#" onclick="demandTableBySort(demandSortName5)">按花费排序</a></li>'
                 + '</ul>'
                 + '</li>'
                 + '</ul>'
@@ -511,9 +606,9 @@ function getDemand(part, key, order, up) {
                 + '</div>'
                 + '</div>'
                 + '</div>';
-            html = html + '<div id="table-div" class="panel-body"><table class="table table-striped" id="mainTable"> <tr> <th>物品名称</th> <th>物品类别</th> <th>需求</th> <th>花费</th> </tr>';
+            html = html + '<div id="table-div" class="panel-body"><table class="table table-striped" id="mainTable"> <tr> <th>物品名称</th> <th>物品类别</th> <th>需求</th></tr>';
             for (var i = 0; i < demandList.length; i++) {
-                html = html + "<tr><td>" + demandList[i].gname + "</td><td>" + demandList[i].classify + "</td><td>" + demandList[i].need + "</td><td>" + demandList[i].cost + "</td></tr>";
+                html = html + "<tr><td>" + demandList[i].gname + "</td><td>" + demandList[i].classify + "</td><td>" + demandList[i].need + "</td></tr>";
             }
             html = html + "</table></div>";
             $("#main-body").html(html);
@@ -742,7 +837,7 @@ function getReturn(part, key, order, up) {
                 + '</div>';
             html = html + '<div id="table-div" class="panel-body"> <table class="table table-striped" id="mainTable"> <tr> <th>员工编号</th><th>物品名称</th><th>领取时间</th><th>数量</th> <th class="td-center">归还数量</th><th class="td-center">操作</th></tr>';
             for (var i = 0; i < returnList.length; i++) {
-                html = html + "<tr><td id='user-id"+i+"'>" + returnList[i].id + "</td><td id='gname"+i+"'>" + returnList[i].gname +"</td><td>"+returnList[i].gtime+"</td><td>" + returnList[i].number + "</td><td class='td-center'><input type='text' id='return-number"+i+"'/></td><td class='td-center'><input class='btn btn-primary' type='button' value='归还' onclick='doReturnGoods()'/></td></tr>";
+                html = html + "<tr><td id='user-id"+i+"'>" + returnList[i].id + "</td><td id='gname"+i+"'>" + returnList[i].gname +"</td><td>"+returnList[i].gtime+"</td><td>" + returnList[i].number + "</td><td class='td-center'><input type='text' id='return-number"+i+"'/></td><td class='td-center'><input class='btn btn-primary' type='button' value='归还' onclick='doReturnGoods("+i+")'/><input class='btn btn-primary margin-left' type='button' value='全部归还' onclick='returnAll("+i+")'/></td></tr>";
             }
             html = html + "</table></div>";
             $("#main-body").html(html);
@@ -751,6 +846,64 @@ function getReturn(part, key, order, up) {
             alert("error");
         }
     });
+}
+
+function newDamage() {
+    var html = '<div class="panel panel-primary">'
+        +'<div class="navbar navbar-inverse">'
+        +'<div class="container-fluid">'
+        +'<div id="header" class="navbar-header">'
+        +'<a id="title" class="navbar-brand">添加记录</a>'
+        +'</div>'
+        +'</div>'
+        +'</div>'
+        +'<div id="small-body">'
+        +'<form class="form-horizontal">'
+        +'<div class="form-group">'
+        +'<label for="gname" class="col-sm-4 control-label">物品名称</label>'
+        +'<div class="col-sm-5">'
+        +'<input type="text" class="form-control" id="gname" placeholder="请输入物品名称">'
+        +'</div>'
+        +'</div>'
+        +'<div class="form-group">'
+        +'<label for="id" class="col-sm-4 control-label">员工编号</label>'
+        +'<div class="col-sm-5">'
+        +'<input type="text" class="form-control" id="id" placeholder="请输入员工编号">'
+        +'</div>'
+        +'</div>'
+        +'<div class="form-group">'
+        +'<label for="part" class="col-sm-4 control-label">部门名称</label>'
+        +'<div class="col-sm-5">'
+        +'<input type="text" class="form-control" id="part" placeholder="请输入部门名称">'
+        +'</div>'
+        +'</div>'
+        +'<div class="form-group">'
+        +'<label for="reason" class="col-sm-4 control-label">原因</label>'
+        +'<div class="col-sm-5">'
+        +'<input type="text" class="form-control" id="reason" placeholder="请输入损坏原因">'
+        +'</div>'
+        +'</div>'
+        +'<div class="form-group">'
+        +'<label for="number" class="col-sm-4 control-label">数量</label>'
+        +'<div class="col-sm-5">'
+        +'<input type="text" class="form-control" id="number" placeholder="请输入数量">'
+        +'</div>'
+        +'</div>'
+        +'<div class="form-group">'
+        +'<label for="status" class="col-sm-4 control-label">当前状态</label>'
+        +'<div class="col-sm-5">'
+        +'<input type="text" class="form-control" id="status" placeholder="请输入当前状态">'
+        +'</div>'
+        +'</div>'
+        +'<div class="form-group">'
+        +'<div class="col-sm-offset-4 col-sm-5">'
+        +'<input type="button" class="btn btn-default" onclick="addNewDamage()" value="提交"/>'
+        +'</div>'
+        +'</div>'
+        +'</form>'
+        +'</div>'
+        +'</div>';
+    $("#main-body").html(html);
 }
 /*第一级局部刷新结束*/
 
@@ -869,9 +1022,15 @@ function gainTable() {
         data: {cid: cid, part: part, key: key, order: order, up: up},
         dataType: "json",
         success: function (gainList) {
-            var html = '<table class="table table-striped" id="mainTable"> <tr> <th>物品名称</th> <th>行为</th> <th>时间</th> <th>数量</th> </tr>';
+            var html = '<table class="table table-striped" id="mainTable"> <tr> <th>物品名称</th><th>员工编号</th> <th>行为</th> <th>时间</th> <th>数量</th> </tr>';
             for (var i = 0; i < gainList.length; i++) {
-                html = html + "<tr><td>" + gainList[i].gname + "</td><td>" + gainList[i].action + "</td><td>" + gainList[i].gtime + "</td><td>" + gainList[i].number + "</td></tr>";
+                var action;
+                if(gainList[i].action == 0) {
+                    action = "领取";
+                } else {
+                    action = "归还";
+                }
+                html = html + "<tr><td>" + gainList[i].gname + "</td><td>"+gainList[i].id+"</td><td>" + action + "</td><td>" + gainList[i].gtime + "</td><td>" + gainList[i].number + "</td></tr>";
             }
             html = html + "</table>";
             $("#mainTable").html(html);
@@ -911,9 +1070,9 @@ function demandTable() {
         data: {cid: cid, part: part, key: key, order: order, up: up},
         dataType: "json",
         success: function (demandList) {
-            var html = '<table class="table table-striped" id="mainTable"> <tr> <th>物品名称</th> <th>物品类别</th> <th>需求</th> <th>花费</th> </tr>';
+            var html = '<table class="table table-striped" id="mainTable"> <tr> <th>物品名称</th> <th>物品类别</th> <th>需求</th></tr>';
             for (var i = 0; i < demandList.length; i++) {
-                html = html + "<tr><td>" + demandList[i].gname + "</td><td>" + demandList[i].classify + "</td><td>" + demandList[i].need + "</td><td>" + demandList[i].cost + "</td></tr>";
+                html = html + "<tr><td>" + demandList[i].gname + "</td><td>" + demandList[i].classify + "</td><td>" + demandList[i].need + "</td></tr>";
             }
             html = html + "</table>";
             $("#mainTable").html(html);
@@ -1249,12 +1408,13 @@ function doTakeGoods() {
     $.ajax({
         type:"POST",
         url:"../table/doTakeGoods.form",
-        data:{userid:userid},
+        data:{cid:cid, userid:userid},
         success:function() {
             alert("领取成功!");
             enterGainGoods('','','');
         }
     });
+
 }
 
 //归还物品，“归还”
@@ -1264,15 +1424,38 @@ function doReturnGoods(no) {
     var id = $(tid.toString()).text();
     var tgname = "#gname"+no;
     var gname = $(tgname.toString()).text();
+    var numberid ="#return-number"+no;
+    var number = $(numberid).val();
     $.ajax({
         type:"POST",
         url:"../table/doReturnGoods.form",
-        data:{cid:cid, id:id, gname:gname},
+        data:{cid:cid, id:id, gname:gname, number:number},
         success:function() {
-
+            alert("归还成功");
+            getReturn('所有部门','','','默认排序');
         }
     });
 }
+
+//归还物品，“归还”
+function returnAll(no) {
+    var cid = $("#cid").val();
+    var tid = "#user-id"+no;
+    var id = $(tid.toString()).text();
+    var tgname = "#gname"+no;
+    var gname = $(tgname.toString()).text();
+
+    $.ajax({
+        type:"POST",
+        url:"../table/returnAll.form",
+        data:{cid:cid, id:id, gname:gname},
+        success:function() {
+            alert("归还成功");
+            getReturn('所有部门','','','默认排序');
+        }
+    });
+}
+
 
 function addNewGoods() {
     var cid = $("#cid").val();
@@ -1313,6 +1496,7 @@ function addNewDemand() {
     });
 }
 
+//添加新雇员
 function addNewEmployee() {
     var cid = $("#cid").val();
     var ename = $("#ename").val();
@@ -1329,6 +1513,45 @@ function addNewEmployee() {
         success:function (data) {
             alert("添加员工成功");
             newEmployee();
+        }
+    });
+}
+
+//离职
+function out(no) {
+    var cid = $("#cid").val();
+    var enameId = "#ename"+no;
+    var setOutTimeId = "#set-out-time"+no;
+    var ename = $(enameId).text();
+    var setOutTime = $(setOutTimeId).val();
+
+    $.ajax({
+        type:"POST",
+        url:"../table/outEmployee.form",
+        data:{cid:cid, ename:ename, setOutTime:setOutTime},
+        success:function (data) {
+            alert("离职员工成功");
+            getUser('所有部门', '', '', '默认排序');
+        }
+    });
+}
+
+//添加损坏记录
+function addNewDamage() {
+    var cid = $("#cid").val();
+    var gname = $("#gname").val();
+    var number = $("#number").val();
+    var status = $("#status").val();
+    var reason = $("#reason").val();
+    var part = $("#part").val();
+
+    $.ajax({
+        type:"POST",
+        url:"../table/addNewDamage.form",
+        data:{cid:cid, gname:gname, number:number, status:status, reason:reason, part:part},
+        success:function(data) {
+            alert("添加记录成功");
+            newDamage();
         }
     });
 }
