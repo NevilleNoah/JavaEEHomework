@@ -194,6 +194,14 @@
       <include refid="Example_Where_Clause" />
     </if>
   </select>
+  <select id="classify" resultMap="forClassify">
+    select classify,sum(store) from goods where cid=#{cid,jdbcType=INTEGER} group by classify;
+  </select>
+  <resultMap id="forClassify" type="com.entity.ForClassify">
+    <id property="classify" column="classify"/>
+    <result property="number" column="sum(store)"/>
+  </resultMap>
+
   <update id="updateByExampleSelective" parameterType="map">
     <!--
       WARNING - @mbg.generated
@@ -256,7 +264,14 @@
     set total = total-#{change, jdbcType=INTEGER}
     where (cid = #{cid, jdbcType=INTEGER}) and (gname = #{gname, jdbcType=VARCHAR});
   </update>
+  <update id="returnGoods">
+    update goods
+    set store = store+#{number}
+    where cid=#{cid} and gname=#{gname};
+  </update>
   <delete id="removeGoods">
     delete from goods where (cid = #{cid, jdbcType=INTEGER}) and (gname = #{gname, jdbcType=VARCHAR});
   </delete>
+
+
 </mapper>

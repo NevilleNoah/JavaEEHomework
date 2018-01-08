@@ -73,6 +73,15 @@
             <nav>
                 <ul class="nav">
                     <li>
+                        <a href="#subPages0" data-toggle="collapse" class="collapsed"><i class="lnr lnr-book"></i>
+                            <span>信息概览</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+                        <div id="subPages0" class="collapse">
+                            <ul class="nav">
+                                <li><a class="choose" onclick="getChart()">图表概览</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
                         <a href="#subPages1" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i>
                             <span>库存管理</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
                         <div id="subPages1" class="collapse ">
@@ -119,7 +128,7 @@
                         <div id="subPages5" class="collapse ">
                             <ul class="nav">
                                 <li><a class="choose" onclick="getDamage('所有部门', '', '', '默认排序')">损坏记录</a></li>
-                                <li><a class="choose">添加记录</a></li>
+                                <li><a class="choose" onclick="newDamage()">添加记录</a></li>
                             </ul>
                         </div>
                     </li>
@@ -127,7 +136,7 @@
             </nav>
         </div>
     </div>
-    <input id="cid" type="hidden" value="${cid}"/>
+    <input id="cid" type="hidden" value="214214"/>
     <div id="main-body">
 
 
@@ -135,8 +144,11 @@
 </div>
 
 <script>
-    var cid = $("#cid").val();
-    document.getElementById('company').value=cid;
+    /*var cid = $("#cid").val();
+    document.getElementById('company').value=cid;*/
+    getChart();
+
+
 </script>
 </body>
 </html>

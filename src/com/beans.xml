@@ -7,4 +7,5 @@
     <bean id="user" class="com.entity.Cuser"/>
     <bean id="goods" class="com.entity.Goods"/>
     <bean id="demand" class="com.entity.Demand"/>
+    <bean id="damage" class="com.entity.Damage"/>
 </beans>

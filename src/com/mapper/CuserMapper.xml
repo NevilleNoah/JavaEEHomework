@@ -392,6 +392,12 @@
       part = #{part,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <update id="out">
+    update cuser
+    set outtime=#{time}
+    where cid=#{cid} and ename=#{ename}
+  </update>
   
 
   

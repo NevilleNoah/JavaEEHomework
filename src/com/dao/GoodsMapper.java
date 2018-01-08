@@ -1,8 +1,11 @@
 package com.dao;
 
+import com.entity.ForClassify;
 import com.entity.Goods;
 import com.entity.GoodsExample;
 import java.util.List;
+import java.util.Map;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface GoodsMapper {
@@ -65,4 +68,8 @@ public interface GoodsMapper {
     void addGoods(@Param("cid") Integer cid, @Param("gname") String gname, @Param("change") Integer change);
     void subGoods(@Param("cid") Integer cid, @Param("gname") String gname, @Param("change") Integer change);
     void removeGoods(@Param("cid") Integer cid, @Param("gname") String gname);
+
+    List<ForClassify> classify(@Param("cid") Integer cid);
+
+
 }

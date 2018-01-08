@@ -1,8 +1,10 @@
 package com.service;
 
+import com.dao.CuserMapper;
 import com.dao.GainMapper;
 import com.dao.GoodsMapper;
 import com.dbtools.GetSqlSession;
+import com.entity.ForClassify;
 import com.entity.Goods;
 import com.entity.GoodsExample;
 import org.apache.ibatis.session.SqlSession;
@@ -11,6 +13,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by asus on 2017/12/9/009.
@@ -105,4 +108,25 @@ public class GoodsManager {
         sqlSession.close();
     }
 
+    public static void returnGoods(Integer cid, Integer id, String gname, Integer number) throws IOException {
+        SqlSession sqlSession  = GetSqlSession.getSqlSession();
+
+        GainMapper gainMapper = sqlSession.getMapper(GainMapper.class);
+        gainMapper.returnGoods(cid, id, gname, number);
+
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
+    public static List<ForClassify> classify(Integer cid) throws IOException {
+        SqlSession sqlSession  = GetSqlSession.getSqlSession();
+
+        GoodsMapper goodsMapper = sqlSession.getMapper(GoodsMapper.class);
+        List<ForClassify> list = goodsMapper.classify(cid);
+
+        sqlSession.commit();
+        sqlSession.close();
+
+        return list;
+    }
 }

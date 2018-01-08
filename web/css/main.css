@@ -1836,4 +1836,19 @@ ul.activity-timeline > li {
   margin: 0px auto;
   text-align: center;
 }
+.chart-div{
+  width: 480px;text-align: center;height: 420px;float: left;margin-left: 100px;margin-top: 100px;
+}
+#chart1{
+  width: 480px;height: 380px
+}
+#chart2{
+  width: 480px;height: 380px;float: right;margin-left: 120px
+}
+#chart1-span{
+  width: 470px;text-align: center
+}
+#chart2-span{
+  width: 480;text-align: center;float: right
+}
 

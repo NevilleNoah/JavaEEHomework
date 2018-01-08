@@ -192,12 +192,20 @@ public class GainManager {
         GainMapper gainMapper = sqlSession.getMapper(GainMapper.class);
         gainMapper.take(cid, id);
 
-
-
         sqlSession.commit();
         sqlSession.close();
     }
 
+    public static List<GainCore> gainCores(Integer cid) throws IOException {
+        SqlSession sqlSession  = GetSqlSession.getSqlSession();
 
+        GainMapper gainMapper = sqlSession.getMapper(GainMapper.class);
+        List<GainCore> list = gainMapper.gainCore(cid);
+
+        sqlSession.commit();
+        sqlSession.close();
+
+        return list;
+    }
 }
 

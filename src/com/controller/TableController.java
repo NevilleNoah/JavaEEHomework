@@ -1,7 +1,9 @@
 package com.controller;
 
+import com.entity.ForClassify;
 import com.entity.GainGoods;
 import com.entity.Goods;
+import org.omg.CORBA.INTERNAL;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -10,8 +12,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 import static com.service.CuserManager.addCuser;
+import static com.service.CuserManager.doOutEmployee;
+import static com.service.DamageManager.newDamage;
 import static com.service.DemandManager.doAddNewDemand;
 import static com.service.GainManager.*;
 import static com.service.GoodsManager.*;
@@ -93,10 +98,14 @@ public class TableController {
     }
 
     @RequestMapping("/doReturnGoods")
-    public static void doReturnGoods(HttpServletRequest request, HttpServletResponse response) {
+    @ResponseBody
+    public static void doReturnGoods(HttpServletRequest request, HttpServletResponse response) throws IOException {
         Integer cid = Integer.valueOf(request.getParameter("cid"));
         Integer id = Integer.valueOf(request.getParameter("id"));
+        String gname = request.getParameter("gname");
+        Integer number = Integer.valueOf(request.getParameter("number"));
 
+        returnGoods(cid, id, gname,number);
 
     }
 
@@ -168,4 +177,28 @@ public class TableController {
         addCuser(id, ismanager, ename, sex, age, intime, outtime, img, phone, address, cid, part);
 
     }
+
+    @RequestMapping("/addNewDamage")
+    public static void addNewDamage(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        Integer id = Integer.valueOf(request.getParameter("id"));
+        String gname = request.getParameter("gname");
+        Integer number = Integer.valueOf(request.getParameter("number"));
+        String status = request.getParameter("status");
+        String reason = request.getParameter("reason");
+        String part = request.getParameter("part");
+
+        newDamage(id, part, gname, number, status, reason);
+    }
+
+    @RequestMapping("/outEmployee")
+    public static void outEmployee(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        Integer cid = Integer.valueOf(request.getParameter("cid"));
+        String ename = request.getParameter("ename");
+        String setOutTime = request.getParameter("setOutTime");
+
+        doOutEmployee(cid, ename, setOutTime);
+    }
+
+
+
 }
